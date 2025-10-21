@@ -158,7 +158,7 @@ export default function GoHighLevelReview() {
           <li>Build an affiliate layer: It multiplies your reach without multiplying your workload.</li>
         </ol>
         <h3>Join the GoHighLevel Ecosystem</h3>
-        <p>Whether you're launching your first funnel or scaling your SaaS empire, GoHighLevel CRM gives you the infrastructure to grow faster with fewer tools. The best time to start was yesterday — the second best time is right now.</p>
+        <p>Whether you&apos;re launching your first funnel or scaling your SaaS empire, GoHighLevel CRM gives you the infrastructure to grow faster with fewer tools. The best time to start was yesterday — the second best time is right now.</p>
         <p><Link href="https://www.gohighlevel.com/gohighlevel-pricing?fp_ref=kerim46">Start Your 14-Day Free Trial</Link></p>
       </section>
     </main>
