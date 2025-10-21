@@ -454,7 +454,7 @@ export async function getNavigationLinks(): Promise<NavigationLink[]> {
 
 		if (blogPage) {
 			const blogTitle = stripHtml(blogPage.title?.rendered) || "Blog";
-			links.push({ title: blogTitle, href: `/pages/${blogPage.slug}` });
+			links.push({ title: blogTitle, href: "/posts" });
 		} else {
 			links.push(fallback[2]);
 		}
