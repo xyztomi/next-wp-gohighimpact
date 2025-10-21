@@ -1,149 +1,74 @@
-// Craft Imports
-import { Section, Container, Prose } from "@/components/craft";
-import Balancer from "react-wrap-balancer";
+"use client";
 
-// Next.js Imports
-import Link from "next/link";
+import { useState } from "react";
+import { CheckCircle2, Play } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
-// Icons
-import { File, Pen, Tag, Diamond, User, Folder } from "lucide-react";
-import { WordPressIcon } from "@/components/icons/wordpress";
-import { NextJsIcon } from "@/components/icons/nextjs";
-
-// This page is using the craft.tsx component and design system
 export default function Home() {
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
   return (
-    <Section>
-      <Container>
-        <ToDelete />
-      </Container>
-    </Section>
-  );
-}
+    <section className="pt-32 pb-20 px-6 bg-gradient-to-b from-gray-50 to-white">
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-12">
+          <Badge className="mb-6 bg-[#0EA5E9]/10 text-[#0EA5E9] border-[#0EA5E9]/20 px-4 py-2 rounded-full">
+            <CheckCircle2 className="w-4 h-4 mr-2 inline" />
+            Trusted by 1,000+ GoHighLevel Marketers
+          </Badge>
 
-// This is just some example TSX
-const ToDelete = () => {
-  return (
-    <main className="space-y-6">
-      <Prose>
-        <h1>
-          <Balancer>Headless WordPress built with the Next.js</Balancer>
-        </h1>
+          <h1 className="text-gray-900 mb-6 max-w-5xl mx-auto text-5xl md:text-6xl lg:text-7xl leading-tight">
+            Master GoHighLevel & Build Your <span className="text-[#0EA5E9]">Marketing Empire</span>
+          </h1>
 
-        <p>
-          This is <a href="https://github.com/9d8dev/next-wp">next-wp</a>,
-          created as a way to build WordPress sites with Next.js at rapid speed.
-          This starter is designed with{" "}
-          <a href="https://ui.shadcn.com">shadcn/ui</a>,{" "}
-          <a href="https://craft-ds.com">craft-ds</a>, and Tailwind CSS. Use{" "}
-          <a href="https://components.work">brijr/components</a> to build your
-          site with prebuilt components. The data fetching and typesafety is
-          handled in <code>lib/wordpress.ts</code> and{" "}
-          <code>lib/wordpress.d.ts</code>.
-        </p>
-      </Prose>
+          <p className="text-gray-600 mb-10 max-w-3xl mx-auto text-xl">
+            Learn proven strategies to leverage GoHighLevel for business growth, client acquisition, and scalable revenue.
+          </p>
 
-      <div className="flex justify-between items-center gap-4">
-        {/* Vercel Clone Starter */}
-        <div className="flex items-center gap-3">
-          <a
-            className="h-auto block"
-            href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F9d8dev%2Fnext-wp&env=WORDPRESS_URL,WORDPRESS_HOSTNAME&envDescription=Add%20WordPress%20URL%20with%20Rest%20API%20enabled%20(ie.%20https%3A%2F%2Fwp.example.com)%20abd%20the%20hostname%20for%20Image%20rendering%20in%20Next%20JS%20(ie.%20wp.example.com)&project-name=next-wp&repository-name=next-wp&demo-title=Next%20JS%20and%20WordPress%20Starter&demo-url=https%3A%2F%2Fwp.9d8.dev"
-          >
-            {/* eslint-disable-next-line */}
-            <img
-              className="not-prose my-4"
-              src="https://vercel.com/button"
-              alt="Deploy with Vercel"
-              width={105}
-              height={32.62}
-            />
-          </a>
-          <p className="!text-sm sr-only sm:not-sr-only text-muted-foreground">
-            Deploy with Vercel in seconds.
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+            <Button className="bg-[#0EA5E9] text-white hover:bg-[#0EA5E9]/90 rounded-full px-10 py-7 shadow-lg shadow-[#0EA5E9]/20 text-lg">
+              Read Guides
+            </Button>
+            <Button
+              variant="outline"
+              className="bg-transparent border-2 border-gray-300 text-gray-900 hover:bg-gray-50 hover:border-gray-400 rounded-full px-10 py-7 text-lg"
+            >
+              Watch Tutorials
+            </Button>
+          </div>
+        </div>
+
+        {/* Video Demo Section */}
+        <div className="max-w-4xl mx-auto">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-gray-200 border border-gray-200 bg-gray-100">
+            <div className="aspect-video">
+              {!isVideoPlaying ? (
+                <div
+                  className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-50 flex flex-col items-center justify-center cursor-pointer group"
+                  onClick={() => setIsVideoPlaying(true)}
+                >
+                  <div className="w-20 h-20 bg-[#0EA5E9] rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-[#0EA5E9]/30">
+                    <Play className="w-8 h-8 text-white ml-1" fill="white" />
+                  </div>
+                  <p className="text-gray-900 text-xl">Watch the Platform Demo</p>
+                  <p className="text-gray-600 mt-2">See how GoHighLevel transforms your business</p>
+                </div>
+              ) : (
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+                  title="GoHighLevel Demo"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              )}
+            </div>
+          </div>
+          <p className="text-center text-gray-500 mt-4 text-sm">
+            Replace the YouTube video ID with your actual demo video
           </p>
         </div>
-
-        <div className="flex gap-2 items-center">
-          <WordPressIcon className="text-foreground" width={32} height={32} />
-          <NextJsIcon className="text-foreground" width={32} height={32} />
-        </div>
       </div>
-
-      <div className="grid md:grid-cols-3 gap-4 mt-6">
-        <Link
-          className="border h-48 bg-accent/50 rounded-lg p-4 flex flex-col justify-between hover:scale-[1.02] transition-all"
-          href="/posts"
-        >
-          <Pen size={32} />
-          <span>
-            Posts{" "}
-            <span className="block text-sm text-muted-foreground">
-              All posts from your WordPress
-            </span>
-          </span>
-        </Link>
-        <Link
-          className="border h-48 bg-accent/50 rounded-lg p-4 flex flex-col justify-between hover:scale-[1.02] transition-all"
-          href="/pages"
-        >
-          <File size={32} />
-          <span>
-            Pages{" "}
-            <span className="block text-sm text-muted-foreground">
-              Custom pages from your WordPress
-            </span>
-          </span>
-        </Link>
-        <Link
-          className="border h-48 bg-accent/50 rounded-lg p-4 flex flex-col justify-between hover:scale-[1.02] transition-all"
-          href="/posts/authors"
-        >
-          <User size={32} />
-          <span>
-            Authors{" "}
-            <span className="block text-sm text-muted-foreground">
-              List of the authors from your WordPress
-            </span>
-          </span>
-        </Link>
-        <Link
-          className="border h-48 bg-accent/50 rounded-lg p-4 flex flex-col justify-between hover:scale-[1.02] transition-all"
-          href="/posts/tags"
-        >
-          <Tag size={32} />
-          <span>
-            Tags{" "}
-            <span className="block text-sm text-muted-foreground">
-              Content by tags from your WordPress
-            </span>
-          </span>
-        </Link>
-        <Link
-          className="border h-48 bg-accent/50 rounded-lg p-4 flex flex-col justify-between hover:scale-[1.02] transition-all"
-          href="/posts/categories"
-        >
-          <Diamond size={32} />
-          <span>
-            Categories{" "}
-            <span className="block text-sm text-muted-foreground">
-              Categories from your WordPress
-            </span>
-          </span>
-        </Link>
-        <a
-          className="border h-48 bg-accent/50 rounded-lg p-4 flex flex-col justify-between hover:scale-[1.02] transition-all"
-          href="https://github.com/9d8dev/next-wp/blob/main/README.md"
-        >
-          <Folder size={32} />
-          <span>
-            Documentation{" "}
-            <span className="block text-sm text-muted-foreground">
-              How to use `next-wp`
-            </span>
-          </span>
-        </a>
-      </div>
-    </main>
+    </section>
   );
-};
+}
