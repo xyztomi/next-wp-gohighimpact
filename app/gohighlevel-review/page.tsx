@@ -1,5 +1,12 @@
+
 import React from "react";
 import Link from "next/link";
+
+export const metadata = {
+  title: "GoHighLevel Review: Honest 2025 Breakdown for Agencies & SaaS",
+  description:
+    "GoHighLevel Review reveals how this CRM helps agencies scale fast. Explore features, pricing, pros, cons, and real results to decide if it’s worth it.",
+};
 
 export default function GoHighLevelReview() {
   return (
