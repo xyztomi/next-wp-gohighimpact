@@ -1,4 +1,4 @@
-import "./globals.css";
+import "@/app/globals.css";
 
 import { Inter as FontSans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
@@ -17,9 +17,9 @@ const font = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "WordPress & Next.js Starter by 9d8",
+  title: "GoHighLevel CRM: All-in-One Platform for Agencies & SaaS Growth",
   description:
-    "A starter template for Next.js with WordPress as a headless CMS.",
+    "GoHighLevel CRM helps agencies automate, scale, and grow MRR. Learn how to use its powerful tools to boost sales, marketing, and client retention.",
   metadataBase: new URL(siteConfig.site_domain),
   alternates: {
     canonical: "/",

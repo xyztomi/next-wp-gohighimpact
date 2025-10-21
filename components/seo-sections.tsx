@@ -35,11 +35,11 @@ export function HeroSection() {
           </Badge>
 
           <h1 className="mx-auto mb-6 max-w-5xl text-5xl leading-tight text-gray-900 md:text-6xl lg:text-7xl">
-            GoHigh Impact: Your Trusted Guide to Dominating with <span className="text-[#0EA5E9]">GoHighLevel CRM</span>
+            GoHighLevel CRM: The Ultimate 2025 Guide for Agencies and SaaS Founders
           </h1>
 
           <p className="mx-auto mb-10 max-w-3xl text-xl text-gray-600">
-            Discover proven playbooks, conversion-tested funnels, and automation frameworks that help agencies, consultants, and SaaS founders unlock predictable revenue with GoHighLevel CRM.
+            Discover how GoHighLevel CRM can automate your marketing, close more deals, and create predictable monthly revenue.
           </p>
 
           <div className="mb-16 flex flex-col items-center justify-center gap-4 sm:flex-row">
