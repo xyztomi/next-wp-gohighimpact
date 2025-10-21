@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion } from "motion/react";
 import {
   Sparkles,
@@ -15,7 +16,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 
 export function AnnouncementBar() {
   return (
@@ -44,6 +44,17 @@ export function AnnouncementBar() {
     </div>
   );
 }
+
+type HeaderLink = {
+  title: string;
+  href: string;
+};
+
+const fallbackLinks: HeaderLink[] = [
+  { title: "Home", href: "/" },
+  { title: "About", href: "/pages/about" },
+  { title: "Blog", href: "/posts" },
+];
 
 const benefits = [
   {
@@ -137,13 +148,9 @@ export function FeaturedGuides() {
               className="group cursor-pointer overflow-hidden border-gray-200 bg-white transition-all duration-300 hover:border-[#0EA5E9]/50 hover:shadow-lg"
             >
               <div className="relative aspect-video overflow-hidden">
-                {/* <ImageWithFallback
-                  src={guide.image}
-                  alt={guide.title}
-                  fill
-                  sizes="(min-width: 768px) 33vw, 100vw"
-                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                /> */}
+                <div className="flex h-full w-full items-center justify-center bg-gray-100 text-sm text-gray-500">
+                  Image coming soon
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="mb-3 text-gray-900 transition-colors group-hover:text-[#0EA5E9]">
@@ -203,7 +210,10 @@ export function Footer() {
   );
 }
 
-export function Header() {
+export function Header({ links }: { links?: HeaderLink[] }) {
+  const pathname = usePathname();
+  const navigation = links && links.length ? links : fallbackLinks;
+
   return (
     <header className="fixed left-0 right-0 top-[32px] z-40 border-b border-gray-200 bg-white/80 backdrop-blur-sm">
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
@@ -216,36 +226,25 @@ export function Header() {
           </div>
 
           <nav className="hidden items-center gap-8 md:flex">
-            <Link
-              href="#"
-              className="text-gray-600 transition-colors hover:text-[#0EA5E9]"
-            >
-              Home
-            </Link>
-            <Link
-              href="#"
-              className="text-gray-600 transition-colors hover:text-[#0EA5E9]"
-            >
-              Guides
-            </Link>
-            <Link
-              href="#"
-              className="text-gray-600 transition-colors hover:text-[#0EA5E9]"
-            >
-              Tools
-            </Link>
-            <Link
-              href="#"
-              className="text-gray-600 transition-colors hover:text-[#0EA5E9]"
-            >
-              Case Studies
-            </Link>
-            <Link
-              href="#"
-              className="text-gray-600 transition-colors hover:text-[#0EA5E9]"
-            >
-              About
-            </Link>
+            {navigation.map((link) => {
+              const isActive =
+                pathname === link.href ||
+                (link.href !== "/" && pathname.startsWith(link.href));
+
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`text-sm font-medium transition-colors ${isActive
+                    ? "text-[#0EA5E9]"
+                    : "text-gray-600 hover:text-[#0EA5E9]"
+                    }`}
+                  aria-current={isActive ? "page" : undefined}
+                >
+                  {link.title}
+                </Link>
+              );
+            })}
           </nav>
         </div>
 

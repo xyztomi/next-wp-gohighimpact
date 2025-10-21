@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/theme/theme-provider";
 import { AnnouncementBar, Footer, Header } from "@/components/marketing";
 import { siteConfig } from "@/site.config";
 import { cn } from "@/lib/utils";
+import { getNavigationLinks } from "@/lib/wordpress";
 
 import type { Metadata } from "next";
 
@@ -25,11 +26,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const navigationLinks = await getNavigationLinks();
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
@@ -42,7 +45,7 @@ export default function RootLayout({
         >
           <div className="flex min-h-screen flex-col bg-[#0A0F1E]">
             <AnnouncementBar />
-            {/* <Header /> */}
+            <Header links={navigationLinks} />
             <main className="flex-1 pt-40">{children}</main>
             {/* <Footer /> */}
           </div>
