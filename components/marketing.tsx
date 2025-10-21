@@ -28,14 +28,14 @@ export function AnnouncementBar() {
         {[...Array(10)].map((_, index) => (
           <a
             key={index}
-            href="https://www.gohighlevel.com/?fp_ref=your-affiliate-link"
+            href="https://snip.ly/ghl-bootcamp"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 transition-opacity hover:opacity-80"
           >
             <Sparkles className="h-4 w-4" />
             <span>
-              Try GoHighLevel Free for 14 Days - All-in-One Marketing & CRM Platform
+              30 Days GoHighLevel Bootcamp – Get Your Agency Automated & Scalable
             </span>
             <span className="text-white/50">•</span>
           </a>
