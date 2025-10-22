@@ -3,7 +3,6 @@ import "@/app/globals.css";
 import { Inter as FontSans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 
-import { ThemeProvider } from "@/components/theme/theme-provider";
 import { AnnouncementBar, Footer, Header } from "@/components/marketing";
 import { siteConfig } from "@/site.config";
 import { cn } from "@/lib/utils";
@@ -37,19 +36,12 @@ export default async function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head />
       <body className={cn("min-h-screen font-sans antialiased", font.variable)}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <div className="flex min-h-screen flex-col">
-            <AnnouncementBar />
-            <Header links={navigationLinks} />
-            <main className="flex-1 pt-40">{children}</main>
-            {/* <Footer /> */}
-          </div>
-        </ThemeProvider>
+        <div className="flex min-h-screen flex-col">
+          <AnnouncementBar />
+          <Header links={navigationLinks} />
+          <main className="flex-1 pt-40">{children}</main>
+          {/* <Footer /> */}
+        </div>
         <Analytics />
       </body>
     </html>
