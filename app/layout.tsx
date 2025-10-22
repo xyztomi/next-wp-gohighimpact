@@ -33,13 +33,13 @@ export default async function RootLayout({
   const navigationLinks = await getNavigationLinks();
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="overflow-x-hidden">
       <head />
-      <body className={cn("min-h-screen font-sans antialiased overflow-y-scroll no-scrollbar", font.variable)}>
+      <body className={cn("min-h-screen font-sans antialiased overflow-x-hidden overflow-y-scroll no-scrollbar", font.variable)}>
         <div className="flex min-h-screen flex-col">
           <AnnouncementBar />
           <Header links={navigationLinks} />
-          <main className="">{children}</main>
+          <main className="pt-[100px]">{children}</main>
           <Footer />
         </div>
         <Analytics />
