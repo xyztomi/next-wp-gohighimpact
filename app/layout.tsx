@@ -17,13 +17,35 @@ const font = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "GoHighLevel CRM: All-in-One Platform for Agencies & SaaS Growth",
+  title: "GoHighLevel CRM Review 2025: Complete Guide for Agencies & Marketing Automation",
   description:
-    "GoHighLevel CRM helps agencies automate, scale, and grow MRR. Learn how to use its powerful tools to boost sales, marketing, and client retention.",
+    "GoHighLevel CRM helps agencies automate, scale, and grow MRR. Compare pricing, plans, integrations & workflows. Expert tutorials for marketing agencies, coaches, and consultants.",
   metadataBase: new URL(siteConfig.site_domain),
   alternates: {
     canonical: "/",
   },
+  openGraph: {
+    title: "GoHighLevel CRM Review 2025: Complete Guide for Agencies & Marketing Automation",
+    description: "GoHighLevel CRM helps agencies automate, scale, and grow MRR. Compare pricing, plans, integrations & workflows.",
+    url: siteConfig.site_domain,
+    siteName: "GoHigh Impact",
+    type: "website",
+    images: [
+      {
+        url: `${siteConfig.site_domain}/api/og`,
+        width: 1200,
+        height: 630,
+        alt: "GoHighLevel CRM Complete Guide",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GoHighLevel CRM Review 2025: Complete Guide for Agencies",
+    description: "GoHighLevel CRM helps agencies automate, scale, and grow MRR. Compare pricing, plans, integrations & workflows.",
+    images: [`${siteConfig.site_domain}/api/og`],
+  },
+  keywords: ["gohighlevel crm", "marketing automation platform", "crm software", "all-in-one crm", "white label crm", "agency software", "gohighlevel review", "gohighlevel pricing"],
 };
 
 export default async function RootLayout({

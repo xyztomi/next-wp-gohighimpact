@@ -26,21 +26,21 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/site.config";
 
 export const metadata: Metadata = {
-  title: "GoHighLevel Guides & Resources | Posts",
-  description: "Explore comprehensive guides, tutorials, and insights about GoHighLevel, marketing automation, and business growth strategies. Stay updated with expert tips and best practices.",
+  title: "GoHighLevel CRM Tutorials, Guides & Marketing Automation Resources",
+  description: "Explore comprehensive GoHighLevel CRM tutorials, guides, and insights about marketing automation and business growth strategies. Step-by-step walkthroughs, workflow templates, and expert tips.",
   alternates: {
     canonical: "/posts",
   },
   openGraph: {
-    title: "GoHighLevel Guides & Resources | Posts",
-    description: "Explore comprehensive guides, tutorials, and insights about GoHighLevel, marketing automation, and business growth strategies.",
+    title: "GoHighLevel CRM Tutorials, Guides & Marketing Automation Resources",
+    description: "Explore comprehensive GoHighLevel CRM tutorials, guides, and insights about marketing automation and business growth strategies.",
     url: `${siteConfig.site_domain}/posts`,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "GoHighLevel Guides & Resources | Posts",
-    description: "Explore comprehensive guides, tutorials, and insights about GoHighLevel, marketing automation, and business growth strategies.",
+    title: "GoHighLevel CRM Tutorials, Guides & Marketing Automation Resources",
+    description: "Explore comprehensive GoHighLevel CRM tutorials, guides, and insights about marketing automation and business growth strategies.",
   },
 };
 

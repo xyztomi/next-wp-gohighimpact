@@ -3,9 +3,17 @@ import React from "react";
 import Link from "next/link";
 
 export const metadata = {
-  title: "GoHighLevel Review: Honest 2025 Breakdown for Agencies & SaaS",
+  title: "GoHighLevel CRM Review 2025: Pricing, Features & Real User Results",
   description:
-    "GoHighLevel Review reveals how this CRM helps agencies scale fast. Explore features, pricing, pros, cons, and real results to decide if it’s worth it.",
+    "Complete GoHighLevel CRM review with pricing breakdown, feature analysis, and real agency results. Compare plans, integrations, and see if it's worth the investment for your business.",
+  alternates: {
+    canonical: "/gohighlevel-review",
+  },
+  openGraph: {
+    title: "GoHighLevel CRM Review 2025: Pricing, Features & Real User Results",
+    description: "Complete GoHighLevel CRM review with pricing breakdown, feature analysis, and real agency results.",
+    type: "article",
+  },
 };
 
 export default function GoHighLevelReview() {
