@@ -3,7 +3,8 @@ import "@/app/globals.css";
 import { Inter as FontSans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 
-import { AnnouncementBar, Footer, Header } from "@/components/marketing";
+import { AnnouncementBar, Footer } from "@/components/marketing";
+import { Header } from "@/components/nav/header";
 import { siteConfig } from "@/site.config";
 import { cn } from "@/lib/utils";
 import { getNavigationLinks } from "@/lib/wordpress";
