@@ -22,7 +22,7 @@ type HeaderLink = {
 const fallbackLinks: HeaderLink[] = [
   { title: "Home", href: "/" },
   { title: "GoHighLevel Review", href: "/gohighlevel-review" },
-  { title: "About", href: "/pages/about" },
+  { title: "About", href: "/about" },
   { title: "Blog", href: "/posts" },
 ];
 
