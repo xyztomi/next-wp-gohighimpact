@@ -35,11 +35,11 @@ export default async function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body className={cn("min-h-screen font-sans antialiased", font.variable)}>
+      <body className={cn("min-h-screen font-sans antialiased overflow-y-scroll no-scrollbar", font.variable)}>
         <div className="flex min-h-screen flex-col">
           <AnnouncementBar />
           <Header links={navigationLinks} />
-          <main className="flex-1 pt-40">{children}</main>
+          <main className="">{children}</main>
           <Footer />
         </div>
         <Analytics />
