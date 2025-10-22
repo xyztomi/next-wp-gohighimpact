@@ -463,7 +463,7 @@ export function SuccessStories() {
               <div>
                 <h3 className="text-base font-semibold text-gray-900 sm:text-lg lg:text-xl">{story.name}</h3>
                 <p className="mt-2 text-xs uppercase tracking-wide text-brand-blue sm:text-sm">{story.metric}</p>
-                <p className="mt-3 text-sm text-gray-600 sm:mt-4 sm:text-base">"{story.quote}"</p>
+                <p className="mt-3 text-sm text-gray-600 sm:mt-4 sm:text-base">&ldquo;{story.quote}&rdquo;</p>
               </div>
               <p className="mt-4 text-xs text-gray-500 sm:mt-6 sm:text-sm">{story.role}</p>
             </Card>
