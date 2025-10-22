@@ -585,7 +585,8 @@ export function FAQSection() {
 }
 
 export function FinalCTA() {
-  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<{ message: string; type: "success" | "error" } | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const valueProps = useMemo(
     () => [
@@ -595,6 +596,43 @@ export function FinalCTA() {
     ],
     []
   );
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setStatus(null);
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xrbywplv", {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        setStatus({ message: "Thanks! Please check your inbox. ✅", type: "success" });
+        form.reset();
+        // Auto-hide success message after 5 seconds
+        setTimeout(() => setStatus(null), 5000);
+      } else {
+        let errorMsg = "Oops, something went wrong. Please try again.";
+        try {
+          const json = await response.json();
+          if (json?.errors?.length) {
+            errorMsg = json.errors.map((e: { message: string }) => e.message).join(", ");
+          }
+        } catch { }
+        setStatus({ message: errorMsg, type: "error" });
+      }
+    } catch {
+      setStatus({ message: "Network error. Please try again.", type: "error" });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section id="cta" className="border-t border-gray-200 bg-gradient-to-br from-white to-gray-50 px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
@@ -607,28 +645,41 @@ export function FinalCTA() {
         <p className="mx-auto mb-6 max-w-2xl text-sm text-gray-600 sm:mb-8 sm:text-base lg:text-lg">
           Join 5,000+ marketers who rely on our GoHighLevel CRM insights for automation best practices, compliance updates, and funnel frameworks that convert cold traffic into superfans.
         </p>
-        <form
-          onSubmit={(event) => {
-            event.preventDefault();
-            console.log("Newsletter signup:", email);
-            alert(`Thanks for subscribing with ${email}!`);
-            setEmail("");
-          }}
-          className="mx-auto max-w-xl"
-        >
+        <form onSubmit={handleSubmit} className="mx-auto max-w-xl">
           <div className="flex flex-col gap-3 sm:flex-row">
             <Input
               type="email"
+              name="email"
               required
               placeholder="Enter your email"
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
-              className="flex-1 rounded-full border-gray-300 bg-white px-4 py-4 text-sm text-gray-900 placeholder:text-gray-500 focus:border-brand-blue sm:px-6 sm:py-6 sm:text-base"
+              aria-label="Email address"
+              disabled={isSubmitting}
+              className="flex-1 rounded-full border-gray-300 bg-white px-4 py-4 text-sm text-gray-900 placeholder:text-gray-500 focus:border-brand-blue disabled:opacity-50 sm:px-6 sm:py-6 sm:text-base"
             />
-            <Button type="submit" className="rounded-full bg-brand-green px-6 py-4 text-sm text-white shadow-lg shadow-brand-green/20 transition-colors hover:bg-brand-green/90 sm:px-8 sm:py-6 sm:text-base">
-              Subscribe Now
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+              className="rounded-full bg-brand-green px-6 py-4 text-sm text-white shadow-lg shadow-brand-green/20 transition-colors hover:bg-brand-green/90 disabled:opacity-50 sm:px-8 sm:py-6 sm:text-base"
+            >
+              {isSubmitting ? "Subscribing..." : "Subscribe Now"}
             </Button>
           </div>
+
+          {/* Hidden fields */}
+          <input type="hidden" name="_subject" value="New subscriber from your site" />
+          <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
+
+          {/* Status message popup */}
+          {status && (
+            <div
+              className={`mt-4 animate-in fade-in slide-in-from-top-2 rounded-lg border px-4 py-3 text-sm ${status.type === "success"
+                  ? "border-green-200 bg-green-50 text-green-800"
+                  : "border-red-200 bg-red-50 text-red-800"
+                }`}
+            >
+              {status.message}
+            </div>
+          )}
         </form>
         <div className="mt-4 flex flex-col items-center gap-2 text-xs text-gray-600 sm:mt-6 sm:text-sm">
           {valueProps.map((prop) => (
