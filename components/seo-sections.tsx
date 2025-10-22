@@ -19,6 +19,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { FAQSchema } from "@/components/structured-data";
 
 export function HeroSection() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
@@ -67,9 +68,10 @@ export function HeroSection() {
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                   }}
+                  aria-label="Play GoHighLevel CRM tutorial video"
                 >
                   {/* Dark overlay for better text contrast */}
-                  <div className="absolute inset-0 bg-black/40 transition-opacity group-hover:bg-black/50" />
+                  <div className="absolute inset-0 bg-black/40 transition-opacity group-hover:bg-black/50" aria-hidden="true" />
 
                   {/* Content */}
                   <div className="relative z-10 flex flex-col items-center">
@@ -102,23 +104,23 @@ export function WhatIsGoHighLevel() {
       <div className="container mx-auto max-w-5xl">
         <h2 className="mb-4 text-center text-2xl font-semibold text-gray-900 sm:mb-6 sm:text-3xl lg:text-4xl">What Is GoHighLevel CRM?</h2>
         <p className="mb-4 text-base leading-7 text-gray-700 sm:mb-6 sm:text-lg sm:leading-8">
-          GoHighLevel CRM is an all-in-one marketing, sales, and service platform engineered to simplify how agencies and growth-focused businesses acquire leads, nurture relationships, and close deals. Instead of duct-taping multiple point solutions together, GoHighLevel brings funnel builder, marketing automation, pipeline tracking, and client reporting into a unified dashboard. The result: faster execution, cleaner data, and higher lifetime value per customer.
+          GoHighLevel CRM is an all-in-one marketing, sales, and service platform engineered to simplify how agencies and growth-focused businesses acquire leads, nurture relationships, and close deals. Instead of duct-taping multiple point solutions together, <Link href="/posts" className="text-brand-blue hover:underline">GoHighLevel brings funnel builder, marketing automation, pipeline tracking, and client reporting</Link> into a unified dashboard. The result: faster execution, cleaner data, and higher lifetime value per customer.
         </p>
         <p className="mb-6 text-lg leading-8 text-gray-700">
-          At GoHigh Impact, we specialize in deploying GoHighLevel CRM for agencies that demand measurable ROI. Our team has implemented the platform across coaching firms, local service companies, SaaS products, and high-ticket masterminds. We know what shortcuts to avoid, which automations actually drive conversions, and how to keep client portals stickier than the competition.
+          At GoHigh Impact, we specialize in deploying GoHighLevel CRM for agencies that demand measurable ROI. Our team has implemented the platform across coaching firms, local service companies, SaaS products, and high-ticket masterminds. We know what shortcuts to avoid, which <Link href="/posts" className="text-brand-blue hover:underline">automations actually drive conversions</Link>, and how to keep client portals stickier than the competition.
         </p>
         <p className="text-lg leading-8 text-gray-700">
-          Whether you are migrating from HubSpot, upgrading from ClickFunnels, or leveling up from spreadsheets, this guide shows you how to extract the full value from GoHighLevel CRM—and stay compliant with the latest data privacy, deliverability, and platform updates in 2025.
+          Whether you are migrating from HubSpot, upgrading from ClickFunnels, or leveling up from spreadsheets, this guide shows you how to extract the full value from GoHighLevel CRM—and stay compliant with the latest data privacy, deliverability, and <Link href="/gohighlevel-review" className="text-brand-blue hover:underline">platform updates in 2025</Link>.
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500">
-          <span className="rounded-full border border-gray-200 px-4 py-1">Entity-based SEO</span>
-          <span className="rounded-full border border-gray-200 px-4 py-1">GoHighLevel SaaS</span>
-          <span className="rounded-full border border-gray-200 px-4 py-1">Automation Frameworks</span>
-          <span className="rounded-full border border-gray-200 px-4 py-1">Agency Playbooks</span>
+          <Link href="/posts" className="rounded-full border border-gray-200 px-4 py-1 transition-colors hover:border-brand-blue hover:text-brand-blue">Entity-based SEO</Link>
+          <Link href="/gohighlevel-review" className="rounded-full border border-gray-200 px-4 py-1 transition-colors hover:border-brand-blue hover:text-brand-blue">GoHighLevel SaaS</Link>
+          <Link href="/posts" className="rounded-full border border-gray-200 px-4 py-1 transition-colors hover:border-brand-blue hover:text-brand-blue">Automation Frameworks</Link>
+          <Link href="/about" className="rounded-full border border-gray-200 px-4 py-1 transition-colors hover:border-brand-blue hover:text-brand-blue">Agency Playbooks</Link>
         </div>
         <div className="mt-6 flex justify-center sm:mt-8">
           <Button asChild className="w-full rounded-full bg-brand-blue px-6 py-4 text-sm text-white transition-colors hover:bg-brand-blue/90 sm:w-auto sm:px-8 sm:text-base">
-            <Link href="/posts">Explore Our GoHighLevel CRM Guides</Link>
+            <Link href="/gohighlevel-review">Read the Full GoHighLevel CRM Review</Link>
           </Button>
         </div>
       </div>
@@ -182,7 +184,7 @@ export function KeyFeatures() {
           })}
         </div>
         <p className="mt-6 text-center text-sm text-gray-600 sm:mt-8 sm:text-base">
-          Ready to map these features to your agency? <Link href="https://snip.ly/ghl-bootcamp" target="_blank" rel="noopener noreferrer" className="text-brand-blue">Start your free trial</Link>.
+          Ready to map these features to your agency? <Link href="https://snip.ly/ghl-bootcamp" target="_blank" rel="noopener noreferrer" className="text-brand-blue">Start your free trial</Link> or <Link href="/about" className="text-brand-blue hover:underline">learn about our implementation services</Link>.
         </p>
       </div>
     </section>
@@ -370,7 +372,7 @@ export function UseCasesIndustries() {
           ))}
         </div>
         <p className="mt-6 text-center text-sm text-gray-600 sm:mt-8 sm:text-base">
-          Want a custom playbook? <Link href="https://snip.ly/ghl-bootcamp" target="_blank" rel="noopener noreferrer" className="text-brand-blue">Start your free trial</Link>.
+          Want a custom playbook? <Link href="https://snip.ly/ghl-bootcamp" target="_blank" rel="noopener noreferrer" className="text-brand-blue">Start your free trial</Link> or <Link href="/posts" className="text-brand-blue hover:underline">browse our industry-specific tutorials</Link>.
         </p>
       </div>
     </section>
@@ -538,7 +540,7 @@ export function CompetitorComparison() {
           </table>
         </div>
         <p className="mt-6 text-center text-xs text-gray-500 sm:mt-8 sm:text-sm">
-          Need client-facing comparison decks? <Link href="/posts/comparisons" className="text-brand-blue">Download our slide templates</Link>.
+          Need client-facing comparison decks? <Link href="/posts" className="text-brand-blue hover:underline">Download our comparison templates</Link> or <Link href="/gohighlevel-review" className="text-brand-blue hover:underline">read our detailed review</Link>.
         </p>
       </div>
     </section>
@@ -571,6 +573,7 @@ const faqItems = [
 export function FAQSection() {
   return (
     <section id="faq" className="bg-white px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
+      <FAQSchema faqs={faqItems} />
       <div className="container mx-auto max-w-5xl">
         <h2 className="mb-4 text-center text-2xl font-semibold text-gray-900 sm:mb-6 sm:text-3xl lg:text-4xl">GoHighLevel CRM FAQ</h2>
         <p className="mb-8 text-center text-sm text-gray-600 sm:mb-12 sm:text-base lg:text-lg">

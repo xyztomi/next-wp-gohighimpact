@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 import { AnnouncementBar, Footer } from "@/components/marketing";
 import { Header } from "@/components/nav/header";
+import { StructuredData } from "@/components/structured-data";
 import { siteConfig } from "@/site.config";
 import { cn } from "@/lib/utils";
 import { getNavigationLinks } from "@/lib/wordpress";
@@ -59,6 +60,7 @@ export default async function RootLayout({
     <html lang="en" suppressHydrationWarning className="overflow-x-hidden">
       <head />
       <body className={cn("min-h-screen font-sans antialiased overflow-x-hidden overflow-y-scroll no-scrollbar", font.variable)}>
+        <StructuredData />
         <div className="flex min-h-screen flex-col">
           <AnnouncementBar />
           <Header links={navigationLinks} />
