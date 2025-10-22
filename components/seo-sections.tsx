@@ -24,30 +24,30 @@ export function HeroSection() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   return (
-    <section className="bg-gradient-to-b from-brand-blue/10 via-white to-white px-6 pb-20 pt-32">
+    <section className="bg-gradient-to-b from-brand-blue/10 via-white to-white px-4 pb-12 pt-24 sm:px-6 sm:pb-20 sm:pt-32">
       <div className="container mx-auto max-w-6xl">
-        <div className="mb-12 text-center">
-          <Badge className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-green/30 bg-brand-green/10 px-4 py-2 text-sm font-medium text-brand-green">
-            <Sparkles className="h-4 w-4" />
+        <div className="mb-8 text-center sm:mb-12">
+          <Badge className="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-green/30 bg-brand-green/10 px-3 py-1.5 text-xs font-medium text-brand-green sm:mb-6 sm:px-4 sm:py-2 sm:text-sm">
+            <Sparkles className="h-3 w-3 sm:h-4 sm:w-4" />
             GoHighLevel CRM Certified Expert Insights
           </Badge>
 
-          <h1 className="mx-auto mb-6 max-w-5xl text-5xl leading-tight text-gray-900 md:text-6xl lg:text-7xl">
+          <h1 className="mx-auto mb-4 max-w-5xl text-3xl font-bold leading-tight text-gray-900 sm:mb-6 sm:text-4xl md:text-5xl lg:text-6xl">
             GoHighLevel CRM: The Ultimate 2025 Guide for Agencies and SaaS Founders
           </h1>
 
-          <p className="mx-auto mb-10 max-w-3xl text-xl text-gray-600">
+          <p className="mx-auto mb-6 max-w-3xl text-base text-gray-600 sm:mb-10 sm:text-lg md:text-xl">
             Discover how GoHighLevel CRM can automate your marketing, close more deals, and create predictable monthly revenue.
           </p>
 
-          <div className="mb-16 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button asChild className="rounded-full bg-brand-green px-10 py-7 text-lg text-white shadow-lg shadow-brand-green/30 transition-colors hover:bg-brand-green/90">
+          <div className="mb-10 flex flex-col items-center justify-center gap-3 sm:mb-16 sm:flex-row sm:gap-4">
+            <Button asChild className="w-full rounded-full bg-brand-green px-6 py-5 text-base text-white shadow-lg shadow-brand-green/30 transition-colors hover:bg-brand-green/90 sm:w-auto sm:px-8 sm:py-6 sm:text-lg">
               <Link href="#pricing">Compare GoHighLevel CRM Plans</Link>
             </Button>
             <Button
               asChild
               variant="outline"
-              className="rounded-full border-2 border-brand-blue/20 px-10 py-7 text-lg text-brand-blue hover:border-brand-blue hover:bg-brand-blue/10"
+              className="w-full rounded-full border-2 border-brand-blue/20 px-6 py-5 text-base text-brand-blue hover:border-brand-blue hover:bg-brand-blue/10 sm:w-auto sm:px-8 sm:py-6 sm:text-lg"
             >
               <Link href="#guide">Get the Implementation Guide</Link>
             </Button>
@@ -55,19 +55,19 @@ export function HeroSection() {
         </div>
 
         <div className="mx-auto max-w-4xl">
-          <div className="relative overflow-hidden rounded-2xl border border-gray-200 bg-gray-100 shadow-2xl shadow-gray-200">
+          <div className="relative overflow-hidden rounded-xl border border-gray-200 bg-gray-100 shadow-xl shadow-gray-200 sm:rounded-2xl sm:shadow-2xl">
             <div className="aspect-video">
               {!isVideoPlaying ? (
                 <button
                   type="button"
-                  className="group flex h-full w-full cursor-pointer flex-col items-center justify-center bg-gradient-to-br from-gray-100 to-gray-50"
+                  className="group flex h-full w-full cursor-pointer flex-col items-center justify-center bg-gradient-to-br from-gray-100 to-gray-50 px-4"
                   onClick={() => setIsVideoPlaying(true)}
                 >
-                  <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-brand-blue shadow-lg shadow-brand-blue/30 transition-transform group-hover:scale-110">
-                    <Play className="ml-1 h-8 w-8 text-white" fill="white" />
+                  <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-brand-blue shadow-lg shadow-brand-blue/30 transition-transform group-hover:scale-110 sm:mb-6 sm:h-20 sm:w-20">
+                    <Play className="ml-1 h-6 w-6 text-white sm:h-8 sm:w-8" fill="white" />
                   </div>
-                  <p className="text-xl text-gray-900">Watch How GoHigh Impact Builds High-ROI Systems with GoHighLevel CRM</p>
-                  <p className="mt-2 text-gray-600">3-minute walkthrough of our lead-to-sale automation blueprint</p>
+                  <p className="text-center text-sm font-medium text-gray-900 sm:text-base md:text-lg lg:text-xl">Watch How GoHigh Impact Builds High-ROI Systems with GoHighLevel CRM</p>
+                  <p className="mt-2 text-center text-xs text-gray-600 sm:text-sm">3-minute walkthrough of our lead-to-sale automation blueprint</p>
                 </button>
               ) : (
                 <iframe
@@ -89,10 +89,10 @@ export function HeroSection() {
 
 export function WhatIsGoHighLevel() {
   return (
-    <section id="overview" className="bg-white px-6 py-20">
+    <section id="overview" className="bg-white px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="mb-6 text-center text-4xl font-semibold text-gray-900">What Is GoHighLevel CRM?</h2>
-        <p className="mb-6 text-lg leading-8 text-gray-700">
+        <h2 className="mb-4 text-center text-2xl font-semibold text-gray-900 sm:mb-6 sm:text-3xl lg:text-4xl">What Is GoHighLevel CRM?</h2>
+        <p className="mb-4 text-base leading-7 text-gray-700 sm:mb-6 sm:text-lg sm:leading-8">
           GoHighLevel CRM is an all-in-one marketing, sales, and service platform engineered to simplify how agencies and growth-focused businesses acquire leads, nurture relationships, and close deals. Instead of duct-taping multiple point solutions together, GoHighLevel brings funnel builder, marketing automation, pipeline tracking, and client reporting into a unified dashboard. The result: faster execution, cleaner data, and higher lifetime value per customer.
         </p>
         <p className="mb-6 text-lg leading-8 text-gray-700">
@@ -107,8 +107,8 @@ export function WhatIsGoHighLevel() {
           <span className="rounded-full border border-gray-200 px-4 py-1">Automation Frameworks</span>
           <span className="rounded-full border border-gray-200 px-4 py-1">Agency Playbooks</span>
         </div>
-        <div className="mt-8 flex justify-center">
-          <Button asChild className="rounded-full bg-brand-blue px-8 py-4 text-white transition-colors hover:bg-brand-blue/90">
+        <div className="mt-6 flex justify-center sm:mt-8">
+          <Button asChild className="w-full rounded-full bg-brand-blue px-6 py-4 text-sm text-white transition-colors hover:bg-brand-blue/90 sm:w-auto sm:px-8 sm:text-base">
             <Link href="/posts">Explore Our GoHighLevel CRM Guides</Link>
           </Button>
         </div>
@@ -146,33 +146,33 @@ const featureHighlights = [
 
 export function KeyFeatures() {
   return (
-    <section id="features" className="bg-gray-50 px-6 py-20">
+    <section id="features" className="bg-gray-50 px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="mb-4 text-center text-4xl font-semibold text-gray-900">Core GoHighLevel CRM Features We Deploy Daily</h2>
-        <p className="mx-auto mb-12 max-w-3xl text-center text-lg text-gray-600">
+        <h2 className="mb-3 text-center text-2xl font-semibold text-gray-900 sm:mb-4 sm:text-3xl lg:text-4xl">Core GoHighLevel CRM Features We Deploy Daily</h2>
+        <p className="mx-auto mb-8 max-w-3xl text-center text-sm text-gray-600 sm:mb-12 sm:text-base lg:text-lg">
           These features form the backbone of every seven-figure GoHighLevel CRM rollout we deliver. Each one reduces tech stack bloat while increasing campaign velocity.
         </p>
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
           {featureHighlights.map((feature) => {
             const Icon = feature.icon;
             return (
-              <Card key={feature.title} className="h-full bg-white p-8 transition-shadow hover:shadow-lg">
-                <div className="mb-6 inline-flex rounded-2xl border border-brand-blue/20 bg-brand-blue/10 p-4">
-                  <Icon className="h-8 w-8 text-brand-blue" />
+              <Card key={feature.title} className="h-full bg-white p-6 transition-shadow hover:shadow-lg sm:p-8">
+                <div className="mb-4 inline-flex rounded-xl border border-brand-blue/20 bg-brand-blue/10 p-3 sm:mb-6 sm:rounded-2xl sm:p-4">
+                  <Icon className="h-6 w-6 text-brand-blue sm:h-8 sm:w-8" />
                 </div>
-                <h3 className="mb-3 text-2xl text-gray-900">{feature.title}</h3>
-                <p className="text-base leading-7 text-gray-600">{feature.description}</p>
-                <div className="mt-6 text-brand-blue">
-                  <Link href="/posts/categories" className="inline-flex items-center gap-2 text-sm font-medium">
+                <h3 className="mb-2 text-lg font-semibold text-gray-900 sm:mb-3 sm:text-xl lg:text-2xl">{feature.title}</h3>
+                <p className="text-sm leading-6 text-gray-600 sm:text-base sm:leading-7">{feature.description}</p>
+                <div className="mt-4 text-brand-blue sm:mt-6">
+                  <Link href="/posts/categories" className="inline-flex items-center gap-2 text-xs font-medium sm:text-sm">
                     See feature tutorials
-                    <ArrowRight className="h-4 w-4" />
+                    <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4" />
                   </Link>
                 </div>
               </Card>
             );
           })}
         </div>
-        <p className="mt-12 text-center text-sm text-gray-500">
+        <p className="mt-8 text-center text-xs text-gray-500 sm:mt-12 sm:text-sm">
           Ready to map these features to your agency? <Link href="#cta" className="text-brand-blue">Book a GoHighLevel CRM blueprint session</Link>.
         </p>
       </div>
@@ -205,30 +205,30 @@ const benefitPoints = [
 
 export function WhyChooseGoHighLevel() {
   return (
-    <section id="why" className="bg-white px-6 py-20">
+    <section id="why" className="bg-white px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="mb-4 text-center text-4xl font-semibold text-gray-900">Why Agencies Choose GoHigh Impact for GoHighLevel CRM</h2>
-        <p className="mx-auto mb-12 max-w-3xl text-center text-lg text-gray-600">
+        <h2 className="mb-3 text-center text-2xl font-semibold text-gray-900 sm:mb-4 sm:text-3xl lg:text-4xl">Why Agencies Choose GoHigh Impact for GoHighLevel CRM</h2>
+        <p className="mx-auto mb-8 max-w-3xl text-center text-sm text-gray-600 sm:mb-12 sm:text-base lg:text-lg">
           We are not just resellers. We are operators who deploy GoHighLevel CRM in our own ventures and coach agencies on how to productize it profitably.
         </p>
-        <div className="grid gap-10 md:grid-cols-2">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:gap-10">
           {benefitPoints.map((benefit) => (
-            <div key={benefit.title} className="flex gap-4">
-              <div className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-brand-blue/10">
-                <CheckCircle2 className="h-5 w-5 text-brand-blue" />
+            <div key={benefit.title} className="flex gap-3 sm:gap-4">
+              <div className="mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-brand-blue/10 sm:h-10 sm:w-10">
+                <CheckCircle2 className="h-4 w-4 text-brand-blue sm:h-5 sm:w-5" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900">{benefit.title}</h3>
-                <p className="mt-2 text-base text-gray-600">{benefit.description}</p>
+                <h3 className="text-base font-semibold text-gray-900 sm:text-lg lg:text-xl">{benefit.title}</h3>
+                <p className="mt-1 text-sm text-gray-600 sm:mt-2 sm:text-base">{benefit.description}</p>
               </div>
             </div>
           ))}
         </div>
-        <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-          <Button asChild className="rounded-full bg-brand-green px-8 py-4 text-white transition-colors hover:bg-brand-green/90">
+        <div className="mt-8 flex flex-col items-center gap-3 sm:mt-12 sm:flex-row sm:justify-center sm:gap-4">
+          <Button asChild className="w-full rounded-full bg-brand-green px-6 py-4 text-sm text-white transition-colors hover:bg-brand-green/90 sm:w-auto sm:px-8 sm:text-base">
             <Link href="/posts/tags">Browse our GoHighLevel CRM tags</Link>
           </Button>
-          <Link href="/pages" className="text-sm font-medium text-brand-blue">
+          <Link href="/pages" className="text-xs font-medium text-brand-blue sm:text-sm">
             View SOP library →
           </Link>
         </div>
@@ -276,38 +276,38 @@ const pricingTiers = [
 
 export function PricingComparison() {
   return (
-    <section id="pricing" className="bg-gray-50 px-6 py-20">
+    <section id="pricing" className="bg-gray-50 px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="mb-4 text-center text-4xl font-semibold text-gray-900">GoHighLevel CRM Pricing Compared</h2>
-        <p className="mx-auto mb-12 max-w-3xl text-center text-lg text-gray-600">
+        <h2 className="mb-3 text-center text-2xl font-semibold text-gray-900 sm:mb-4 sm:text-3xl lg:text-4xl">GoHighLevel CRM Pricing Compared</h2>
+        <p className="mx-auto mb-8 max-w-3xl text-center text-sm text-gray-600 sm:mb-12 sm:text-base lg:text-lg">
           Choose the plan that aligns with your growth goals. We layer in custom automations, onboarding, and client retention frameworks for every tier.
         </p>
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-3">
           {pricingTiers.map((tier) => (
             <Card
               key={tier.name}
-              className={`flex h-full flex-col justify-between border-gray-200 p-8 ${tier.highlighted ? "border-brand-green shadow-lg" : "bg-white"}`}
+              className={`flex h-full flex-col justify-between border-gray-200 p-6 sm:p-8 ${tier.highlighted ? "border-brand-green shadow-lg" : "bg-white"}`}
             >
               <div>
-                <Badge className={`${tier.highlighted ? "bg-brand-green text-white" : "bg-brand-blue/10 text-brand-blue"} mb-4 w-fit rounded-full px-4 py-2`}>{tier.name}</Badge>
-                <p className="text-3xl font-semibold text-gray-900">{tier.cost}</p>
-                <p className="mt-2 text-sm uppercase tracking-wide text-gray-500">{tier.bestFor}</p>
-                <ul className="mt-6 space-y-3 text-base text-gray-600">
+                <Badge className={`${tier.highlighted ? "bg-brand-green text-white" : "bg-brand-blue/10 text-brand-blue"} mb-3 w-fit rounded-full px-3 py-1.5 text-xs sm:mb-4 sm:px-4 sm:py-2 sm:text-sm`}>{tier.name}</Badge>
+                <p className="text-2xl font-semibold text-gray-900 sm:text-3xl">{tier.cost}</p>
+                <p className="mt-2 text-xs uppercase tracking-wide text-gray-500 sm:text-sm">{tier.bestFor}</p>
+                <ul className="mt-4 space-y-2 text-sm text-gray-600 sm:mt-6 sm:space-y-3 sm:text-base">
                   {tier.bullets.map((bullet) => (
                     <li key={bullet} className="flex items-start gap-2">
-                      <CheckCircle2 className="mt-1 h-4 w-4 text-brand-blue" />
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-blue" />
                       <span>{bullet}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              <Button asChild className="mt-8 rounded-full bg-brand-blue px-6 py-3 text-white transition-colors hover:bg-brand-blue/90">
+              <Button asChild className="mt-6 rounded-full bg-brand-blue px-5 py-2.5 text-sm text-white transition-colors hover:bg-brand-blue/90 sm:mt-8 sm:px-6 sm:py-3 sm:text-base">
                 <Link href="#cta">{tier.cta}</Link>
               </Button>
             </Card>
           ))}
         </div>
-        <p className="mt-10 text-center text-sm text-gray-500">
+        <p className="mt-8 text-center text-xs text-gray-500 sm:mt-10 sm:text-sm">
           Not sure which plan to choose? <Link href="#faq" className="text-brand-blue">Jump to the GoHighLevel CRM FAQ</Link> or schedule a roadmap call.
         </p>
       </div>
@@ -340,27 +340,27 @@ const industries = [
 
 export function UseCasesIndustries() {
   return (
-    <section id="use-cases" className="bg-white px-6 py-20">
+    <section id="use-cases" className="bg-white px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
       <div className="container mx-auto max-w-6xl">
-        <div className="mb-12 text-center">
-          <h2 className="mb-4 text-4xl font-semibold text-gray-900">Where GoHighLevel CRM Delivers Category-Leading Impact</h2>
-          <p className="mx-auto max-w-3xl text-lg text-gray-600">
+        <div className="mb-8 text-center sm:mb-12">
+          <h2 className="mb-3 text-2xl font-semibold text-gray-900 sm:mb-4 sm:text-3xl lg:text-4xl">Where GoHighLevel CRM Delivers Category-Leading Impact</h2>
+          <p className="mx-auto max-w-3xl text-sm text-gray-600 sm:text-base lg:text-lg">
             These are the exact industries we have helped achieve 3x–7x pipeline growth using GoHighLevel CRM automations.
           </p>
         </div>
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
           {industries.map((item) => (
-            <Card key={item.title} className="border-gray-200 bg-white p-8">
-              <h3 className="text-2xl font-semibold text-gray-900">{item.title}</h3>
-              <p className="mt-4 text-base text-gray-600">{item.description}</p>
-              <Link href="/posts/categories" className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-brand-blue">
+            <Card key={item.title} className="border-gray-200 bg-white p-6 sm:p-8">
+              <h3 className="text-lg font-semibold text-gray-900 sm:text-xl lg:text-2xl">{item.title}</h3>
+              <p className="mt-3 text-sm text-gray-600 sm:mt-4 sm:text-base">{item.description}</p>
+              <Link href="/posts/categories" className="mt-4 inline-flex items-center gap-2 text-xs font-medium text-brand-blue sm:mt-6 sm:text-sm">
                 Explore case studies
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4" />
               </Link>
             </Card>
           ))}
         </div>
-        <div className="mt-12 text-center text-sm text-gray-500">
+        <div className="mt-8 text-center text-xs text-gray-500 sm:mt-12 sm:text-sm">
           Want a custom playbook? <Link href="#cta" className="text-brand-blue">Request a GoHighLevel CRM industry audit</Link>.
         </div>
       </div>
@@ -397,26 +397,26 @@ const implementationSteps = [
 
 export function ImplementationGuide() {
   return (
-    <section id="guide" className="bg-gray-50 px-6 py-20">
+    <section id="guide" className="bg-gray-50 px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="mb-4 text-center text-4xl font-semibold text-gray-900">Our Proven GoHighLevel CRM Implementation Guide</h2>
-        <p className="mx-auto mb-12 max-w-3xl text-center text-lg text-gray-600">
+        <h2 className="mb-3 text-center text-2xl font-semibold text-gray-900 sm:mb-4 sm:text-3xl lg:text-4xl">Our Proven GoHighLevel CRM Implementation Guide</h2>
+        <p className="mx-auto mb-8 max-w-3xl text-center text-sm text-gray-600 sm:mb-12 sm:text-base lg:text-lg">
           Follow the same four-phase framework we have used to onboard 150+ GoHighLevel CRM clients with minimal downtime.
         </p>
-        <div className="grid gap-8 md:grid-cols-4">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">
           {implementationSteps.map((step) => (
-            <Card key={step.step} className="border-gray-200 bg-white p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-blue/10 text-sm font-semibold text-brand-blue">
+            <Card key={step.step} className="border-gray-200 bg-white p-6 sm:p-8">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-blue/10 text-xs font-semibold text-brand-blue sm:h-12 sm:w-12 sm:text-sm">
                 {step.step}
               </div>
-              <h3 className="mt-6 text-xl font-semibold text-gray-900">{step.title}</h3>
-              <p className="mt-3 text-sm text-gray-600">{step.description}</p>
+              <h3 className="mt-4 text-base font-semibold text-gray-900 sm:mt-6 sm:text-lg lg:text-xl">{step.title}</h3>
+              <p className="mt-2 text-xs text-gray-600 sm:mt-3 sm:text-sm">{step.description}</p>
             </Card>
           ))}
         </div>
-        <div className="mt-10 flex flex-col items-center gap-4 text-center">
-          <p className="text-gray-600">Download our complete GoHighLevel CRM launch checklist to keep your migration on track.</p>
-          <Button asChild className="rounded-full bg-brand-green px-8 py-4 text-white transition-colors hover:bg-brand-green/90">
+        <div className="mt-8 flex flex-col items-center gap-3 text-center sm:mt-10 sm:gap-4">
+          <p className="text-sm text-gray-600 sm:text-base">Download our complete GoHighLevel CRM launch checklist to keep your migration on track.</p>
+          <Button asChild className="w-full rounded-full bg-brand-green px-6 py-4 text-sm text-white transition-colors hover:bg-brand-green/90 sm:w-auto sm:px-8 sm:text-base">
             <Link href="/posts/launch-checklist">Get the 25-point checklist</Link>
           </Button>
         </div>
@@ -451,25 +451,25 @@ const stories = [
 
 export function SuccessStories() {
   return (
-    <section id="success" className="bg-white px-6 py-20">
+    <section id="success" className="bg-white px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="mb-4 text-center text-4xl font-semibold text-gray-900">Real GoHighLevel CRM Wins from Our Community</h2>
-        <p className="mx-auto mb-12 max-w-3xl text-center text-lg text-gray-600">
+        <h2 className="mb-3 text-center text-2xl font-semibold text-gray-900 sm:mb-4 sm:text-3xl lg:text-4xl">Real GoHighLevel CRM Wins from Our Community</h2>
+        <p className="mx-auto mb-8 max-w-3xl text-center text-sm text-gray-600 sm:mb-12 sm:text-base lg:text-lg">
           Experience matters. We combine firsthand GoHighLevel CRM execution with verifiable results across diverse industries.
         </p>
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-3">
           {stories.map((story) => (
-            <Card key={story.name} className="flex h-full flex-col justify-between border-gray-200 bg-white p-8">
+            <Card key={story.name} className="flex h-full flex-col justify-between border-gray-200 bg-white p-6 sm:p-8">
               <div>
-                <h3 className="text-xl font-semibold text-gray-900">{story.name}</h3>
-                <p className="mt-2 text-sm uppercase tracking-wide text-brand-blue">{story.metric}</p>
-                <p className="mt-4 text-base text-gray-600">“{story.quote}”</p>
+                <h3 className="text-base font-semibold text-gray-900 sm:text-lg lg:text-xl">{story.name}</h3>
+                <p className="mt-2 text-xs uppercase tracking-wide text-brand-blue sm:text-sm">{story.metric}</p>
+                <p className="mt-3 text-sm text-gray-600 sm:mt-4 sm:text-base">"{story.quote}"</p>
               </div>
-              <p className="mt-6 text-sm text-gray-500">{story.role}</p>
+              <p className="mt-4 text-xs text-gray-500 sm:mt-6 sm:text-sm">{story.role}</p>
             </Card>
           ))}
         </div>
-        <div className="mt-12 text-center text-sm text-gray-500">
+        <div className="mt-8 text-center text-xs text-gray-500 sm:mt-12 sm:text-sm">
           Want your story featured? <Link href="/posts" className="text-brand-blue">Submit your GoHighLevel CRM case study</Link>.
         </div>
       </div>
@@ -502,33 +502,33 @@ const competitorRows = [
 
 export function CompetitorComparison() {
   return (
-    <section id="comparison" className="bg-gray-50 px-6 py-20">
+    <section id="comparison" className="bg-gray-50 px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="mb-4 text-center text-4xl font-semibold text-gray-900">GoHighLevel CRM vs. The Field</h2>
-        <p className="mx-auto mb-10 max-w-3xl text-center text-lg text-gray-600">
+        <h2 className="mb-3 text-center text-2xl font-semibold text-gray-900 sm:mb-4 sm:text-3xl lg:text-4xl">GoHighLevel CRM vs. The Field</h2>
+        <p className="mx-auto mb-8 max-w-3xl text-center text-sm text-gray-600 sm:mb-10 sm:text-base lg:text-lg">
           Understand how GoHighLevel CRM stacks up so you can articulate the value to clients and stakeholders.
         </p>
-        <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white">
-          <table className="min-w-full divide-y divide-gray-200 text-left text-sm">
+        <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white sm:rounded-2xl">
+          <table className="min-w-full divide-y divide-gray-200 text-left text-xs sm:text-sm">
             <thead className="bg-gray-100">
               <tr>
-                <th className="px-6 py-4 font-medium text-gray-500">Platform</th>
-                <th className="px-6 py-4 font-medium text-gray-500">Primary Focus</th>
-                <th className="px-6 py-4 font-medium text-gray-500">Why GoHighLevel CRM Wins</th>
+                <th className="px-3 py-3 font-medium text-gray-500 sm:px-6 sm:py-4">Platform</th>
+                <th className="px-3 py-3 font-medium text-gray-500 sm:px-6 sm:py-4">Primary Focus</th>
+                <th className="px-3 py-3 font-medium text-gray-500 sm:px-6 sm:py-4">Why GoHighLevel CRM Wins</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
               {competitorRows.map((row) => (
                 <tr key={row.competitor} className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-gray-900">{row.competitor}</td>
-                  <td className="px-6 py-4 text-gray-600">{row.focus}</td>
-                  <td className="px-6 py-4 text-gray-600">{row.differentiator}</td>
+                  <td className="px-3 py-3 text-gray-900 sm:px-6 sm:py-4">{row.competitor}</td>
+                  <td className="px-3 py-3 text-gray-600 sm:px-6 sm:py-4">{row.focus}</td>
+                  <td className="px-3 py-3 text-gray-600 sm:px-6 sm:py-4">{row.differentiator}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-        <p className="mt-8 text-center text-sm text-gray-500">
+        <p className="mt-6 text-center text-xs text-gray-500 sm:mt-8 sm:text-sm">
           Need client-facing comparison decks? <Link href="/posts/comparisons" className="text-brand-blue">Download our slide templates</Link>.
         </p>
       </div>
@@ -561,21 +561,21 @@ const faqItems = [
 
 export function FAQSection() {
   return (
-    <section id="faq" className="bg-white px-6 py-20">
+    <section id="faq" className="bg-white px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="mb-6 text-center text-4xl font-semibold text-gray-900">GoHighLevel CRM FAQ</h2>
-        <p className="mb-12 text-center text-lg text-gray-600">
+        <h2 className="mb-4 text-center text-2xl font-semibold text-gray-900 sm:mb-6 sm:text-3xl lg:text-4xl">GoHighLevel CRM FAQ</h2>
+        <p className="mb-8 text-center text-sm text-gray-600 sm:mb-12 sm:text-base lg:text-lg">
           Still researching? These answers are based on hundreds of real-world GoHighLevel CRM implementations and ongoing platform updates.
         </p>
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {faqItems.map((item) => (
-            <details key={item.question} className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
-              <summary className="flex cursor-pointer items-center gap-3 text-lg font-semibold text-gray-900">
-                <HelpCircle className="h-5 w-5 text-brand-blue" />
+            <details key={item.question} className="rounded-xl border border-gray-200 bg-gray-50 p-4 sm:rounded-2xl sm:p-6">
+              <summary className="flex cursor-pointer items-center gap-2 text-base font-semibold text-gray-900 sm:gap-3 sm:text-lg">
+                <HelpCircle className="h-4 w-4 flex-shrink-0 text-brand-blue sm:h-5 sm:w-5" />
                 {item.question}
               </summary>
-              <p className="mt-4 text-base text-gray-600">{item.answer}</p>
-              <p className="mt-3 text-sm text-brand-blue">Still unsure? <Link href="#cta">Talk to a strategist</Link>.</p>
+              <p className="mt-3 text-sm text-gray-600 sm:mt-4 sm:text-base">{item.answer}</p>
+              <p className="mt-2 text-xs text-brand-blue sm:mt-3 sm:text-sm">Still unsure? <Link href="#cta">Talk to a strategist</Link>.</p>
             </details>
           ))}
         </div>
@@ -597,14 +597,14 @@ export function FinalCTA() {
   );
 
   return (
-    <section id="cta" className="border-t border-gray-200 bg-gradient-to-br from-white to-gray-50 px-6 py-20">
+    <section id="cta" className="border-t border-gray-200 bg-gradient-to-br from-white to-gray-50 px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
       <div className="container mx-auto max-w-4xl text-center">
-        <Badge className="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-blue/30 bg-brand-blue/10 px-4 py-2 text-brand-blue">
-          <ShieldCheck className="h-4 w-4" />
+        <Badge className="mb-3 inline-flex items-center gap-2 rounded-full border border-brand-blue/30 bg-brand-blue/10 px-3 py-1.5 text-xs text-brand-blue sm:mb-4 sm:px-4 sm:py-2 sm:text-sm">
+          <ShieldCheck className="h-3 w-3 sm:h-4 sm:w-4" />
           Trusted GoHighLevel CRM Partner
         </Badge>
-        <h2 className="mb-4 text-4xl font-semibold text-gray-900">Scale Faster with GoHigh Impact</h2>
-        <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-600">
+        <h2 className="mb-3 text-2xl font-semibold text-gray-900 sm:mb-4 sm:text-3xl lg:text-4xl">Scale Faster with GoHigh Impact</h2>
+        <p className="mx-auto mb-6 max-w-2xl text-sm text-gray-600 sm:mb-8 sm:text-base lg:text-lg">
           Join 5,000+ marketers who rely on our GoHighLevel CRM insights for automation best practices, compliance updates, and funnel frameworks that convert cold traffic into superfans.
         </p>
         <form
@@ -623,17 +623,17 @@ export function FinalCTA() {
               placeholder="Enter your email"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
-              className="flex-1 rounded-full border-gray-300 bg-white px-6 py-6 text-gray-900 placeholder:text-gray-500 focus:border-brand-blue"
+              className="flex-1 rounded-full border-gray-300 bg-white px-4 py-4 text-sm text-gray-900 placeholder:text-gray-500 focus:border-brand-blue sm:px-6 sm:py-6 sm:text-base"
             />
-            <Button type="submit" className="rounded-full bg-brand-green px-8 py-6 text-white shadow-lg shadow-brand-green/20 transition-colors hover:bg-brand-green/90">
+            <Button type="submit" className="rounded-full bg-brand-green px-6 py-4 text-sm text-white shadow-lg shadow-brand-green/20 transition-colors hover:bg-brand-green/90 sm:px-8 sm:py-6 sm:text-base">
               Subscribe Now
             </Button>
           </div>
         </form>
-        <div className="mt-6 flex flex-col items-center gap-2 text-sm text-gray-600">
+        <div className="mt-4 flex flex-col items-center gap-2 text-xs text-gray-600 sm:mt-6 sm:text-sm">
           {valueProps.map((prop) => (
             <div key={prop} className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-brand-blue" />
+              <CheckCircle2 className="h-3 w-3 text-brand-blue sm:h-4 sm:w-4" />
               <span>{prop}</span>
             </div>
           ))}
