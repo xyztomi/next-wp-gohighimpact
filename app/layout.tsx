@@ -43,7 +43,7 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex min-h-screen flex-col bg-[#0A0F1E]">
+          <div className="flex min-h-screen flex-col">
             <AnnouncementBar />
             <Header links={navigationLinks} />
             <main className="flex-1 pt-40">{children}</main>
