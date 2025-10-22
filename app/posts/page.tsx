@@ -23,10 +23,25 @@ import { FilterPosts } from "@/components/posts/filter";
 import { SearchInput } from "@/components/posts/search-input";
 
 import type { Metadata } from "next";
+import { siteConfig } from "@/site.config";
 
 export const metadata: Metadata = {
-  title: "Blog Posts",
-  description: "Browse all our blog posts",
+  title: "GoHighLevel Guides & Resources | Posts",
+  description: "Explore comprehensive guides, tutorials, and insights about GoHighLevel, marketing automation, and business growth strategies. Stay updated with expert tips and best practices.",
+  alternates: {
+    canonical: "/posts",
+  },
+  openGraph: {
+    title: "GoHighLevel Guides & Resources | Posts",
+    description: "Explore comprehensive guides, tutorials, and insights about GoHighLevel, marketing automation, and business growth strategies.",
+    url: `${siteConfig.site_domain}/posts`,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GoHighLevel Guides & Resources | Posts",
+    description: "Explore comprehensive guides, tutorials, and insights about GoHighLevel, marketing automation, and business growth strategies.",
+  },
 };
 
 export const dynamic = "auto";

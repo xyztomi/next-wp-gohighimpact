@@ -3,12 +3,19 @@ import { Section, Container, Prose } from "@/components/craft";
 import { Metadata } from "next";
 import BackButton from "@/components/back";
 import Link from "next/link";
+import { siteConfig } from "@/site.config";
 
 export const metadata: Metadata = {
-  title: "All Categories",
-  description: "Browse all categories of our blog posts",
+  title: "All Categories | GoHighLevel Topics & Guides",
+  description: "Browse posts by category. Find tutorials, guides, and resources organized by topics including automation, integrations, workflows, and more.",
   alternates: {
     canonical: "/posts/categories",
+  },
+  openGraph: {
+    title: "All Categories | GoHighLevel Topics & Guides",
+    description: "Browse posts by category. Find tutorials, guides, and resources organized by topics including automation, integrations, workflows, and more.",
+    url: `${siteConfig.site_domain}/posts/categories`,
+    type: "website",
   },
 };
 

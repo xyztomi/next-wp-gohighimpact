@@ -3,12 +3,19 @@ import { Section, Container, Prose } from "@/components/craft";
 import { Metadata } from "next";
 import BackButton from "@/components/back";
 import Link from "next/link";
+import { siteConfig } from "@/site.config";
 
 export const metadata: Metadata = {
-  title: "All Tags",
-  description: "Browse all tags of our blog posts",
+  title: "All Tags | Explore GoHighLevel Content",
+  description: "Browse posts by tag. Discover specific topics and find exactly what you're looking for with our comprehensive tag system.",
   alternates: {
     canonical: "/posts/tags",
+  },
+  openGraph: {
+    title: "All Tags | Explore GoHighLevel Content",
+    description: "Browse posts by tag. Discover specific topics and find exactly what you're looking for with our comprehensive tag system.",
+    url: `${siteConfig.site_domain}/posts/tags`,
+    type: "website",
   },
 };
 

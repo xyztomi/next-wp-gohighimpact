@@ -5,7 +5,8 @@ type SiteConfig = {
 };
 
 export const siteConfig: SiteConfig = {
-	site_name: "next-wp",
-	site_description: "Starter template for Headless WordPress with Next.js",
+	site_name: "GoHighImpact",
+	site_description:
+		"Your trusted resource for GoHighLevel guides, tutorials, and marketing automation strategies. Maximize your business growth with expert insights.",
 	site_domain: "https://gohighimpact.co",
 };
