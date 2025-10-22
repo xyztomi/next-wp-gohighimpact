@@ -19,7 +19,7 @@ import { Input } from "@/components/ui/input";
 
 export function AnnouncementBar() {
   return (
-    <div className="fixed left-0 right-0 top-0 z-50 overflow-hidden bg-[#0EA5E9] py-2 text-white">
+    <div className="fixed left-0 right-0 top-0 z-50 overflow-hidden bg-brand-green py-2 text-white">
       <motion.div
         className="flex whitespace-nowrap"
         animate={{ x: [0, -1000] }}
@@ -94,8 +94,8 @@ export function Benefits() {
             const Icon = benefit.icon;
             return (
               <div key={benefit.id} className="text-center">
-                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#0EA5E9]/20 bg-[#0EA5E9]/10">
-                  <Icon className="h-8 w-8 text-[#0EA5E9]" />
+                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-brand-blue/20 bg-brand-blue/10">
+                  <Icon className="h-8 w-8 text-brand-blue" />
                 </div>
                 <h3 className="mb-3 text-gray-900">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
@@ -145,7 +145,7 @@ export function FeaturedGuides() {
           {guides.map((guide) => (
             <Card
               key={guide.id}
-              className="group cursor-pointer overflow-hidden border-gray-200 bg-white transition-all duration-300 hover:border-[#0EA5E9]/50 hover:shadow-lg"
+              className="group cursor-pointer overflow-hidden border-gray-200 bg-white transition-all duration-300 hover:border-brand-blue/50 hover:shadow-lg"
             >
               <div className="relative aspect-video overflow-hidden">
                 <div className="flex h-full w-full items-center justify-center bg-gray-100 text-sm text-gray-500">
@@ -153,11 +153,11 @@ export function FeaturedGuides() {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="mb-3 text-gray-900 transition-colors group-hover:text-[#0EA5E9]">
+                <h3 className="mb-3 text-gray-900 transition-colors group-hover:text-brand-blue">
                   {guide.title}
                 </h3>
                 <p className="mb-4 text-gray-600">{guide.description}</p>
-                <div className="flex items-center gap-2 text-[#0EA5E9]">
+                <div className="flex items-center gap-2 text-brand-blue">
                   <span>Read More</span>
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </div>
@@ -176,7 +176,7 @@ export function Footer() {
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#0EA5E9]">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-green">
               <span className="text-white">GH</span>
             </div>
             <span className="text-gray-900">GoHighImpact</span>
@@ -185,19 +185,19 @@ export function Footer() {
           <div className="flex gap-8">
             <Link
               href="#"
-              className="text-gray-600 transition-colors hover:text-[#0EA5E9]"
+              className="text-gray-600 transition-colors hover:text-brand-blue"
             >
               Privacy Policy
             </Link>
             <Link
               href="#"
-              className="text-gray-600 transition-colors hover:text-[#0EA5E9]"
+              className="text-gray-600 transition-colors hover:text-brand-blue"
             >
               Terms of Service
             </Link>
             <Link
               href="#"
-              className="text-gray-600 transition-colors hover:text-[#0EA5E9]"
+              className="text-gray-600 transition-colors hover:text-brand-blue"
             >
               Contact
             </Link>
@@ -219,7 +219,7 @@ export function Header({ links }: { links?: HeaderLink[] }) {
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         <div className="flex items-center gap-12">
           <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#0EA5E9]">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-green">
               <span className="text-white">GH</span>
             </div>
             <span className="text-gray-900">GoHighImpact</span>
@@ -236,8 +236,8 @@ export function Header({ links }: { links?: HeaderLink[] }) {
                   key={link.href}
                   href={link.href}
                   className={`text-sm font-medium transition-colors ${isActive
-                    ? "text-[#0EA5E9]"
-                    : "text-gray-600 hover:text-[#0EA5E9]"
+                    ? "text-brand-blue"
+                    : "text-gray-600 hover:text-brand-blue"
                     }`}
                   aria-current={isActive ? "page" : undefined}
                 >
@@ -248,7 +248,7 @@ export function Header({ links }: { links?: HeaderLink[] }) {
           </nav>
         </div>
 
-        <Button className="rounded-full bg-[#0EA5E9] px-6 text-white hover:bg-[#0EA5E9]/90">
+        <Button className="rounded-full bg-brand-green px-6 text-white transition-colors hover:bg-brand-green/90">
           Subscribe
         </Button>
       </div>
@@ -269,8 +269,8 @@ export function Newsletter() {
   return (
     <section className="border-t border-gray-200 bg-gradient-to-br from-white to-gray-50 px-6 py-20">
       <div className="container mx-auto max-w-4xl text-center">
-        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#0EA5E9]/20 bg-[#0EA5E9]/10">
-          <Mail className="h-8 w-8 text-[#0EA5E9]" />
+        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-brand-blue/20 bg-brand-blue/10">
+          <Mail className="h-8 w-8 text-brand-blue" />
         </div>
 
         <h2 className="mb-4 text-gray-900">Join the Newsletter</h2>
@@ -286,11 +286,11 @@ export function Newsletter() {
               value={email}
               onChange={(event) => setEmail(event.target.value)}
               required
-              className="flex-1 rounded-full border-gray-300 bg-white px-6 py-6 text-gray-900 placeholder:text-gray-500 focus:border-[#0EA5E9]"
+              className="flex-1 rounded-full border-gray-300 bg-white px-6 py-6 text-gray-900 placeholder:text-gray-500 focus:border-brand-blue"
             />
             <Button
               type="submit"
-              className="rounded-full bg-[#0EA5E9] px-8 py-6 text-white shadow-lg shadow-[#0EA5E9]/20 hover:bg-[#0EA5E9]/90"
+              className="rounded-full bg-brand-green px-8 py-6 text-white shadow-lg shadow-brand-green/20 transition-colors hover:bg-brand-green/90"
             >
               Subscribe
             </Button>

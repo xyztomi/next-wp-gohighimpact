@@ -40,7 +40,7 @@ export default async function RootLayout({
           <AnnouncementBar />
           <Header links={navigationLinks} />
           <main className="flex-1 pt-40">{children}</main>
-          {/* <Footer /> */}
+          <Footer />
         </div>
         <Analytics />
       </body>

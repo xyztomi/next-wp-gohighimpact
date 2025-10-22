@@ -20,16 +20,14 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 
-const primaryBlue = "#0EA5E9";
-
 export function HeroSection() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   return (
-    <section className="bg-gradient-to-b from-gray-50 to-white px-6 pb-20 pt-32">
+    <section className="bg-gradient-to-b from-brand-blue/10 via-white to-white px-6 pb-20 pt-32">
       <div className="container mx-auto max-w-6xl">
         <div className="mb-12 text-center">
-          <Badge className="mb-6 inline-flex items-center gap-2 rounded-full border" style={{ borderColor: `${primaryBlue}33`, backgroundColor: `${primaryBlue}1a`, color: primaryBlue }}>
+          <Badge className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-green/30 bg-brand-green/10 px-4 py-2 text-sm font-medium text-brand-green">
             <Sparkles className="h-4 w-4" />
             GoHighLevel CRM Certified Expert Insights
           </Badge>
@@ -43,13 +41,13 @@ export function HeroSection() {
           </p>
 
           <div className="mb-16 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button asChild className="rounded-full bg-[#0EA5E9] px-10 py-7 text-lg text-white shadow-lg shadow-[#0EA5E9]/20 hover:bg-[#0EA5E9]/90">
+            <Button asChild className="rounded-full bg-brand-green px-10 py-7 text-lg text-white shadow-lg shadow-brand-green/30 transition-colors hover:bg-brand-green/90">
               <Link href="#pricing">Compare GoHighLevel CRM Plans</Link>
             </Button>
             <Button
               asChild
               variant="outline"
-              className="rounded-full border-2 border-gray-300 px-10 py-7 text-lg text-gray-900 hover:border-gray-400 hover:bg-gray-50"
+              className="rounded-full border-2 border-brand-blue/20 px-10 py-7 text-lg text-brand-blue hover:border-brand-blue hover:bg-brand-blue/10"
             >
               <Link href="#guide">Get the Implementation Guide</Link>
             </Button>
@@ -65,7 +63,7 @@ export function HeroSection() {
                   className="group flex h-full w-full cursor-pointer flex-col items-center justify-center bg-gradient-to-br from-gray-100 to-gray-50"
                   onClick={() => setIsVideoPlaying(true)}
                 >
-                  <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-[#0EA5E9] shadow-lg shadow-[#0EA5E9]/30 transition-transform group-hover:scale-110">
+                  <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-brand-blue shadow-lg shadow-brand-blue/30 transition-transform group-hover:scale-110">
                     <Play className="ml-1 h-8 w-8 text-white" fill="white" />
                   </div>
                   <p className="text-xl text-gray-900">Watch How GoHigh Impact Builds High-ROI Systems with GoHighLevel CRM</p>
@@ -110,7 +108,7 @@ export function WhatIsGoHighLevel() {
           <span className="rounded-full border border-gray-200 px-4 py-1">Agency Playbooks</span>
         </div>
         <div className="mt-8 flex justify-center">
-          <Button asChild className="rounded-full bg-[#0EA5E9] px-8 py-4 text-white hover:bg-[#0EA5E9]/90">
+          <Button asChild className="rounded-full bg-brand-blue px-8 py-4 text-white transition-colors hover:bg-brand-blue/90">
             <Link href="/posts">Explore Our GoHighLevel CRM Guides</Link>
           </Button>
         </div>
@@ -159,12 +157,12 @@ export function KeyFeatures() {
             const Icon = feature.icon;
             return (
               <Card key={feature.title} className="h-full bg-white p-8 transition-shadow hover:shadow-lg">
-                <div className="mb-6 inline-flex rounded-2xl border border-[#0EA5E9]/20 bg-[#0EA5E9]/10 p-4">
-                  <Icon className="h-8 w-8 text-[#0EA5E9]" />
+                <div className="mb-6 inline-flex rounded-2xl border border-brand-blue/20 bg-brand-blue/10 p-4">
+                  <Icon className="h-8 w-8 text-brand-blue" />
                 </div>
                 <h3 className="mb-3 text-2xl text-gray-900">{feature.title}</h3>
                 <p className="text-base leading-7 text-gray-600">{feature.description}</p>
-                <div className="mt-6 text-[#0EA5E9]">
+                <div className="mt-6 text-brand-blue">
                   <Link href="/posts/categories" className="inline-flex items-center gap-2 text-sm font-medium">
                     See feature tutorials
                     <ArrowRight className="h-4 w-4" />
@@ -175,7 +173,7 @@ export function KeyFeatures() {
           })}
         </div>
         <p className="mt-12 text-center text-sm text-gray-500">
-          Ready to map these features to your agency? <Link href="#cta" className="text-[#0EA5E9]">Book a GoHighLevel CRM blueprint session</Link>.
+          Ready to map these features to your agency? <Link href="#cta" className="text-brand-blue">Book a GoHighLevel CRM blueprint session</Link>.
         </p>
       </div>
     </section>
@@ -216,8 +214,8 @@ export function WhyChooseGoHighLevel() {
         <div className="grid gap-10 md:grid-cols-2">
           {benefitPoints.map((benefit) => (
             <div key={benefit.title} className="flex gap-4">
-              <div className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-[#0EA5E9]/10">
-                <CheckCircle2 className="h-5 w-5 text-[#0EA5E9]" />
+              <div className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-brand-blue/10">
+                <CheckCircle2 className="h-5 w-5 text-brand-blue" />
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-900">{benefit.title}</h3>
@@ -227,10 +225,10 @@ export function WhyChooseGoHighLevel() {
           ))}
         </div>
         <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-          <Button asChild className="rounded-full bg-[#0EA5E9] px-8 py-4 text-white hover:bg-[#0EA5E9]/90">
+          <Button asChild className="rounded-full bg-brand-green px-8 py-4 text-white transition-colors hover:bg-brand-green/90">
             <Link href="/posts/tags">Browse our GoHighLevel CRM tags</Link>
           </Button>
-          <Link href="/pages" className="text-sm font-medium text-[#0EA5E9]">
+          <Link href="/pages" className="text-sm font-medium text-brand-blue">
             View SOP library →
           </Link>
         </div>
@@ -288,29 +286,29 @@ export function PricingComparison() {
           {pricingTiers.map((tier) => (
             <Card
               key={tier.name}
-              className={`flex h-full flex-col justify-between border-gray-200 p-8 ${tier.highlighted ? "border-[#0EA5E9] shadow-lg" : "bg-white"}`}
+              className={`flex h-full flex-col justify-between border-gray-200 p-8 ${tier.highlighted ? "border-brand-green shadow-lg" : "bg-white"}`}
             >
               <div>
-                <Badge className={`${tier.highlighted ? "bg-[#0EA5E9] text-white" : "bg-[#0EA5E9]/10 text-[#0EA5E9]"} mb-4 w-fit rounded-full px-4 py-2`}>{tier.name}</Badge>
+                <Badge className={`${tier.highlighted ? "bg-brand-green text-white" : "bg-brand-blue/10 text-brand-blue"} mb-4 w-fit rounded-full px-4 py-2`}>{tier.name}</Badge>
                 <p className="text-3xl font-semibold text-gray-900">{tier.cost}</p>
                 <p className="mt-2 text-sm uppercase tracking-wide text-gray-500">{tier.bestFor}</p>
                 <ul className="mt-6 space-y-3 text-base text-gray-600">
                   {tier.bullets.map((bullet) => (
                     <li key={bullet} className="flex items-start gap-2">
-                      <CheckCircle2 className="mt-1 h-4 w-4 text-[#0EA5E9]" />
+                      <CheckCircle2 className="mt-1 h-4 w-4 text-brand-blue" />
                       <span>{bullet}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              <Button asChild className="mt-8 rounded-full bg-[#0EA5E9] px-6 py-3 text-white hover:bg-[#0EA5E9]/90">
+              <Button asChild className="mt-8 rounded-full bg-brand-blue px-6 py-3 text-white transition-colors hover:bg-brand-blue/90">
                 <Link href="#cta">{tier.cta}</Link>
               </Button>
             </Card>
           ))}
         </div>
         <p className="mt-10 text-center text-sm text-gray-500">
-          Not sure which plan to choose? <Link href="#faq" className="text-[#0EA5E9]">Jump to the GoHighLevel CRM FAQ</Link> or schedule a roadmap call.
+          Not sure which plan to choose? <Link href="#faq" className="text-brand-blue">Jump to the GoHighLevel CRM FAQ</Link> or schedule a roadmap call.
         </p>
       </div>
     </section>
@@ -355,7 +353,7 @@ export function UseCasesIndustries() {
             <Card key={item.title} className="border-gray-200 bg-white p-8">
               <h3 className="text-2xl font-semibold text-gray-900">{item.title}</h3>
               <p className="mt-4 text-base text-gray-600">{item.description}</p>
-              <Link href="/posts/categories" className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-[#0EA5E9]">
+              <Link href="/posts/categories" className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-brand-blue">
                 Explore case studies
                 <ArrowRight className="h-4 w-4" />
               </Link>
@@ -363,7 +361,7 @@ export function UseCasesIndustries() {
           ))}
         </div>
         <div className="mt-12 text-center text-sm text-gray-500">
-          Want a custom playbook? <Link href="#cta" className="text-[#0EA5E9]">Request a GoHighLevel CRM industry audit</Link>.
+          Want a custom playbook? <Link href="#cta" className="text-brand-blue">Request a GoHighLevel CRM industry audit</Link>.
         </div>
       </div>
     </section>
@@ -408,7 +406,7 @@ export function ImplementationGuide() {
         <div className="grid gap-8 md:grid-cols-4">
           {implementationSteps.map((step) => (
             <Card key={step.step} className="border-gray-200 bg-white p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0EA5E9]/10 text-sm font-semibold text-[#0EA5E9]">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-blue/10 text-sm font-semibold text-brand-blue">
                 {step.step}
               </div>
               <h3 className="mt-6 text-xl font-semibold text-gray-900">{step.title}</h3>
@@ -418,7 +416,7 @@ export function ImplementationGuide() {
         </div>
         <div className="mt-10 flex flex-col items-center gap-4 text-center">
           <p className="text-gray-600">Download our complete GoHighLevel CRM launch checklist to keep your migration on track.</p>
-          <Button asChild className="rounded-full bg-[#0EA5E9] px-8 py-4 text-white hover:bg-[#0EA5E9]/90">
+          <Button asChild className="rounded-full bg-brand-green px-8 py-4 text-white transition-colors hover:bg-brand-green/90">
             <Link href="/posts/launch-checklist">Get the 25-point checklist</Link>
           </Button>
         </div>
@@ -464,7 +462,7 @@ export function SuccessStories() {
             <Card key={story.name} className="flex h-full flex-col justify-between border-gray-200 bg-white p-8">
               <div>
                 <h3 className="text-xl font-semibold text-gray-900">{story.name}</h3>
-                <p className="mt-2 text-sm uppercase tracking-wide text-[#0EA5E9]">{story.metric}</p>
+                <p className="mt-2 text-sm uppercase tracking-wide text-brand-blue">{story.metric}</p>
                 <p className="mt-4 text-base text-gray-600">“{story.quote}”</p>
               </div>
               <p className="mt-6 text-sm text-gray-500">{story.role}</p>
@@ -472,7 +470,7 @@ export function SuccessStories() {
           ))}
         </div>
         <div className="mt-12 text-center text-sm text-gray-500">
-          Want your story featured? <Link href="/posts" className="text-[#0EA5E9]">Submit your GoHighLevel CRM case study</Link>.
+          Want your story featured? <Link href="/posts" className="text-brand-blue">Submit your GoHighLevel CRM case study</Link>.
         </div>
       </div>
     </section>
@@ -531,7 +529,7 @@ export function CompetitorComparison() {
           </table>
         </div>
         <p className="mt-8 text-center text-sm text-gray-500">
-          Need client-facing comparison decks? <Link href="/posts/comparisons" className="text-[#0EA5E9]">Download our slide templates</Link>.
+          Need client-facing comparison decks? <Link href="/posts/comparisons" className="text-brand-blue">Download our slide templates</Link>.
         </p>
       </div>
     </section>
@@ -573,11 +571,11 @@ export function FAQSection() {
           {faqItems.map((item) => (
             <details key={item.question} className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
               <summary className="flex cursor-pointer items-center gap-3 text-lg font-semibold text-gray-900">
-                <HelpCircle className="h-5 w-5 text-[#0EA5E9]" />
+                <HelpCircle className="h-5 w-5 text-brand-blue" />
                 {item.question}
               </summary>
               <p className="mt-4 text-base text-gray-600">{item.answer}</p>
-              <p className="mt-3 text-sm text-[#0EA5E9]">Still unsure? <Link href="#cta">Talk to a strategist</Link>.</p>
+              <p className="mt-3 text-sm text-brand-blue">Still unsure? <Link href="#cta">Talk to a strategist</Link>.</p>
             </details>
           ))}
         </div>
@@ -601,7 +599,7 @@ export function FinalCTA() {
   return (
     <section id="cta" className="border-t border-gray-200 bg-gradient-to-br from-white to-gray-50 px-6 py-20">
       <div className="container mx-auto max-w-4xl text-center">
-        <Badge className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#0EA5E9]/20 bg-[#0EA5E9]/10 px-4 py-2 text-[#0EA5E9]">
+        <Badge className="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-blue/30 bg-brand-blue/10 px-4 py-2 text-brand-blue">
           <ShieldCheck className="h-4 w-4" />
           Trusted GoHighLevel CRM Partner
         </Badge>
@@ -625,9 +623,9 @@ export function FinalCTA() {
               placeholder="Enter your email"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
-              className="flex-1 rounded-full border-gray-300 bg-white px-6 py-6 text-gray-900 placeholder:text-gray-500 focus:border-[#0EA5E9]"
+              className="flex-1 rounded-full border-gray-300 bg-white px-6 py-6 text-gray-900 placeholder:text-gray-500 focus:border-brand-blue"
             />
-            <Button type="submit" className="rounded-full bg-[#0EA5E9] px-8 py-6 text-white shadow-lg shadow-[#0EA5E9]/20 hover:bg-[#0EA5E9]/90">
+            <Button type="submit" className="rounded-full bg-brand-green px-8 py-6 text-white shadow-lg shadow-brand-green/20 transition-colors hover:bg-brand-green/90">
               Subscribe Now
             </Button>
           </div>
@@ -635,13 +633,13 @@ export function FinalCTA() {
         <div className="mt-6 flex flex-col items-center gap-2 text-sm text-gray-600">
           {valueProps.map((prop) => (
             <div key={prop} className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-[#0EA5E9]" />
+              <CheckCircle2 className="h-4 w-4 text-brand-blue" />
               <span>{prop}</span>
             </div>
           ))}
         </div>
         <p className="mt-6 text-sm text-gray-500">
-          Prefer a live conversation? <Link href="/pages/contact" className="text-[#0EA5E9]">Book a GoHighLevel CRM strategy session</Link>.
+          Prefer a live conversation? <Link href="/pages/contact" className="text-brand-blue">Book a GoHighLevel CRM strategy session</Link>.
         </p>
       </div>
     </section>
