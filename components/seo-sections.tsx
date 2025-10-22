@@ -42,7 +42,7 @@ export function HeroSection() {
 
           <div className="mb-10 flex flex-col items-center justify-center gap-3 sm:mb-16 sm:flex-row sm:gap-4">
             <Button asChild className="w-full rounded-full bg-brand-green px-6 py-5 text-base text-white shadow-lg shadow-brand-green/30 transition-colors hover:bg-brand-green/90 sm:w-auto sm:px-8 sm:py-6 sm:text-lg">
-              <Link href="#pricing">Compare GoHighLevel CRM Plans</Link>
+              <Link href="https://snip.ly/ghl-bootcamp" target="_blank" rel="noopener noreferrer">Start Free Trial</Link>
             </Button>
             <Button
               asChild
@@ -60,19 +60,29 @@ export function HeroSection() {
               {!isVideoPlaying ? (
                 <button
                   type="button"
-                  className="group flex h-full w-full cursor-pointer flex-col items-center justify-center bg-gradient-to-br from-gray-100 to-gray-50 px-4"
+                  className="group relative flex h-full w-full cursor-pointer flex-col items-center justify-center overflow-hidden px-4"
                   onClick={() => setIsVideoPlaying(true)}
+                  style={{
+                    backgroundImage: 'url(https://img.youtube.com/vi/JSltX3xCCbM/maxresdefault.jpg)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }}
                 >
-                  <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-brand-blue shadow-lg shadow-brand-blue/30 transition-transform group-hover:scale-110 sm:mb-6 sm:h-20 sm:w-20">
-                    <Play className="ml-1 h-6 w-6 text-white sm:h-8 sm:w-8" fill="white" />
+                  {/* Dark overlay for better text contrast */}
+                  <div className="absolute inset-0 bg-black/40 transition-opacity group-hover:bg-black/50" />
+
+                  {/* Content */}
+                  <div className="relative z-10 flex flex-col items-center">
+                    <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-brand-blue shadow-lg shadow-brand-blue/30 transition-transform group-hover:scale-110 sm:mb-6 sm:h-20 sm:w-20">
+                      <Play className="ml-1 h-6 w-6 text-white sm:h-8 sm:w-8" fill="white" />
+                    </div>
+                    <p className="text-center text-sm font-medium text-white drop-shadow-lg sm:text-base md:text-lg lg:text-xl">What is GoHighLevel CRM? 📈 Explained in 11 Minutes</p>
                   </div>
-                  <p className="text-center text-sm font-medium text-gray-900 sm:text-base md:text-lg lg:text-xl">Watch How GoHigh Impact Builds High-ROI Systems with GoHighLevel CRM</p>
-                  <p className="mt-2 text-center text-xs text-gray-600 sm:text-sm">3-minute walkthrough of our lead-to-sale automation blueprint</p>
                 </button>
               ) : (
                 <iframe
                   className="h-full w-full"
-                  src="https://www.youtube.com/embed/JSltX3xCCbM"
+                  src="https://www.youtube.com/embed/JSltX3xCCbM?autoplay=1"
                   title="GoHighLevel CRM Demo"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -80,7 +90,6 @@ export function HeroSection() {
               )}
             </div>
           </div>
-          <p className="mt-4 text-center text-sm text-gray-500">Replace the demo video with your latest GoHighLevel CRM walkthrough when available.</p>
         </div>
       </div>
     </section>
@@ -172,8 +181,8 @@ export function KeyFeatures() {
             );
           })}
         </div>
-        <p className="mt-8 text-center text-xs text-gray-500 sm:mt-12 sm:text-sm">
-          Ready to map these features to your agency? <Link href="#cta" className="text-brand-blue">Book a GoHighLevel CRM blueprint session</Link>.
+        <p className="mt-6 text-center text-sm text-gray-600 sm:mt-8 sm:text-base">
+          Ready to map these features to your agency? <Link href="https://snip.ly/ghl-bootcamp" target="_blank" rel="noopener noreferrer" className="text-brand-blue">Start your free trial</Link>.
         </p>
       </div>
     </section>
@@ -302,13 +311,13 @@ export function PricingComparison() {
                 </ul>
               </div>
               <Button asChild className="mt-6 rounded-full bg-brand-blue px-5 py-2.5 text-sm text-white transition-colors hover:bg-brand-blue/90 sm:mt-8 sm:px-6 sm:py-3 sm:text-base">
-                <Link href="#cta">{tier.cta}</Link>
+                <Link href="https://snip.ly/ghl-bootcamp" target="_blank" rel="noopener noreferrer">{tier.cta}</Link>
               </Button>
             </Card>
           ))}
         </div>
         <p className="mt-8 text-center text-xs text-gray-500 sm:mt-10 sm:text-sm">
-          Not sure which plan to choose? <Link href="#faq" className="text-brand-blue">Jump to the GoHighLevel CRM FAQ</Link> or schedule a roadmap call.
+          Not sure which plan to choose? <Link href="https://snip.ly/ghl-bootcamp" target="_blank" rel="noopener noreferrer" className="text-brand-blue">Start your free trial</Link> or schedule a roadmap call.
         </p>
       </div>
     </section>
@@ -360,9 +369,9 @@ export function UseCasesIndustries() {
             </Card>
           ))}
         </div>
-        <div className="mt-8 text-center text-xs text-gray-500 sm:mt-12 sm:text-sm">
-          Want a custom playbook? <Link href="#cta" className="text-brand-blue">Request a GoHighLevel CRM industry audit</Link>.
-        </div>
+        <p className="mt-6 text-center text-sm text-gray-600 sm:mt-8 sm:text-base">
+          Want a custom playbook? <Link href="https://snip.ly/ghl-bootcamp" target="_blank" rel="noopener noreferrer" className="text-brand-blue">Start your free trial</Link>.
+        </p>
       </div>
     </section>
   );
@@ -575,7 +584,7 @@ export function FAQSection() {
                 {item.question}
               </summary>
               <p className="mt-3 text-sm text-gray-600 sm:mt-4 sm:text-base">{item.answer}</p>
-              <p className="mt-2 text-xs text-brand-blue sm:mt-3 sm:text-sm">Still unsure? <Link href="#cta">Talk to a strategist</Link>.</p>
+              <p className="mt-2 text-xs text-brand-blue sm:mt-3 sm:text-sm">Still unsure? <Link href="https://snip.ly/ghl-bootcamp" target="_blank" rel="noopener noreferrer">Start your free trial</Link>.</p>
             </details>
           ))}
         </div>
@@ -673,8 +682,8 @@ export function FinalCTA() {
           {status && (
             <div
               className={`mt-4 animate-in fade-in slide-in-from-top-2 rounded-lg border px-4 py-3 text-sm ${status.type === "success"
-                  ? "border-green-200 bg-green-50 text-green-800"
-                  : "border-red-200 bg-red-50 text-red-800"
+                ? "border-green-200 bg-green-50 text-green-800"
+                : "border-red-200 bg-red-50 text-red-800"
                 }`}
             >
               {status.message}

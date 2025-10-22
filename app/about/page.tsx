@@ -177,7 +177,7 @@ export default function AboutPage() {
               asChild
               className="w-full rounded-full bg-brand-green px-6 py-5 text-base text-white transition-colors hover:bg-brand-green/90 sm:w-auto sm:px-8 sm:py-6"
             >
-              <Link href="/#cta">Get Started Today</Link>
+              <Link href="https://snip.ly/ghl-bootcamp" target="_blank" rel="noopener noreferrer">Start Free Trial</Link>
             </Button>
             <Button
               asChild

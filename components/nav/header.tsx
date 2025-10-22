@@ -71,8 +71,10 @@ export function Header({ links }: { links?: HeaderLink[] }) {
         </nav>
 
         <div className="flex items-center gap-4">
-          <Button className="hidden rounded-full bg-brand-green px-6 text-white transition-colors hover:bg-brand-green/90 sm:inline-flex">
-            Get Started
+          <Button asChild className="hidden rounded-full bg-brand-green px-6 text-white transition-colors hover:bg-brand-green/90 sm:inline-flex">
+            <Link href="https://snip.ly/ghl-bootcamp" target="_blank" rel="noopener noreferrer">
+              Get Started
+            </Link>
           </Button>
 
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -113,8 +115,10 @@ export function Header({ links }: { links?: HeaderLink[] }) {
                     </Link>
                   );
                 })}
-                <Button className="mt-4 w-full rounded-full bg-brand-green px-6 py-6 text-white transition-colors hover:bg-brand-green/90">
-                  Get Started
+                <Button asChild className="mt-4 w-full rounded-full bg-brand-green px-6 py-6 text-white transition-colors hover:bg-brand-green/90">
+                  <Link href="https://snip.ly/ghl-bootcamp" target="_blank" rel="noopener noreferrer">
+                    Get Started
+                  </Link>
                 </Button>
               </nav>
             </SheetContent>

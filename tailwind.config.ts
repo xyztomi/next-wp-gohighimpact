@@ -29,7 +29,7 @@ const config = {
 				background: "hsl(var(--background))",
 				foreground: "hsl(var(--foreground))",
 				brand: {
-					green: "#16dc48",
+					green: "#1a5ba8",
 					blue: "#2a96fa",
 				},
 				primary: {

@@ -166,7 +166,7 @@ export default function GoHighLevelReview() {
         </ol>
         <h3>Join the GoHighLevel Ecosystem</h3>
         <p>Whether you&apos;re launching your first funnel or scaling your SaaS empire, GoHighLevel CRM gives you the infrastructure to grow faster with fewer tools. The best time to start was yesterday — the second best time is right now.</p>
-        <p><Link href="https://www.gohighlevel.com/gohighlevel-pricing?fp_ref=kerim46">Start Your 14-Day Free Trial</Link></p>
+        <p><Link href="https://snip.ly/ghl-bootcamp" target="_blank" rel="noopener noreferrer">Start Your 14-Day Free Trial</Link></p>
       </section>
     </main>
   );
