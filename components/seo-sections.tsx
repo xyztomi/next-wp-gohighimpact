@@ -551,22 +551,102 @@ const faqItems = [
   {
     question: "Is GoHighLevel CRM a good fit for small agencies in 2025?",
     answer:
-      "Absolutely. The latest GoHighLevel CRM updates make it easier to spin up sub-accounts, templatize workflows, and white-label your services. Even if you are a team of one, you can sell higher-retainer offers with the right systems.",
+      "Absolutely. GoHighLevel is built for lean teams that want to automate lead generation, follow-up, and client management without hiring a full tech squad. It replaces multiple tools and saves agencies thousands monthly.",
+  },
+  {
+    question: "What exactly does GoHighLevel CRM do?",
+    answer:
+      "GoHighLevel is an all-in-one platform that combines CRM, marketing automation, funnels, appointment booking, pipeline tracking, email and SMS campaigns, reputation management, and more, all under one dashboard.",
+  },
+  {
+    question: "Can GoHighLevel replace tools like ClickFunnels, Mailchimp, and Calendly?",
+    answer:
+      "Yes. It is designed to consolidate your tech stack so you can build funnels, send email and SMS campaigns, automate follow-ups, and manage appointments without juggling multiple subscriptions.",
   },
   {
     question: "How long does it take to migrate to GoHighLevel CRM?",
     answer:
-      "Most migrations take 21–30 days depending on how many funnels, pipelines, and contact lists you have. Our implementation guide keeps your marketing live while the new automations are built in parallel.",
+      "Most agencies fully migrate in 7-14 days depending on the number of existing tools. Templates, snapshots, and cloning options make the process surprisingly fast.",
   },
   {
-    question: "Can GoHighLevel CRM replace my current email, SMS, and calendar tools?",
+    question: "Is GoHighLevel beginner-friendly?",
     answer:
-      "Yes. GoHighLevel CRM consolidates marketing automation, calendar scheduling, pipeline tracking, reputation management, and membership delivery. We map necessary exceptions during the audit phase.",
+      "Yes. Even if you are not tech-savvy, the platform offers prebuilt automations, drag-and-drop editors, and 24/7 support. Many users launch campaigns within their first 48 hours.",
   },
   {
-    question: "Does GoHighLevel CRM support HIPAA or financial compliance?",
+    question: "Can I white-label GoHighLevel under my own brand?",
     answer:
-      "Compliance requirements vary by industry. We work with legal counsel to ensure your GoHighLevel CRM instance aligns with HIPAA, FINRA, or GDPR where applicable.",
+      "Yes. With the SaaS Pro plan, you can fully white-label the platform with a custom domain, branding, and your own pricing so you can sell it like proprietary software.",
+  },
+  {
+    question: "Does GoHighLevel support HIPAA or financial compliance?",
+    answer:
+      "Yes. HIPAA compliance is available as an add-on, making it a strong fit for healthcare, legal, and financial businesses with strict data regulations.",
+  },
+  {
+    question: "Can I integrate GoHighLevel with my existing tools?",
+    answer:
+      "Yes. GoHighLevel integrates with Zapier, webhooks, API, and thousands of third-party apps, making it easy to connect your favorite tools.",
+  },
+  {
+    question: "How much does GoHighLevel CRM cost?",
+    answer:
+      "Pricing starts around $97 per month for the basic plan. Agencies typically choose the $297 plan or the SaaS Pro plan at $497 per month to unlock full automation and white-labeling.",
+  },
+  {
+    question: "Does GoHighLevel offer a free trial?",
+    answer:
+      "Yes. GoHighLevel offers a 14-day free trial so you can test everything, including funnels, automation, CRM, and more, before committing.",
+  },
+  {
+    question: "What industries use GoHighLevel CRM?",
+    answer:
+      "Agencies, real estate professionals, coaches, gyms, med spas, roofers, and e-commerce brands all use GoHighLevel to automate marketing and sales.",
+  },
+  {
+    question: "Can GoHighLevel manage multiple client accounts?",
+    answer:
+      "Yes. You can create unlimited sub-accounts, manage every client in a single dashboard, and keep campaigns organized without tool sprawl.",
+  },
+  {
+    question: "Does GoHighLevel include AI tools?",
+    answer:
+      "Yes. The platform has built-in AI features like AI chatbots, AI follow-up messaging, and integrations with AI calling systems to boost conversions 24/7.",
+  },
+  {
+    question: "Can I build websites and funnels inside GoHighLevel?",
+    answer:
+      "Yes. It includes a powerful drag-and-drop funnel and website builder, landing page templates, and full customization options.",
+  },
+  {
+    question: "Is GoHighLevel good for real estate agents?",
+    answer:
+      "Definitely. Realtors use GoHighLevel to capture leads, follow up with AI, automate showings, and book appointments without manual chasing.",
+  },
+  {
+    question: "How secure is my data inside GoHighLevel?",
+    answer:
+      "GoHighLevel uses secure, encrypted connections and complies with modern security standards. HIPAA options are available for sensitive industries.",
+  },
+  {
+    question: "Can GoHighLevel help me get more leads?",
+    answer:
+      "Yes. With lead capture forms, funnels, AI follow-ups, and automated nurturing sequences, GoHighLevel helps agencies generate and convert leads 24/7.",
+  },
+  {
+    question: "Does GoHighLevel have a mobile app?",
+    answer:
+      "Yes. The mobile app lets you manage leads, reply to messages, and track pipelines on the go, which is perfect for busy agency owners.",
+  },
+  {
+    question: "Can I cancel GoHighLevel anytime?",
+    answer:
+      "Yes. There are no long-term contracts. You can cancel or upgrade anytime directly from your account dashboard.",
+  },
+  {
+    question: "Is GoHighLevel CRM worth it in 2025?",
+    answer:
+      "For most agencies, yes. It reduces tool costs, increases revenue through automation, and turns agencies into scalable SaaS businesses. The ROI usually pays for itself in the first 30-60 days.",
   },
 ];
 
