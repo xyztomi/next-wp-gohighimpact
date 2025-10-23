@@ -84,7 +84,7 @@ export function Benefits() {
   return (
     <section className="bg-gray-50 px-6 py-20">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="mb-4 text-center text-gray-900">Why GoHighImpact?</h2>
+        <h2 className="mb-4 text-center text-gray-900">Why GoHigh Impact?</h2>
         <p className="mx-auto mb-16 max-w-2xl text-center text-gray-600">
           Everything you need to master GoHighLevel and grow your business
         </p>
@@ -179,7 +179,7 @@ export function Footer() {
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-green">
               <span className="text-white">GH</span>
             </div>
-            <span className="text-gray-900">GoHighImpact</span>
+            <span className="text-gray-900">GoHigh Impact</span>
           </div>
 
           <div className="flex gap-8">
@@ -203,7 +203,7 @@ export function Footer() {
             </Link>
           </div>
 
-          <p className="text-sm text-gray-500">© 2025 GoHighImpact. All rights reserved.</p>
+          <p className="text-sm text-gray-500">© 2025 GoHigh Impact. All rights reserved.</p>
         </div>
       </div>
     </footer>
@@ -291,8 +291,8 @@ export function Newsletter() {
           {status && (
             <div
               className={`mt-4 animate-in fade-in slide-in-from-top-2 rounded-lg border px-4 py-3 text-sm ${status.type === "success"
-                  ? "border-green-200 bg-green-50 text-green-800"
-                  : "border-red-200 bg-red-50 text-red-800"
+                ? "border-green-200 bg-green-50 text-green-800"
+                : "border-red-200 bg-red-50 text-red-800"
                 }`}
             >
               {status.message}

@@ -45,7 +45,7 @@ export function Header({ links }: { links?: HeaderLink[] }) {
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-green">
             <span className="text-sm font-bold text-white">GH</span>
           </div>
-          <span className="text-lg font-semibold text-gray-900">GoHighImpact</span>
+          <span className="text-lg font-semibold text-gray-900">GoHigh Impact</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -91,7 +91,7 @@ export function Header({ links }: { links?: HeaderLink[] }) {
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-green">
                       <span className="text-sm font-bold text-white">GH</span>
                     </div>
-                    <span className="text-lg font-semibold text-gray-900">GoHighImpact</span>
+                    <span className="text-lg font-semibold text-gray-900">GoHigh Impact</span>
                   </Link>
                 </SheetTitle>
               </SheetHeader>
