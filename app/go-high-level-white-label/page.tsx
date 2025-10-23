@@ -109,15 +109,26 @@ export default function GoHighLevelWhiteLabelPage() {
           </section>
         </div>
 
-        <p className="text-xl text-muted-foreground">
-          GoHighLevel has revolutionized the way marketing agencies scale — and its white label feature is the secret sauce behind thousands of 6- and 7-figure agency empires.
-        </p>
-        <p className="mt-4 text-muted-foreground">
-          This guide breaks down exactly how white labeling works, why it matters, how to set it up, and how smart agencies are turning it into a monthly recurring revenue machine.
-        </p>
-        <p className="mt-4 text-muted-foreground">
-          Whether you're a seasoned agency owner or just starting your SaaS journey, buckle up — this is the playbook.
-        </p>
+        <div className="grid gap-4 text-left text-muted-foreground md:grid-cols-3">
+          <div className="rounded-xl border border-border bg-background p-5 shadow-sm">
+            <h3 className="text-lg font-semibold text-foreground">Why White Label Matters</h3>
+            <p className="mt-2 text-sm leading-relaxed">
+              GoHighLevel has revolutionized the way marketing agencies scale — and its white label feature is the secret sauce behind thousands of 6- and 7-figure agency empires.
+            </p>
+          </div>
+          <div className="rounded-xl border border-border bg-background p-5 shadow-sm">
+            <h3 className="text-lg font-semibold text-foreground">What You&apos;ll Learn</h3>
+            <p className="mt-2 text-sm leading-relaxed">
+              This guide breaks down exactly how white labeling works, why it matters, how to set it up, and how smart agencies are turning it into a monthly recurring revenue machine.
+            </p>
+          </div>
+          <div className="rounded-xl border border-border bg-background p-5 shadow-sm">
+            <h3 className="text-lg font-semibold text-foreground">Who It&apos;s For</h3>
+            <p className="mt-2 text-sm leading-relaxed">
+              Whether you&apos;re a seasoned agency owner or just starting your SaaS journey, this playbook shows you how to package GoHighLevel into a scalable recurring revenue offer.
+            </p>
+          </div>
+        </div>
       </header>
 
       {/* Table of Contents */}
