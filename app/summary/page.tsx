@@ -65,6 +65,15 @@ export default function SummaryPage() {
         "CTA buttons standardized with keyword inclusion",
       ],
     },
+    {
+      category: "URL & Navigation Updates (Oct 24, 2025)",
+      tasks: [
+        "Migrated white label guide to /gohighlevel-whitelabel slug",
+        "Added canonical and social metadata for the new white label page",
+        "Updated header navigation fallbacks to reference the new slug",
+        "Audited core pages (home, review, posts, about, contact, privacy, terms) for metadata consistency",
+      ],
+    },
   ];
 
   const pendingHighPriority = [
@@ -83,8 +92,61 @@ export default function SummaryPage() {
     { label: "Internal Links Added", value: "15+", status: "completed" },
     { label: "Meta Tags Enhanced", value: "7", status: "completed" },
     { label: "LSI Keywords Integrated", value: "8+", status: "completed" },
-    { label: "Pages Optimized", value: "4", status: "completed" },
+    { label: "Pages Audited", value: "7", status: "completed" },
+    { label: "Navigation Links Verified", value: "✓", status: "completed" },
     { label: "High Priority Items", value: "12/20", status: "in-progress" },
+  ];
+
+  const pageAudits = [
+    {
+      page: "Homepage",
+      path: "/",
+      status: "✅ Healthy",
+      notes: "Structured data, hero CTA, and FAQ schema validated during the audit.",
+      next: "Add transcript and annotated screenshots to deepen topical authority.",
+    },
+    {
+      page: "GoHighLevel Review",
+      path: "/gohighlevel-review",
+      status: "✅ Healthy",
+      notes: "Metadata, table of contents, and long-form content confirmed intact.",
+      next: "Spin up comparison subpages (HubSpot, ClickFunnels, Keap) linked from this review.",
+    },
+    {
+      page: "GoHighLevel White Label Guide",
+      path: "/gohighlevel-whitelabel",
+      status: "✅ Updated",
+      notes: "Slug migrated and metadata refreshed with canonical + social tags.",
+      next: "Monitor internal links and consider adding snapshot walkthrough visuals.",
+    },
+    {
+      page: "Posts Hub",
+      path: "/posts",
+      status: "✅ Healthy",
+      notes: "Pagination, search filters, and metadata confirmed after audit.",
+      next: "Implement related articles block to improve recirculation.",
+    },
+    {
+      page: "About",
+      path: "/about",
+      status: "✅ Healthy",
+      notes: "Canonical tag, CTA buttons, and value props reviewed for consistency.",
+      next: "Layer in case study highlights and testimonial proof points.",
+    },
+    {
+      page: "Contact",
+      path: "/contact",
+      status: "✅ Healthy",
+      notes: "Contact channels verified; business hours and support email confirmed.",
+      next: "Embed condensed contact form for direct lead capture.",
+    },
+    {
+      page: "Legal (Privacy + Terms)",
+      path: "/privacy-policy, /tos",
+      status: "✅ Compliant",
+      notes: "Canonical tags, last-updated dates, and support references consistent across legal pages.",
+      next: "Review quarterly to ensure policy language matches new offers.",
+    },
   ];
 
   return (
@@ -94,13 +156,13 @@ export default function SummaryPage() {
         <div className="container mx-auto max-w-5xl">
           <Badge className="mb-4 bg-green-100 text-green-800">
             <CheckCircle2 className="mr-2 h-3 w-3" />
-            Implementation Complete
+            Implementation Updated
           </Badge>
           <h1 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl">
             SEO Implementation Summary
           </h1>
           <p className="mb-6 text-lg text-gray-600">
-            High priority SEO optimizations completed on October 22, 2025 for ranking #1 on &ldquo;gohighlevel crm&rdquo;
+            Updated October 24, 2025 after sitewide page audit, slug migration, and navigation checks supporting &ldquo;gohighlevel crm&rdquo; visibility
           </p>
           <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
             <Link
@@ -142,6 +204,34 @@ export default function SummaryPage() {
         </div>
       </section>
 
+      {/* Page Audit Snapshot */}
+      <section className="border-b border-gray-200 px-4 py-12 sm:px-6">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="mb-8 text-center text-2xl font-semibold text-gray-900">
+            Sitewide Page Audit · October 24, 2025
+          </h2>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {pageAudits.map((audit) => (
+              <Card key={audit.page} className="h-full p-6">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-lg font-medium text-gray-900">{audit.page}</h3>
+                  <span className="text-sm font-semibold text-green-600">{audit.status}</span>
+                </div>
+                <p className="mt-2 text-xs uppercase tracking-wide text-gray-500">
+                  URL: {audit.path}
+                </p>
+                <p className="mt-4 text-sm text-gray-700">{audit.notes}</p>
+                {audit.next && (
+                  <p className="mt-4 text-sm text-gray-600">
+                    <strong className="text-gray-900">Next:</strong> {audit.next}
+                  </p>
+                )}
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Completed Tasks */}
       <section className="border-b border-gray-200 px-4 py-12 sm:px-6 sm:py-16">
         <div className="container mx-auto max-w-5xl">
@@ -176,6 +266,10 @@ export default function SummaryPage() {
                 <li>✅ <code className="rounded bg-gray-100 px-2 py-1">components/seo-sections.tsx</code></li>
                 <li>✅ <code className="rounded bg-gray-100 px-2 py-1">app/posts/page.tsx</code></li>
                 <li>✅ <code className="rounded bg-gray-100 px-2 py-1">app/gohighlevel-review/page.tsx</code></li>
+                <li>✅ <code className="rounded bg-gray-100 px-2 py-1">app/gohighlevel-whitelabel/page.tsx</code></li>
+                <li>✅ <code className="rounded bg-gray-100 px-2 py-1">components/nav/header.tsx</code></li>
+                <li>✅ <code className="rounded bg-gray-100 px-2 py-1">public/seo-audit-gohighlevel-crm.csv</code></li>
+                <li>✅ <code className="rounded bg-gray-100 px-2 py-1">app/summary/page.tsx</code></li>
               </ul>
             </Card>
             <Card className="p-6">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { siteConfig } from "@/site.config";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -16,11 +17,21 @@ export const metadata: Metadata = {
   title: "GoHighLevel White Label | Full 2025 Guide for Agencies",
   description:
     "Discover how to launch your own CRM with GoHighLevel White Label. Build MRR, automate growth, and scale your agency with this step-by-step 2025 guide.",
+  alternates: {
+    canonical: "/gohighlevel-whitelabel",
+  },
   openGraph: {
     title: "GoHighLevel White Label | Full 2025 Guide for Agencies",
     description:
       "Discover how to launch your own CRM with GoHighLevel White Label. Build MRR, automate growth, and scale your agency with this step-by-step 2025 guide.",
+    url: `${siteConfig.site_domain}/gohighlevel-whitelabel`,
     type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GoHighLevel White Label | Full 2025 Guide for Agencies",
+    description:
+      "Discover how to launch your own CRM with GoHighLevel White Label. Build MRR, automate growth, and scale your agency with this step-by-step 2025 guide.",
   },
 };
 

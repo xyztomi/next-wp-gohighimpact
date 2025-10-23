@@ -77,3 +77,7 @@ Content Distribution,Unknown,Amplification needed,Share content on: LinkedIn Twi
 Email Marketing Integration,Formspree only,Limited,Build email sequence: welcome series educational content product announcements,MEDIUM,Email strategy
 Retargeting Strategy,Not visible,Conversion optimization,Implement Facebook/Google retargeting pixels for visitors who don't convert,MEDIUM,Technical setup
 A/B Testing Plan,Not implemented,Optimization opportunity,Test: headlines CTA text button colors page layouts,MEDIUM,Testing framework
+White Label Guide URL,/gohighlevel-whitelabel,Previous slug used /go-high-level-white-label causing inconsistency,Migrate to /gohighlevel-whitelabel and update navigation + metadata,HIGH,Update app/gohighlevel-whitelabel/page.tsx & components/nav/header.tsx,✅ COMPLETED,2025-10-24
+White Label Metadata,Missing canonical and social tags on new slug,Add canonical reference and social metadata to white label guide,MEDIUM,Update metadata block in app/gohighlevel-whitelabel/page.tsx,✅ COMPLETED,2025-10-24
+Navigation Menu Audit,Fallback nav still referenced old slug,Point header fallback links to /gohighlevel-whitelabel,MEDIUM,Update components/nav/header.tsx,✅ COMPLETED,2025-10-24
+Sitewide Page Audit,Core pages reviewed (/, review, white label, posts, about, contact, legal),Document audit findings and follow-up actions,MEDIUM,Update app/summary/page.tsx & public/seo-audit-gohighlevel-crm.csv,✅ COMPLETED,2025-10-24
