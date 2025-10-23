@@ -1,25 +1,114 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export const metadata: Metadata = {
-  title: "GoHighLevel White Label: The Ultimate 2025 Guide for Agencies & SaaS Builders",
-  description: "Discover how to launch your own SaaS brand with Go High Level White Label. Learn features, pricing, benefits & proven strategies to scale recurring revenue.",
+  title: "GoHighLevel White Label | Full 2025 Guide for Agencies",
+  description:
+    "Discover how to launch your own CRM with GoHighLevel White Label. Build MRR, automate growth, and scale your agency with this step-by-step 2025 guide.",
   openGraph: {
-    title: "GoHighLevel White Label: The Ultimate 2025 Guide for Agencies & SaaS Builders",
-    description: "Discover how to launch your own SaaS brand with Go High Level White Label. Learn features, pricing, benefits & proven strategies to scale recurring revenue.",
+    title: "GoHighLevel White Label | Full 2025 Guide for Agencies",
+    description:
+      "Discover how to launch your own CRM with GoHighLevel White Label. Build MRR, automate growth, and scale your agency with this step-by-step 2025 guide.",
     type: "article",
   },
 };
 
 export default function GoHighLevelWhiteLabelPage() {
   return (
-    <article className="container max-w-4xl py-12">
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">
-          GoHighLevel White Label: The Ultimate 2025 Guide for Agencies & SaaS Builders
-        </h1>
+    <article className="container max-w-4xl py-12 space-y-12">
+      <header className="space-y-6">
+        <div className="space-y-4 text-center">
+          <h1 className="text-4xl font-bold">
+            GoHighLevel White Label: The Complete 2025 Guide for Agencies & SaaS Builders
+          </h1>
+          {/* CTA Section */}
+          <section className="mt-16">
+            <Card className="border-brand-green/40 shadow-xl">
+              <CardHeader className="items-center space-y-4 text-center">
+                <Badge
+                  variant="outline"
+                  className="mx-auto border-brand-green/40 bg-brand-green/15 text-brand-green"
+                >
+                  Start Your SaaS Era
+                </Badge>
+                <CardTitle className="text-3xl md:text-4xl">
+                  🧲 Launch Your White Label Platform With Confidence
+                </CardTitle>
+                <CardDescription className="max-w-2xl text-balance text-base text-muted-foreground md:text-lg">
+                  GoHighLevel gives you the infrastructure. You bring the brand, pricing, and client experience. Upgrade to SaaS mode, ship your snapshots, and start stacking predictable MRR this week.
+                </CardDescription>
+              </CardHeader>
+
+              <CardContent className="flex flex-col items-center gap-6 text-center">
+                <div className="grid w-full max-w-3xl gap-4 text-left text-sm text-muted-foreground sm:grid-cols-2">
+                  <div className="rounded-xl border border-brand-green/30 bg-muted/40 p-4">
+                    <p className="font-semibold text-foreground">What You Get</p>
+                    <ul className="mt-2 space-y-1">
+                      <li>• SaaS Mode with Stripe subscriptions</li>
+                      <li>• Niche snapshots & automation libraries</li>
+                      <li>• Branded portals, reporting, and mobile app</li>
+                    </ul>
+                  </div>
+                  <div className="rounded-xl border border-brand-green/30 bg-muted/40 p-4">
+                    <p className="font-semibold text-foreground">Why It Matters</p>
+                    <ul className="mt-2 space-y-1">
+                      <li>• Productize your services in days</li>
+                      <li>• Grow sticky recurring revenue</li>
+                      <li>• Deliver instantly under your brand</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+
+              <CardFooter className="flex flex-col items-center gap-4 pt-0 md:flex-row md:justify-center">
+                <Button
+                  asChild
+                  variant="outline"
+                  className="w-full rounded-full border-brand-green/40 text-brand-green hover:bg-brand-green/10 md:w-56 animate-in"
+                >
+                  <Link
+                    href="https://snip.ly/ghl-whitelabel"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Start Your SaaS Business
+                  </Link>
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="w-full rounded-full border-brand-green/40 text-brand-green hover:bg-brand-green/10 md:w-56"
+                >
+                  <Link
+                    href="https://snip.ly/ghl-pricing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Explore White Label Pricing
+                  </Link>
+                </Button>
+              </CardFooter>
+
+              <CardContent className="pt-2">
+                <p className="text-center text-sm text-muted-foreground">
+                  Includes full onboarding snapshots, SaaS configurator, billing automations, and AI assist ready to deploy under your brand.
+                </p>
+              </CardContent>
+            </Card>
+          </section>
+        </div>
+
         <p className="text-xl text-muted-foreground">
           GoHighLevel has revolutionized the way marketing agencies scale — and its white label feature is the secret sauce behind thousands of 6- and 7-figure agency empires.
         </p>
@@ -645,53 +734,7 @@ export default function GoHighLevelWhiteLabelPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-brand-green to-emerald-600 p-10 text-white shadow-2xl">
-          <div className="absolute -top-32 right-0 h-64 w-64 rounded-full bg-white/10 blur-3xl" aria-hidden="true" />
-          <div className="absolute -bottom-24 left-10 h-48 w-48 rounded-full bg-lime-400/20 blur-3xl" aria-hidden="true" />
 
-          <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1 text-sm font-semibold uppercase tracking-wide">
-              <span className="h-2 w-2 rounded-full bg-white" />
-              Start Your SaaS Era
-            </span>
-
-            <h2 className="text-3xl font-bold md:text-4xl">
-              🧲 Launch Your White Label Platform With Confidence
-            </h2>
-
-            <p className="text-lg text-white/90 md:text-xl">
-              GoHighLevel gives you the infrastructure. You bring the brand, pricing, and client experience. Upgrade to SaaS mode, clone your snapshots, and start stacking predictable MRR this week.
-            </p>
-
-            <div className="flex flex-col items-center gap-4 md:flex-row">
-              <Button
-                asChild
-                className="rounded-full bg-white px-8 py-6 text-lg font-semibold text-emerald-700 transition-transform duration-200 hover:-translate-y-0.5 hover:bg-white/90"
-              >
-                <Link
-                  href="https://snip.ly/bootcampghl/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  👉 Start Your Free Go High Level Trial
-                </Link>
-              </Button>
-
-              <Link
-                href="#pricing"
-                className="group inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/20"
-              >
-                Explore White Label Pricing
-                <span className="transition-transform group-hover:translate-x-1">→</span>
-              </Link>
-            </div>
-
-            <p className="text-sm text-white/80">
-              Includes full onboarding snapshots, Stripe subscriptions, SaaS configurator, and 24/7 AI automations under your brand.
-            </p>
-          </div>
-        </section>
       </div>
     </article>
   );
