@@ -261,7 +261,7 @@ const pricingTiers = [
     cta: "Launch with our QuickStart SOP",
   },
   {
-    name: "Pro Agency",
+    name: "Unlimited",
     cost: "$297/mo",
     bestFor: "Growing teams and white-label resellers",
     bullets: [
