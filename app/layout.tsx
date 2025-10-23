@@ -18,16 +18,16 @@ const font = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "GoHighLevel CRM Review 2025: Complete Guide for Agencies & Marketing Automation",
+  title: "GoHighLevel CRM: Guide for Agencies & Marketing Automation",
   description:
-    "GoHighLevel CRM helps agencies automate, scale, and grow MRR. Compare pricing, plans, integrations & workflows. Expert tutorials for marketing agencies, coaches, and consultants.",
+    "Automate and grow your agency business with GoHighLevel CRM. Compare pricing, features, integrations, and get expert tips. Start your free trial today!",
   metadataBase: new URL(siteConfig.site_domain),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "GoHighLevel CRM Review 2025: Complete Guide for Agencies & Marketing Automation",
-    description: "GoHighLevel CRM helps agencies automate, scale, and grow MRR. Compare pricing, plans, integrations & workflows.",
+    title: "GoHighLevel CRM: Guide for Agencies & Marketing Automation",
+    description: "Automate and grow your agency business with GoHighLevel CRM. Compare pricing, features, integrations, and get expert tips. Start your free trial today!",
     url: siteConfig.site_domain,
     siteName: "GoHigh Impact",
     type: "website",
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "GoHighLevel CRM Review 2025: Complete Guide for Agencies",
-    description: "GoHighLevel CRM helps agencies automate, scale, and grow MRR. Compare pricing, plans, integrations & workflows.",
+    title: "GoHighLevel CRM: Guide for Agencies & Marketing Automation",
+    description: "Automate and grow your agency business with GoHighLevel CRM. Compare pricing, features, integrations, and get expert tips. Start your free trial today!",
     images: [`${siteConfig.site_domain}/api/og`],
   },
   keywords: ["gohighlevel crm", "marketing automation platform", "crm software", "all-in-one crm", "white label crm", "agency software", "gohighlevel review", "gohighlevel pricing"],
