@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
@@ -42,9 +43,14 @@ export function Header({ links }: { links?: HeaderLink[] }) {
     <header className="fixed left-0 right-0 top-[32px] z-40 border-b border-gray-200 bg-white">
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-green">
-            <span className="text-sm font-bold text-white">GH</span>
-          </div>
+          <Image
+            src="/logo.svg"
+            alt="GoHigh Impact logo"
+            width={40}
+            height={40}
+            className="h-10 w-auto"
+            priority
+          />
           <span className="text-lg font-semibold text-gray-900">GoHigh Impact</span>
         </Link>
 
@@ -88,9 +94,14 @@ export function Header({ links }: { links?: HeaderLink[] }) {
               <SheetHeader>
                 <SheetTitle>
                   <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-green">
-                      <span className="text-sm font-bold text-white">GH</span>
-                    </div>
+                    <Image
+                      src="/logo.svg"
+                      alt="GoHigh Impact logo"
+                      width={40}
+                      height={40}
+                      className="h-10 w-auto"
+                      priority
+                    />
                     <span className="text-lg font-semibold text-gray-900">GoHigh Impact</span>
                   </Link>
                 </SheetTitle>
