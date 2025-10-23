@@ -25,7 +25,7 @@ export function HeroSection() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   return (
-    <section className="bg-gradient-to-b from-brand-blue/10 via-white to-white px-4 pb-12 pt-24 sm:px-6 sm:pb-20 sm:pt-32">
+    <section className="bg-gradient-to-b from-brand-blue/10 via-white to-white px-4 pb-12 pt-24 sm:px-6 sm:pb-20 sm:pt-20">
       <div className="container mx-auto max-w-6xl">
         <div className="mb-8 text-center sm:mb-12">
           <Badge className="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-green/30 bg-brand-green/10 px-3 py-1.5 text-xs font-medium text-brand-green sm:mb-6 sm:px-4 sm:py-2 sm:text-sm">
