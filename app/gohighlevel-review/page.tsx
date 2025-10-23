@@ -2266,8 +2266,8 @@ export default function GoHighLevelReview() {
           </div>
         </div>
       </section>
-      <section>
-        <h2>9) Frequently Asked Questions — GoHighLevel CRM 2025</h2>
+      <section id="faq" className="mb-16 scroll-mt-24">
+        <h2 className="text-3xl font-bold mb-6">9) Frequently Asked Questions — GoHighLevel CRM 2025</h2>
         <ul>
           <li>What is GoHighLevel CRM and who is it best for?</li>
           <li>How fast can I set it up?</li>
@@ -2281,8 +2281,8 @@ export default function GoHighLevelReview() {
           <li>What happens if I want to cancel?</li>
         </ul>
       </section>
-      <section>
-        <h2>10) Resources & Next Steps</h2>
+      <section id="resources" className="mb-16 scroll-mt-24">
+        <h2 className="text-3xl font-bold mb-6">10) Resources & Next Steps</h2>
         <ul>
           <li><Link href="https://www.gohighlevel.com/">GoHighLevel Official Website</Link></li>
           <li><Link href="https://help.gohighlevel.com/">Help Center & Knowledge Base</Link></li>

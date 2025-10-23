@@ -23,6 +23,7 @@ type HeaderLink = {
 const fallbackLinks: HeaderLink[] = [
   { title: "Home", href: "/" },
   { title: "GoHighLevel Review", href: "/gohighlevel-review" },
+  { title: "GoHighLevel White Label", href: "/go-high-level-white-label" },
   { title: "About", href: "/about" },
   { title: "Blog", href: "/posts" },
 ];
@@ -36,6 +37,13 @@ export function Header({ links }: { links?: HeaderLink[] }) {
     navigation.splice(1, 0, {
       title: "GoHighLevel Review",
       href: "/gohighlevel-review",
+    });
+  }
+
+  if (!navigation.find((link) => link.href === "/go-high-level-white-label")) {
+    navigation.splice(2, 0, {
+      title: "GoHighLevel White Label",
+      href: "/go-high-level-white-label",
     });
   }
 
