@@ -250,7 +250,7 @@ export function WhyChooseGoHighLevel() {
 
 const pricingTiers = [
   {
-    name: "Starter SaaS",
+    name: "Starter",
     cost: "$97/mo",
     bestFor: "Solo founders and boutique agencies",
     bullets: [

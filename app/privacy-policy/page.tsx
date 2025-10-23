@@ -63,7 +63,7 @@ export default function PrivacyPolicyPage() {
           Last updated: October 23, 2025
         </p>
         <p className="mt-6 text-sm text-gray-600 sm:text-base">
-          GoHigh Impact ("we", "us", or "our") respects your privacy. This policy explains how we collect, use, and protect personal information across our GoHighLevel CRM resources, newsletters, and client services.
+          GoHigh Impact (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) respects your privacy. This policy explains how we collect, use, and protect personal information across our GoHighLevel CRM resources, newsletters, and client services.
         </p>
 
         <div className="mt-10 space-y-8">

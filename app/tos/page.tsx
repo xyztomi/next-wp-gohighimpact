@@ -65,7 +65,7 @@ export default function TermsOfServicePage() {
         <h1 className="mt-2 text-3xl font-semibold text-gray-900 sm:text-4xl">Terms of Service</h1>
         <p className="mt-3 text-sm text-gray-600 sm:text-base">Last updated: October 23, 2025</p>
         <p className="mt-6 text-sm text-gray-600 sm:text-base">
-          These Terms of Service ("Terms") outline the rules and obligations that apply when you use GoHigh Impact's GoHighLevel CRM content, communities, and services.
+          These Terms of Service (&quot;Terms&quot;) outline the rules and obligations that apply when you use GoHigh Impact&apos;s GoHighLevel CRM content, communities, and services.
         </p>
 
         <div className="mt-10 space-y-8">

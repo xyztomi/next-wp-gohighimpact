@@ -433,7 +433,7 @@ const stripHtml = (value?: string | null) =>
 export async function getNavigationLinks(): Promise<NavigationLink[]> {
 	const fallback: NavigationLink[] = [
 		{ title: "Home", href: "/" },
-		{ title: "About", href: "/pages/about" },
+		{ title: "About", href: "/about" },
 		{ title: "Blog", href: "/posts" },
 	];
 
@@ -447,7 +447,7 @@ export async function getNavigationLinks(): Promise<NavigationLink[]> {
 
 		if (aboutPage) {
 			const aboutTitle = stripHtml(aboutPage.title?.rendered) || "About";
-			links.push({ title: aboutTitle, href: `/pages/${aboutPage.slug}` });
+			links.push({ title: aboutTitle, href: "/about" });
 		} else {
 			links.push(fallback[1]);
 		}
