@@ -73,13 +73,13 @@ export default function GoHighLevelReview() {
 
           <p className="mb-6">GoHighLevel CRM was built by agency owners who lived this pain. They needed a system that could handle client acquisition, nurturing, booking, and fulfillment without requiring a team of integrators to keep everything duct-taped together. The result is a platform that doesn&apos;t just check boxes—it fundamentally changes how you operate.</p>
 
-          <h3 className="text-2xl font-bold mb-4 mt-8">What "All-in-One" Actually Means</h3>
+          <h3 className="text-2xl font-bold mb-4 mt-8">What &ldquo;All-in-One&rdquo; Actually Means</h3>
 
-          <p className="mb-4">The term "all-in-one" gets thrown around carelessly. Most platforms that claim this title are really just a collection of bolted-on features that barely integrate. GoHighLevel CRM is different because it was architected from the ground up as a unified system.</p>
+          <p className="mb-4">The term &ldquo;all-in-one&rdquo; gets thrown around carelessly. Most platforms that claim this title are really just a collection of bolted-on features that barely integrate. GoHighLevel CRM is different because it was architected from the ground up as a unified system.</p>
 
           <div className="bg-white border border-gray-200 p-6 rounded-lg mb-6">
             <h4 className="text-xl font-semibold mb-3">🔗 Unified Data Layer</h4>
-            <p className="mb-3">Every interaction—click, open, reply, call, booking, payment—lives on the same contact record. No more "which list are they on?" or "did we already send them this?" You have one source of truth.</p>
+            <p className="mb-3">Every interaction—click, open, reply, call, booking, payment—lives on the same contact record. No more &ldquo;which list are they on?&rdquo; or &ldquo;did we already send them this?&rdquo; You have one source of truth.</p>
             <p>This matters most when someone engages across multiple channels. They click your Facebook ad, land on your page, opt in, receive emails, book a call via SMS, and show up. All of that history is visible in one timeline, so you know exactly where they are in the journey and what to do next.</p>
           </div>
 
@@ -92,13 +92,13 @@ export default function GoHighLevelReview() {
           <div className="bg-white border border-gray-200 p-6 rounded-lg mb-6">
             <h4 className="text-xl font-semibold mb-3">💰 Native Revenue Loops</h4>
             <p className="mb-3">Funnels, calendars, and payment processing sit beside your CRM. The entire prospect-to-payment journey is measurable and optimizable at every step.</p>
-            <p>When someone books through your GoHighLevel calendar, it creates an opportunity in your pipeline, triggers confirmation emails and SMS reminders, updates their contact record, and can even process deposits via Stripe or PayPal. There&apos;s no integration to break, no "webhook failed" errors to debug, and no revenue that falls into a black hole because someone forgot to update a spreadsheet.</p>
+            <p>When someone books through your GoHighLevel calendar, it creates an opportunity in your pipeline, triggers confirmation emails and SMS reminders, updates their contact record, and can even process deposits via Stripe or PayPal. There&apos;s no integration to break, no &ldquo;webhook failed&rdquo; errors to debug, and no revenue that falls into a black hole because someone forgot to update a spreadsheet.</p>
           </div>
 
           <div className="bg-white border border-gray-200 p-6 rounded-lg mb-6">
             <h4 className="text-xl font-semibold mb-3">🏢 Agency-Grade Controls</h4>
             <p className="mb-3">Snapshots, sub-accounts, and SaaS Mode allow you to package your best processes and deploy them in minutes—white-labeled under your brand.</p>
-            <p>This is where GoHighLevel goes from being a good CRM to being a business model. You can save your entire setup—funnels, automations, pipelines, email templates, forms, calendars—as a "snapshot." Then you deploy that snapshot to a new client in 60 seconds. They get a working system immediately. You get predictable delivery. Everyone wins.</p>
+            <p>This is where GoHighLevel goes from being a good CRM to being a business model. You can save your entire setup—funnels, automations, pipelines, email templates, forms, calendars—as a &ldquo;snapshot.&rdquo; Then you deploy that snapshot to a new client in 60 seconds. They get a working system immediately. You get predictable delivery. Everyone wins.</p>
           </div>
 
           <h3 className="text-2xl font-bold mb-4 mt-8">Why Teams Move to GoHighLevel CRM</h3>
