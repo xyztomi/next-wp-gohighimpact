@@ -258,7 +258,7 @@ const pricingTiers = [
       "Pipeline, email, SMS, calendar",
       "Workflow builder + automations",
     ],
-    cta: "Launch with our QuickStart SOP",
+    cta: "START FREE TRIAL",
   },
   {
     name: "Unlimited",
@@ -269,7 +269,7 @@ const pricingTiers = [
       "Reputation management suite",
       "Priority support & API access",
     ],
-    cta: "Get the 30-day migration plan",
+    cta: "START FREE TRIAL",
     highlighted: true,
   },
   {
@@ -281,7 +281,7 @@ const pricingTiers = [
       "Feature toggles for end users",
       "Partner-level success coaching",
     ],
-    cta: "Access our SaaS pricing calculator",
+    cta: "START FREE TRIAL",
   },
 ];
 
@@ -313,13 +313,13 @@ export function PricingComparison() {
                 </ul>
               </div>
               <Button asChild className="mt-6 rounded-full bg-brand-blue px-5 py-2.5 text-sm text-white transition-colors hover:bg-brand-blue/90 sm:mt-8 sm:px-6 sm:py-3 sm:text-base">
-                <Link href="https://snip.ly/ghl-bootcamp" target="_blank" rel="noopener noreferrer">{tier.cta}</Link>
+                <Link href="https://snip.ly/ghl-pricing" target="_blank" rel="noopener noreferrer">{tier.cta}</Link>
               </Button>
             </Card>
           ))}
         </div>
         <p className="mt-8 text-center text-xs text-gray-500 sm:mt-10 sm:text-sm">
-          Not sure which plan to choose? <Link href="https://snip.ly/ghl-bootcamp" target="_blank" rel="noopener noreferrer" className="text-brand-blue">Start your free trial</Link> or schedule a roadmap call.
+          Not sure which plan to choose? <Link href="https://snip.ly/ghl-pricing" target="_blank" rel="noopener noreferrer" className="text-brand-blue">Start your free trial</Link> or schedule a roadmap call.
         </p>
       </div>
     </section>
