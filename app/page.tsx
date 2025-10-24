@@ -5,6 +5,7 @@ import {
   WhatIsGoHighLevel,
   KeyFeatures,
   WhyChooseGoHighLevel,
+  ComparisonSnapshot,
   PricingComparison,
   UseCasesIndustries,
   ImplementationGuide,
@@ -21,6 +22,7 @@ export default function Home() {
       <WhatIsGoHighLevel />
       <KeyFeatures />
       <WhyChooseGoHighLevel />
+      <ComparisonSnapshot />
       <PricingComparison />
       <UseCasesIndustries />
       <ImplementationGuide />

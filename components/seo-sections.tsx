@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   CheckCircle2,
@@ -256,6 +257,34 @@ export function WhyChooseGoHighLevel() {
             View SOP library →
           </Link>
         </div>
+      </div>
+    </section>
+  );
+}
+
+export function ComparisonSnapshot() {
+  return (
+    <section id="comparison-visual" className="bg-white px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
+      <div className="container mx-auto max-w-5xl">
+        <div className="mb-6 text-center sm:mb-10">
+          <h2 className="text-2xl font-semibold text-gray-900 sm:text-3xl lg:text-4xl">See GoHighLevel Side-by-Side</h2>
+          <p className="mx-auto mt-3 max-w-3xl text-sm text-gray-600 sm:mt-4 sm:text-base lg:text-lg">
+            Quickly compare GoHighLevel&apos;s bundled feature set and monthly pricing against leading point solutions before diving into the full pricing breakdown below.
+          </p>
+        </div>
+        <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-lg">
+          <Image
+            src="/comparison.png"
+            alt="Comparison chart showing GoHighLevel versus other marketing tools with monthly pricing and included features"
+            width={1600}
+            height={900}
+            className="h-auto w-full"
+            priority
+          />
+        </div>
+        <p className="mt-4 text-center text-xs text-gray-500 sm:mt-6 sm:text-sm">
+          Need the editable version for client decks? <Link href="/posts" className="text-brand-blue hover:underline">Download the comparison slide</Link>.
+        </p>
       </div>
     </section>
   );
