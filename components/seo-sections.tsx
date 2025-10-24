@@ -168,7 +168,7 @@ export function WhatIsGoHighLevel() {
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500">
           <Link href="/posts" className="rounded-full border border-gray-200 px-4 py-1 transition-colors hover:border-brand-blue hover:text-brand-blue">GoHighLevel CRM Tutorials</Link>
-          <Link href="/gohighlevel-review" className="rounded-full border border-gray-200 px-4 py-1 transition-colors hover:border-brand-blue hover:text-brand-blue">GoHighLevel SaaS</Link>
+          <Link href="/gohighlevel-whitelabel" className="rounded-full border border-gray-200 px-4 py-1 transition-colors hover:border-brand-blue hover:text-brand-blue">GoHighLevel SaaS</Link>
           <Link href="/posts" className="rounded-full border border-gray-200 px-4 py-1 transition-colors hover:border-brand-blue hover:text-brand-blue">Automation Frameworks</Link>
           <Link href="/about" className="rounded-full border border-gray-200 px-4 py-1 transition-colors hover:border-brand-blue hover:text-brand-blue">Agency Playbooks</Link>
         </div>
