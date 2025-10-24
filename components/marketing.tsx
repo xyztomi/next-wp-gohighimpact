@@ -142,14 +142,14 @@ const guides = [
 ] as const;
 
 const comparisonLinks = [
-  { label: "GoHighLevel vs ActiveCampaign", href: "/posts?search=activecampaign" },
-  { label: "GoHighLevel vs HubSpot", href: "/posts?search=hubspot" },
-  { label: "GoHighLevel vs ClickFunnels", href: "/posts?search=clickfunnels" },
-  { label: "GoHighLevel vs Keap", href: "/posts?search=keap" },
+  { label: "GoHighLevel vs Salesforce", href: "https://gohighimpact.co/posts/gohighlevel-vs-salesforce" },
+  { label: "GoHighLevel vs HubSpot", href: "https://gohighimpact.co/posts/gohighlevel-vs-hubspot" },
+  { label: "GoHighLevel vs Pipedrive", href: "https://gohighimpact.co/posts/gohighlevel-vs-pipedrive" },
+  { label: "GoHighLevel vs Kartra", href: "https://gohighimpact.co/posts/gohighlevel-vs-kartra" },
 ] as const;
 
 const companyLinks = [
-  { label: "About GoHigh Impact", href: "/pages/about" },
+  { label: "About GoHigh Impact", href: "/about" },
   { label: "Implementation Guide", href: "/#guide" },
   { label: "Client Success Stories", href: "/#success" },
   { label: "Request a Roadmap Call", href: "https://snip.ly/ghl-bootcamp" },
@@ -157,7 +157,7 @@ const companyLinks = [
 
 const resourceLinks = [
   { label: "Pricing Breakdown", href: "/#pricing" },
-  { label: "Templates & SOP Library", href: "/pages" },
+  { label: "Templates & SOP Library", href: "/gohighlevel-review" },
   { label: "Automation Tutorials", href: "/posts" },
   { label: "Newsletter Signup", href: "/#cta" },
 ] as const;
@@ -255,6 +255,8 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
+                    target={link.href.startsWith("http") ? "_blank" : undefined}
+                    rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
                     className="group inline-flex items-center gap-2 transition-colors hover:text-white"
                   >
                     {link.label}
