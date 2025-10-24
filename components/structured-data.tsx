@@ -52,8 +52,9 @@ export function StructuredData() {
     offers: {
       "@type": "AggregateOffer",
       priceCurrency: "USD",
-      lowPrice: "97",
-      highPrice: "497",
+      lowPrice: "97.00",
+      highPrice: "497.00",
+      offerCount: "3",
     },
     aggregateRating: {
       "@type": "AggregateRating",

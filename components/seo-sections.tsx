@@ -41,6 +41,19 @@ export function HeroSection() {
             Discover how GoHighLevel CRM can automate your marketing, close more deals, and create predictable monthly revenue.
           </p>
 
+          <div className="mx-auto mb-8 flex max-w-2xl flex-col items-center gap-2 rounded-full border border-yellow-200 bg-yellow-50/60 px-5 py-3 text-sm font-medium text-yellow-800 shadow-sm sm:mb-12 sm:flex-row sm:justify-center sm:gap-4 sm:text-base">
+            <span className="flex items-center gap-2">
+              <span aria-hidden="true" className="flex items-center text-lg text-yellow-500">★★★★½</span>
+              <span>
+                <strong className="text-gray-900">4.7/5</strong> from 2,500+ agency reviews
+              </span>
+            </span>
+            <span className="hidden h-4 w-px bg-yellow-300 sm:block" aria-hidden="true" />
+            <span>
+              Plans start at <strong className="text-gray-900">$97/mo</strong> with SaaS upgrades available
+            </span>
+          </div>
+
           <div className="mb-10 flex flex-col items-center justify-center gap-3 sm:mb-16 sm:flex-row sm:gap-4">
             <Button asChild className="w-full rounded-full bg-brand-green px-6 py-5 text-base text-white shadow-lg shadow-brand-green/30 transition-colors hover:bg-brand-green/90 sm:w-auto sm:px-8 sm:py-6 sm:text-lg">
               <Link href="https://snip.ly/ghl-bootcamp" target="_blank" rel="noopener noreferrer">Start Free Trial</Link>
