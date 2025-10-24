@@ -33,7 +33,7 @@ const sections = [
   },
   {
     heading: "6. Your Rights",
-    body: `Depending on your location, you may request access to, correction of, or deletion of your personal data. To exercise these rights, contact us at support@wealthysales.com with the subject line “Privacy Request.”`,
+    body: `Depending on your location, you may request access to, correction of, or deletion of your personal data. To exercise these rights, contact us at support@gohighimpact.co with the subject line “Privacy Request.”`,
   },
   {
     heading: "7. Data Security",
@@ -49,7 +49,7 @@ const sections = [
   },
   {
     heading: "10. Contact",
-    body: `Have questions about this policy or your data? Email support@wealthysales.com or reach us on Instagram at @gohighimpact.`,
+    body: `Have questions about this policy or your data? Email support@gohighimpact.co or reach us on Instagram at @gohighimpact.`,
   },
 ];
 
@@ -79,7 +79,7 @@ export default function PrivacyPolicyPage() {
           <h2 className="text-lg font-semibold text-gray-900 sm:text-xl">Need to reach us?</h2>
           <ul className="mt-4 space-y-2 text-sm text-gray-700 sm:text-base">
             <li>
-              Email: <Link href="mailto:support@wealthysales.com" className="text-brand-blue hover:underline">support@wealthysales.com</Link>
+              Email: <Link href="mailto:support@gohighimpact.co" className="text-brand-blue hover:underline">support@gohighimpact.co</Link>
             </li>
             <li>
               Instagram: <Link href="https://instagram.com/gohighimpact" target="_blank" rel="noopener noreferrer" className="text-brand-blue hover:underline">@gohighimpact</Link>

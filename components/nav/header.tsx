@@ -54,9 +54,9 @@ export function Header({ links }: { links?: HeaderLink[] }) {
           <Image
             src="/logo.svg"
             alt="GoHigh Impact logo"
-            width={40}
-            height={40}
-            className="h-10 w-auto"
+            width={48}
+            height={48}
+            className="h-16 w-auto"
             priority
           />
           <span className="text-lg font-semibold text-gray-900">GoHigh Impact</span>
@@ -105,9 +105,9 @@ export function Header({ links }: { links?: HeaderLink[] }) {
                     <Image
                       src="/logo.svg"
                       alt="GoHigh Impact logo"
-                      width={40}
-                      height={40}
-                      className="h-10 w-auto"
+                      width={48}
+                      height={48}
+                      className="h-12 w-auto"
                       priority
                     />
                     <span className="text-lg font-semibold text-gray-900">GoHigh Impact</span>

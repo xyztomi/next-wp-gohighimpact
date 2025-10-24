@@ -29,10 +29,10 @@ export default function ContactPage() {
               For client support, media requests, and partnerships.
             </p>
             <Link
-              href="mailto:support@wealthysales.com"
+              href="mailto:support@gohighimpact.co"
               className="mt-4 inline-flex items-center text-sm font-medium text-brand-blue hover:underline"
             >
-              support@wealthysales.com
+              support@gohighimpact.co
             </Link>
           </div>
 

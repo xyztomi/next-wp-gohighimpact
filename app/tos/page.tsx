@@ -53,7 +53,7 @@ const sections = [
   },
   {
     heading: "11. Contact",
-    body: `For questions about these Terms, email support@wealthysales.com or message us on Instagram at @gohighimpact.`,
+    body: `For questions about these Terms, email support@gohighimpact.co or message us on Instagram at @gohighimpact.`,
   },
 ];
 
@@ -81,7 +81,7 @@ export default function TermsOfServicePage() {
           <h2 className="text-lg font-semibold text-gray-900 sm:text-xl">Questions about these Terms?</h2>
           <ul className="mt-4 space-y-2 text-sm text-gray-700 sm:text-base">
             <li>
-              Email: <Link href="mailto:support@wealthysales.com" className="text-brand-blue hover:underline">support@wealthysales.com</Link>
+              Email: <Link href="mailto:support@gohighimpact.co" className="text-brand-blue hover:underline">support@gohighimpact.co</Link>
             </li>
             <li>
               Instagram: <Link href="https://instagram.com/gohighimpact" target="_blank" rel="noopener noreferrer" className="text-brand-blue hover:underline">@gohighimpact</Link>
