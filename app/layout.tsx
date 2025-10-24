@@ -1,7 +1,7 @@
 import "@/app/globals.css";
 
 import { Inter as FontSans } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next";
 
 import { AnnouncementBar, Footer } from "@/components/marketing";
 import { Header } from "@/components/nav/header";
