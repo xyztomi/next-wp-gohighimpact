@@ -1,7 +1,8 @@
 import "@/app/globals.css";
 
-import { Inter as FontSans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { Inter as FontSans } from "next/font/google";
+import Script from "next/script";
 
 import { AnnouncementBar, Footer } from "@/components/marketing";
 import { Header } from "@/components/nav/header";
@@ -68,6 +69,16 @@ export default async function RootLayout({
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </head>
       <body className={cn("min-h-screen font-sans antialiased overflow-x-hidden overflow-y-scroll no-scrollbar", font.variable)}>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-23HWYQVF1Z" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-23HWYQVF1Z');
+          `}
+        </Script>
         <StructuredData />
         <div className="flex min-h-screen flex-col">
           <AnnouncementBar />
