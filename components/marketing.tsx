@@ -11,6 +11,11 @@ import {
   Gift,
   ArrowRight,
   Mail,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Youtube,
+  Twitter,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -53,7 +58,7 @@ type HeaderLink = {
 const fallbackLinks: HeaderLink[] = [
   { title: "Home", href: "/" },
   { title: "GoHighLevel Review", href: "/gohighlevel-review" },
-  { title: "About", href: "/pages/about" },
+  { title: "About", href: "/about" },
   { title: "Blog", href: "/posts" },
 ];
 
@@ -136,6 +141,35 @@ const guides = [
   },
 ] as const;
 
+const comparisonLinks = [
+  { label: "GoHighLevel vs ActiveCampaign", href: "/posts?search=activecampaign" },
+  { label: "GoHighLevel vs HubSpot", href: "/posts?search=hubspot" },
+  { label: "GoHighLevel vs ClickFunnels", href: "/posts?search=clickfunnels" },
+  { label: "GoHighLevel vs Keap", href: "/posts?search=keap" },
+] as const;
+
+const companyLinks = [
+  { label: "About GoHigh Impact", href: "/pages/about" },
+  { label: "Implementation Guide", href: "/#guide" },
+  { label: "Client Success Stories", href: "/#success" },
+  { label: "Request a Roadmap Call", href: "https://snip.ly/ghl-bootcamp" },
+] as const;
+
+const resourceLinks = [
+  { label: "Pricing Breakdown", href: "/#pricing" },
+  { label: "Templates & SOP Library", href: "/pages" },
+  { label: "Automation Tutorials", href: "/posts" },
+  { label: "Newsletter Signup", href: "/#cta" },
+] as const;
+
+const socialLinks = [
+  { label: "Facebook", href: "https://www.facebook.com/gohighimpact", icon: Facebook },
+  { label: "Instagram", href: "https://www.instagram.com/gohighimpact", icon: Instagram },
+  { label: "X", href: "https://twitter.com/gohighimpact", icon: Twitter },
+  { label: "YouTube", href: "https://www.youtube.com/@gohighimpact", icon: Youtube },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/gohighimpact", icon: Linkedin },
+] as const;
+
 export function FeaturedGuides() {
   return (
     <section className="bg-white px-6 py-20">
@@ -173,43 +207,149 @@ export function FeaturedGuides() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-gray-200 bg-white px-6 py-12">
-      <div className="container mx-auto max-w-6xl">
-        <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-          <Link href="/" className="flex items-center gap-3">
-            <Image
-              src="/logo.svg"
-              alt="GoHigh Impact logo"
-              width={48}
-              height={48}
-              className="h-12 w-auto"
-              priority={false}
-            />
-            <span className="text-gray-900">GoHigh Impact</span>
-          </Link>
-
-          <div className="flex gap-8">
-            <Link
-              href="/privacy-policy"
-              className="text-gray-600 transition-colors hover:text-brand-blue"
-            >
-              Privacy Policy
+    <footer className="border-t border-[#0b1f3a] bg-[#05142a] text-slate-100">
+      <div className="container mx-auto max-w-6xl px-6 py-14">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,1.5fr)_repeat(4,minmax(0,1fr))]">
+          <div className="space-y-5">
+            <Link href="/" className="flex items-center gap-3 text-slate-100">
+              <Image
+                src="/logo.svg"
+                alt="GoHigh Impact logo"
+                width={52}
+                height={52}
+                className="h-12 w-auto"
+                priority={false}
+              />
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-wide text-brand-blue/80">
+                  GoHigh Impact
+                </p>
+                <p className="text-xs text-slate-300">Certified GoHighLevel partner & implementation team</p>
+              </div>
             </Link>
-            <Link
-              href="/tos"
-              className="text-gray-600 transition-colors hover:text-brand-blue"
-            >
-              Terms of Service
-            </Link>
-            <Link
-              href="/contact"
-              className="text-gray-600 transition-colors hover:text-brand-blue"
-            >
-              Contact
-            </Link>
+            <p className="max-w-sm text-sm text-slate-300">
+              We help agencies and SaaS founders automate acquisition, fulfillment, and retention inside GoHighLevel.
+            </p>
+            <div className="flex items-center gap-3">
+              {socialLinks.map(({ label, href, icon: Icon }) => (
+                <Link
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-100 transition-colors hover:border-brand-blue/60 hover:bg-brand-blue/20"
+                >
+                  <Icon className="h-4 w-4" />
+                </Link>
+              ))}
+            </div>
           </div>
 
-          <p className="text-sm text-gray-500">© 2025 GoHigh Impact. All rights reserved.</p>
+          <div>
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-300">
+              Platform Comparisons
+            </h4>
+            <ul className="space-y-3 text-sm text-slate-300">
+              {comparisonLinks.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="group inline-flex items-center gap-2 transition-colors hover:text-white"
+                  >
+                    {link.label}
+                    <ArrowRight className="h-3 w-3 text-brand-blue opacity-0 transition-opacity group-hover:opacity-100" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-300">
+              GoHigh Impact
+            </h4>
+            <ul className="space-y-3 text-sm text-slate-300">
+              {companyLinks.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    target={link.href.startsWith("http") ? "_blank" : undefined}
+                    rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    className="transition-colors hover:text-white"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-300">
+              Resources
+            </h4>
+            <ul className="space-y-3 text-sm text-slate-300">
+              {resourceLinks.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    target={link.href.startsWith("http") ? "_blank" : undefined}
+                    rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    className="transition-colors hover:text-white"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="space-y-4 text-sm text-slate-300">
+            <h4 className="text-sm font-semibold uppercase tracking-wide text-slate-300">Contact</h4>
+            <div className="space-y-3">
+              <div className="flex items-start gap-3">
+                <Mail className="mt-1 h-4 w-4 text-brand-blue" />
+                <div>
+                  <p className="text-xs uppercase tracking-wide text-slate-400">Email Support</p>
+                  <a href="mailto:support@gohighimpact.co" className="transition-colors hover:text-white">
+                    support@gohighimpact.co
+                  </a>
+                  <p className="mt-1 text-xs text-slate-400">Response within one business day</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <Instagram className="mt-1 h-4 w-4 text-brand-blue" />
+                <div>
+                  <p className="text-xs uppercase tracking-wide text-slate-400">Instagram DM</p>
+                  <Link
+                    href="https://instagram.com/gohighimpact"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors hover:text-white"
+                  >
+                    @gohighimpact
+                  </Link>
+                  <p className="mt-1 text-xs text-slate-400">Quick questions & live event updates</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+          <p>© 2025 GoHigh Impact. All rights reserved.</p>
+          <div className="flex flex-wrap items-center gap-5">
+            <Link href="/privacy-policy" className="transition-colors hover:text-white">
+              Privacy Policy
+            </Link>
+            <Link href="/tos" className="transition-colors hover:text-white">
+              Terms of Service
+            </Link>
+            <Link href="/posts" className="transition-colors hover:text-white">
+              Resource Library
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

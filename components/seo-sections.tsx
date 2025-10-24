@@ -864,7 +864,7 @@ export function FinalCTA() {
           ))}
         </div>
         <p className="mt-6 text-sm text-gray-500">
-          Prefer a live conversation? <Link href="/pages/contact" className="text-brand-blue">Book a GoHighLevel CRM strategy session</Link>.
+          Prefer a live conversation? <Link href="/contact" className="text-brand-blue">Book a GoHighLevel CRM strategy session</Link>.
         </p>
       </div>
     </section>
