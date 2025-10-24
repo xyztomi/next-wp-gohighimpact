@@ -494,7 +494,7 @@ export function SuccessStories() {
           ))}
         </div>
         <div className="mt-8 text-center text-xs text-gray-500 sm:mt-12 sm:text-sm">
-          Want your story featured? <Link href="/posts" className="text-brand-blue">Submit your GoHighLevel CRM case study</Link>.
+          Want your story featured? <Link href="/contact" className="text-brand-blue">Submit your GoHighLevel CRM case study</Link>.
         </div>
       </div>
     </section>
