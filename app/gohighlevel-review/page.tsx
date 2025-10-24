@@ -2268,18 +2268,57 @@ export default function GoHighLevelReview() {
       </section>
       <section id="faq" className="mb-16 scroll-mt-24">
         <h2 className="text-3xl font-bold mb-6">9) Frequently Asked Questions — GoHighLevel CRM 2025</h2>
-        <ul>
-          <li>What is GoHighLevel CRM and who is it best for?</li>
-          <li>How fast can I set it up?</li>
-          <li>Is GoHighLevel expensive?</li>
-          <li>Do I need to know how to code?</li>
-          <li>What if I already use another CRM?</li>
-          <li>Is there a mobile app?</li>
-          <li>Can I offer this as my own software?</li>
-          <li>What kind of support is available?</li>
-          <li>How does the affiliate program work?</li>
-          <li>What happens if I want to cancel?</li>
-        </ul>
+        <div className="space-y-8">
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-2xl font-semibold mb-2">What is GoHighLevel CRM and who is it best for?</h3>
+            <p className="text-gray-700">GoHighLevel is an all-in-one sales and marketing platform that replaces separate tools for funnels, email, SMS, pipelines, calendars, and automation. It was built by agency owners, so it shines for marketing agencies, local service businesses, coaches, consultants, and any SMB that needs to capture leads, nurture them across channels, and track revenue without duct-taping 10 apps together.</p>
+          </div>
+
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-2xl font-semibold mb-2">How fast can I set it up?</h3>
+            <p className="text-gray-700">Most teams can launch a working funnel, nurture sequence, and booking system in under a week using the 7-day setup playbook above. If you start with a proven snapshot, expect to import contacts, connect calendars, and turn on automations in a weekend. Agencies deploying the same system repeatedly often spin up new client accounts in under an hour.</p>
+          </div>
+
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-2xl font-semibold mb-2">Is GoHighLevel expensive?</h3>
+            <p className="text-gray-700">Plans start at $97/month for the Starter tier and $297/month for Unlimited. Each plan includes unlimited contacts, email, SMS, pipelines, calendars, funnels, and automations, so most users replace $300-$1,800/month worth of point solutions. SaaS Mode at $497/month lets you white-label the platform and resell it, which usually pays for itself with just two paying clients.</p>
+          </div>
+
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-2xl font-semibold mb-2">Do I need to know how to code?</h3>
+            <p className="text-gray-700">No coding is required. Funnels use a drag-and-drop builder, workflows are visual, and most automation logic is point-and-click. You can add custom code if you want advanced customization, but everything from calendars to AI chat flows is configurable through the interface.</p>
+          </div>
+
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-2xl font-semibold mb-2">What if I already use another CRM?</h3>
+            <p className="text-gray-700">You can import contacts via CSV, recreate pipelines with custom stages, and migrate automations gradually. Many teams run GoHighLevel alongside their legacy stack for 30-60 days, then switch fully once campaigns are live. Integrations and webhooks also make it easy to sync data during the transition.</p>
+          </div>
+
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-2xl font-semibold mb-2">Is there a mobile app?</h3>
+            <p className="text-gray-700">Yes. GoHighLevel offers iOS and Android apps (white-labeled under SaaS Mode) so you can view pipelines, respond to SMS, manage conversations, and book appointments on the go. Push notifications ensure you never miss a hot lead or follow-up task.</p>
+          </div>
+
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-2xl font-semibold mb-2">Can I offer this as my own software?</h3>
+            <p className="text-gray-700">Absolutely. SaaS Mode ($497/month) lets you white-label the entire platform, set your own pricing tiers, automate client provisioning, and even publish branded mobile apps. Agencies package snapshots, charge $197-$497/month per customer, and keep the margin.</p>
+          </div>
+
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-2xl font-semibold mb-2">What kind of support is available?</h3>
+            <p className="text-gray-700">You get access to live chat and ticket support, an extensive help center, onboarding webinars, a vibrant Facebook community, and weekly office hours. SaaS Mode users can also deliver their own branded support experience while still escalating issues to GoHighLevel&apos;s team when needed.</p>
+          </div>
+
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-2xl font-semibold mb-2">How does the affiliate program work?</h3>
+            <p className="text-gray-700">Share your referral link, and you earn 40% recurring commission on every payment your referrals make—including plan upgrades and add-ons. Tracking cookies last 90 days, payouts arrive monthly, and even a handful of active referrals can cover your own subscription cost.</p>
+          </div>
+
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-2xl font-semibold mb-2">What happens if I want to cancel?</h3>
+            <p className="text-gray-700">There are no long-term contracts. You can cancel anytime from your billing portal. Export your contacts, funnels, and assets before closing the account, and you&apos;ll still keep any custom snapshots or documentation you created offline.</p>
+          </div>
+        </div>
       </section>
       <section id="resources" className="mb-16 scroll-mt-24">
         <h2 className="text-3xl font-bold mb-6">10) Resources & Next Steps</h2>
