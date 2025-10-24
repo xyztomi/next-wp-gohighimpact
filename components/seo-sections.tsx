@@ -126,7 +126,7 @@ export function WhatIsGoHighLevel() {
           Whether you are migrating from HubSpot, upgrading from ClickFunnels, or leveling up from spreadsheets, this guide shows you how to extract the full value from GoHighLevel CRM—and stay compliant with the latest data privacy, deliverability, and <Link href="/gohighlevel-review" className="text-brand-blue hover:underline">platform updates in 2025</Link>.
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500">
-          <Link href="/posts" className="rounded-full border border-gray-200 px-4 py-1 transition-colors hover:border-brand-blue hover:text-brand-blue">Entity-based SEO</Link>
+          <Link href="/posts" className="rounded-full border border-gray-200 px-4 py-1 transition-colors hover:border-brand-blue hover:text-brand-blue">GoHighLevel CRM Tutorials</Link>
           <Link href="/gohighlevel-review" className="rounded-full border border-gray-200 px-4 py-1 transition-colors hover:border-brand-blue hover:text-brand-blue">GoHighLevel SaaS</Link>
           <Link href="/posts" className="rounded-full border border-gray-200 px-4 py-1 transition-colors hover:border-brand-blue hover:text-brand-blue">Automation Frameworks</Link>
           <Link href="/about" className="rounded-full border border-gray-200 px-4 py-1 transition-colors hover:border-brand-blue hover:text-brand-blue">Agency Playbooks</Link>
