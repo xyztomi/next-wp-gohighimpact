@@ -67,6 +67,28 @@ export function StructuredData() {
       "All-in-one marketing automation platform and CRM for agencies, combining funnel builder, email/SMS marketing, pipeline management, and white-label capabilities.",
   };
 
+  const videoSchema = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: "GoHighLevel All-in-One Platform Tour",
+    description:
+      "Walkthrough of GoHighLevel's all-in-one platform showing how agencies automate lead capture, nurturing, and fulfillment inside a single dashboard.",
+    thumbnailUrl: [`${siteConfig.site_domain}/hero-video-thumbnail.svg`],
+    uploadDate: "2025-01-15",
+    duration: "PT11M",
+    contentUrl:
+      "https://content.apisystem.tech/hls/medias/knES3eSWYIsc5YSZ3YLl/media/transcoded_videos/63efcac51e60ae84979f3a4b_,32,16,00k.mp4.urlset/master.m3u8",
+    embedUrl: `${siteConfig.site_domain}/#ghl-all-in-one-video`,
+    publisher: {
+      "@type": "Organization",
+      name: "GoHigh Impact",
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteConfig.site_domain}/logo.png`,
+      },
+    },
+  };
+
   return (
     <>
       <Script
@@ -88,6 +110,13 @@ export function StructuredData() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(softwareSchema),
+        }}
+      />
+      <Script
+        id="video-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(videoSchema),
         }}
       />
     </>

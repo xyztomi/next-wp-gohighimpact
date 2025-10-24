@@ -19,35 +19,44 @@ const font = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "GoHighLevel CRM: Guide for Agencies & Marketing Automation",
+  title: "GoHighLevel CRM 2025 Guide for Agencies & SaaS Founders",
   description:
-    "Automate and grow your agency business with GoHighLevel CRM. Compare pricing, features, integrations, and get expert tips. Start your free trial today!",
+    "Watch the GoHighLevel all-in-one platform tour, compare 2025 pricing, and grab automation frameworks that scale agencies and SaaS brands.",
   metadataBase: new URL(siteConfig.site_domain),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "GoHighLevel CRM: Guide for Agencies & Marketing Automation",
-    description: "Automate and grow your agency business with GoHighLevel CRM. Compare pricing, features, integrations, and get expert tips. Start your free trial today!",
+    title: "GoHighLevel CRM 2025 Guide for Agencies & SaaS Founders",
+    description: "Watch the GoHighLevel all-in-one platform tour, compare 2025 pricing, and grab automation frameworks that scale agencies and SaaS brands.",
     url: siteConfig.site_domain,
     siteName: "GoHigh Impact",
     type: "website",
     images: [
       {
-        url: `${siteConfig.site_domain}/api/og`,
-        width: 1200,
-        height: 630,
-        alt: "GoHighLevel CRM Complete Guide",
+        url: `${siteConfig.site_domain}/hero-video-thumbnail.svg`,
+        width: 1280,
+        height: 720,
+        alt: "GoHighLevel All-in-One Platform Tour Thumbnail",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "GoHighLevel CRM: Guide for Agencies & Marketing Automation",
-    description: "Automate and grow your agency business with GoHighLevel CRM. Compare pricing, features, integrations, and get expert tips. Start your free trial today!",
-    images: [`${siteConfig.site_domain}/api/og`],
+    title: "GoHighLevel CRM 2025 Guide for Agencies & SaaS Founders",
+    description: "Watch the GoHighLevel all-in-one platform tour, compare 2025 pricing, and grab automation frameworks that scale agencies and SaaS brands.",
+    images: [`${siteConfig.site_domain}/hero-video-thumbnail.svg`],
   },
-  keywords: ["gohighlevel crm", "marketing automation platform", "crm software", "all-in-one crm", "white label crm", "agency software", "gohighlevel review", "gohighlevel pricing"],
+  keywords: [
+    "gohighlevel crm guide",
+    "gohighlevel 2025",
+    "marketing automation platform",
+    "white label crm software",
+    "agency automation",
+    "gohighlevel pricing",
+    "gohighlevel review",
+    "saas agency",
+  ],
 };
 
 export default async function RootLayout({

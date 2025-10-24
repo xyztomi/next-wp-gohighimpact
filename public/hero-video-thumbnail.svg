@@ -1,0 +1,45 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none"
+  xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="675" rx="32" fill="url(#paint0_linear)"/>
+  <defs>
+    <linearGradient id="paint0_linear" x1="1200" y1="0" x2="0" y2="675" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+  <g fill="white" opacity="0.9">
+    <text x="80" y="170" font-family="'Inter', 'Arial', sans-serif" font-size="56" font-weight="600">GoHighLevel All-in-One Platform</text>
+    <text x="80" y="240" font-family="'Inter', 'Arial', sans-serif" font-size="28" font-weight="400" opacity="0.85">Automate lead capture, nurturing, pipelines, and fulfillment in a single dashboard.</text>
+  </g>
+  <g filter="url(#shadow)" transform="translate(80 320)">
+    <rect width="360" height="200" rx="18" fill="rgba(15, 23, 42, 0.55)"/>
+    <text x="32" y="78" font-family="'Inter', 'Arial', sans-serif" font-size="26" fill="white" font-weight="600">Pipeline Automation</text>
+    <text x="32" y="122" font-family="'Inter', 'Arial', sans-serif" font-size="18" fill="white" opacity="0.75">Trigger emails, SMS, and tasks</text>
+    <text x="32" y="154" font-family="'Inter', 'Arial', sans-serif" font-size="18" fill="white" opacity="0.75">based on pipeline stages.</text>
+  </g>
+  <g filter="url(#shadow)" transform="translate(480 320)">
+    <rect width="360" height="200" rx="18" fill="rgba(15, 23, 42, 0.55)"/>
+    <text x="32" y="78" font-family="'Inter', 'Arial', sans-serif" font-size="26" fill="white" font-weight="600">Unified Communications</text>
+    <text x="32" y="122" font-family="'Inter', 'Arial', sans-serif" font-size="18" fill="white" opacity="0.75">Two-way email, SMS, and calls</text>
+    <text x="32" y="154" font-family="'Inter', 'Arial', sans-serif" font-size="18" fill="white" opacity="0.75">from one shared inbox.</text>
+  </g>
+  <g filter="url(#shadow)" transform="translate(880 320)">
+    <rect width="240" height="200" rx="18" fill="rgba(15, 23, 42, 0.55)"/>
+    <text x="32" y="78" font-family="'Inter', 'Arial', sans-serif" font-size="26" fill="white" font-weight="600">SaaS Mode</text>
+    <text x="32" y="122" font-family="'Inter', 'Arial', sans-serif" font-size="18" fill="white" opacity="0.75">White-label GoHighLevel</text>
+    <text x="32" y="154" font-family="'Inter', 'Arial', sans-serif" font-size="18" fill="white" opacity="0.75">and sell subscriptions.</text>
+  </g>
+  <defs>
+    <filter id="shadow" x="0" y="0" width="140%" height="140%" filterUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+      <feOffset dy="18"/>
+      <feGaussianBlur stdDeviation="32" result="blur"/>
+      <feComposite in="blur" in2="SourceAlpha" operator="out"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.35"/>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <circle cx="1080" cy="140" r="64" fill="rgba(59, 130, 246, 0.6)"/>
+  <polygon points="1064,108 1104,140 1064,172" fill="white"/>
+</svg>

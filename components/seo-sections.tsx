@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -21,9 +21,48 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { FAQSchema } from "@/components/structured-data";
+import Hls from "hls.js";
 
 export function HeroSection() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const videoSource = "https://content.apisystem.tech/hls/medias/knES3eSWYIsc5YSZ3YLl/media/transcoded_videos/63efcac51e60ae84979f3a4b_,32,16,00k.mp4.urlset/master.m3u8";
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    if (!isVideoPlaying) return;
+
+    const videoElement = videoRef.current;
+    if (!videoElement) return;
+
+    let hls: Hls | null = null;
+
+    if (videoElement.canPlayType("application/vnd.apple.mpegurl")) {
+      videoElement.src = videoSource;
+      videoElement
+        .play()
+        .catch(() => {
+          /* playback must be triggered by user interaction */
+        });
+    } else if (Hls.isSupported()) {
+      hls = new Hls();
+      hls.loadSource(videoSource);
+      hls.attachMedia(videoElement);
+      hls.on(Hls.Events.MANIFEST_PARSED, () => {
+        videoElement
+          .play()
+          .catch(() => {
+            /* playback must be triggered by user interaction */
+          });
+      });
+    } else {
+      videoElement.src = videoSource;
+    }
+
+    return () => {
+      videoElement.pause();
+      hls?.destroy();
+    };
+  }, [isVideoPlaying, videoSource]);
 
   return (
     <section className="bg-gradient-to-b from-brand-blue/10 via-white to-white px-4 pb-12 pt-24 sm:px-6 sm:pb-20 sm:pt-20">
@@ -69,7 +108,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="mx-auto max-w-4xl">
+        <div className="mx-auto max-w-4xl" id="ghl-all-in-one-video">
           <div className="relative overflow-hidden rounded-xl border border-gray-200 bg-gray-100 shadow-xl shadow-gray-200 sm:rounded-2xl sm:shadow-2xl">
             <div className="aspect-video">
               {!isVideoPlaying ? (
@@ -78,11 +117,11 @@ export function HeroSection() {
                   className="group relative flex h-full w-full cursor-pointer flex-col items-center justify-center overflow-hidden px-4"
                   onClick={() => setIsVideoPlaying(true)}
                   style={{
-                    backgroundImage: 'url(https://img.youtube.com/vi/JSltX3xCCbM/maxresdefault.jpg)',
+                    backgroundImage: 'url(/hero-video-thumbnail.svg)',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                   }}
-                  aria-label="Play GoHighLevel CRM tutorial video"
+                  aria-label="Play GoHighLevel All-in-One Platform video"
                 >
                   {/* Dark overlay for better text contrast */}
                   <div className="absolute inset-0 bg-black/40 transition-opacity group-hover:bg-black/50" aria-hidden="true" />
@@ -92,16 +131,17 @@ export function HeroSection() {
                     <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-brand-blue shadow-lg shadow-brand-blue/30 transition-transform group-hover:scale-110 sm:mb-6 sm:h-20 sm:w-20">
                       <Play className="ml-1 h-6 w-6 text-white sm:h-8 sm:w-8" fill="white" />
                     </div>
-                    <p className="text-center text-sm font-medium text-white drop-shadow-lg sm:text-base md:text-lg lg:text-xl">What is GoHighLevel CRM? 📈 Explained in 11 Minutes</p>
+                    <p className="text-center text-sm font-medium text-white drop-shadow-lg sm:text-base md:text-lg lg:text-xl">GoHighLevel All-in-One Platform Tour (2025)</p>
                   </div>
                 </button>
               ) : (
-                <iframe
+                <video
+                  ref={videoRef}
                   className="h-full w-full"
-                  src="https://www.youtube.com/embed/JSltX3xCCbM?autoplay=1"
-                  title="GoHighLevel CRM Demo"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
+                  controls
+                  playsInline
+                  preload="metadata"
+                  poster="/hero-video-thumbnail.svg"
                 />
               )}
             </div>
