@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
 import {
@@ -175,12 +176,17 @@ export function Footer() {
     <footer className="border-t border-gray-200 bg-white px-6 py-12">
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-          <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-green">
-              <span className="text-white">GH</span>
-            </div>
+          <Link href="/" className="flex items-center gap-3">
+            <Image
+              src="/logo.svg"
+              alt="GoHigh Impact logo"
+              width={48}
+              height={48}
+              className="h-12 w-auto"
+              priority={false}
+            />
             <span className="text-gray-900">GoHigh Impact</span>
-          </div>
+          </Link>
 
           <div className="flex gap-8">
             <Link
