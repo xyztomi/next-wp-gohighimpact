@@ -74,7 +74,7 @@ export function StructuredData() {
     description:
       "Walkthrough of GoHighLevel's all-in-one platform showing how agencies automate lead capture, nurturing, and fulfillment inside a single dashboard.",
     thumbnailUrl: [`${siteConfig.site_domain}/hero-video-thumbnail.svg`],
-    uploadDate: "2025-01-15",
+    uploadDate: "2025-01-15T12:00:00-05:00",
     duration: "PT11M",
     contentUrl:
       "https://content.apisystem.tech/hls/medias/knES3eSWYIsc5YSZ3YLl/media/transcoded_videos/63efcac51e60ae84979f3a4b_,32,16,00k.mp4.urlset/master.m3u8",
