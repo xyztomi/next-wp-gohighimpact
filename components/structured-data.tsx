@@ -1,9 +1,13 @@
 "use client";
 
 import Script from "next/script";
+import { usePathname } from "next/navigation";
 import { siteConfig } from "@/site.config";
 
 export function StructuredData() {
+  const pathname = usePathname();
+  const shouldIncludeVideoSchema = pathname === "/";
+
   // Organization Schema
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -112,13 +116,15 @@ export function StructuredData() {
           __html: JSON.stringify(softwareSchema),
         }}
       />
-      <Script
-        id="video-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(videoSchema),
-        }}
-      />
+      {shouldIncludeVideoSchema && (
+        <Script
+          id="video-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(videoSchema),
+          }}
+        />
+      )}
     </>
   );
 }
