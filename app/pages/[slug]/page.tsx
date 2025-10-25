@@ -33,9 +33,9 @@ export async function generateMetadata({
   const description = page.excerpt?.rendered
     ? page.excerpt.rendered.replace(/<[^>]*>/g, "").trim()
     : page.content.rendered
-        .replace(/<[^>]*>/g, "")
-        .trim()
-        .slice(0, 200) + "...";
+      .replace(/<[^>]*>/g, "")
+      .trim()
+      .slice(0, 200) + "...";
   ogUrl.searchParams.append("description", description);
 
   return {
@@ -60,6 +60,14 @@ export async function generateMetadata({
       title: page.title.rendered,
       description: description,
       images: [ogUrl.toString()],
+    },
+    robots: {
+      index: false,
+      follow: false,
+      googleBot: {
+        index: false,
+        follow: false,
+      },
     },
   };
 }

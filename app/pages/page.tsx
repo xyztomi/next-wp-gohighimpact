@@ -8,7 +8,15 @@ export const metadata: Metadata = {
   title: "All Pages",
   description: "Browse all pages of our blog posts",
   alternates: {
-    canonical: "/posts/pages",
+    canonical: "/pages",
+  },
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
   },
 };
 
