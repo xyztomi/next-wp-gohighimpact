@@ -19,15 +19,19 @@ const font = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "GoHighLevel CRM 2025 Guide for Agencies & SaaS Founders",
+  title: {
+    default: `${siteConfig.site_name} – GoHighLevel CRM 2025 Guide for Agencies & SaaS Founders`,
+    template: `%s | ${siteConfig.site_name}`,
+  },
   description:
     "Watch the GoHighLevel all-in-one platform tour, compare 2025 pricing, and grab automation frameworks that scale agencies and SaaS brands.",
   metadataBase: new URL(siteConfig.site_domain),
+  applicationName: siteConfig.site_name,
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "GoHighLevel CRM 2025 Guide for Agencies & SaaS Founders",
+    title: `${siteConfig.site_name} – GoHighLevel CRM 2025 Guide for Agencies & SaaS Founders`,
     description: "Watch the GoHighLevel all-in-one platform tour, compare 2025 pricing, and grab automation frameworks that scale agencies and SaaS brands.",
     url: siteConfig.site_domain,
     siteName: "GoHigh Impact",
@@ -43,7 +47,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "GoHighLevel CRM 2025 Guide for Agencies & SaaS Founders",
+    title: `${siteConfig.site_name} – GoHighLevel CRM 2025 Guide for Agencies & SaaS Founders`,
     description: "Watch the GoHighLevel all-in-one platform tour, compare 2025 pricing, and grab automation frameworks that scale agencies and SaaS brands.",
     images: [`${siteConfig.site_domain}/hero-video-thumbnail.svg`],
   },

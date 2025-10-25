@@ -13,6 +13,7 @@ export function StructuredData() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "GoHigh Impact",
+    alternateName: "GoHighImpact",
     url: siteConfig.site_domain,
     logo: `${siteConfig.site_domain}/logo.png`,
     description: siteConfig.site_description,
@@ -21,6 +22,8 @@ export function StructuredData() {
       "https://www.linkedin.com/company/gohighimpact",
       "https://twitter.com/gohighimpact",
       "https://www.facebook.com/gohighimpact",
+      "https://www.instagram.com/gohighimpact",
+
     ],
     contactPoint: {
       "@type": "ContactPoint",
@@ -34,6 +37,7 @@ export function StructuredData() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "GoHigh Impact",
+    alternateName: "GoHighImpact",
     url: siteConfig.site_domain,
     description: siteConfig.site_description,
     potentialAction: {
