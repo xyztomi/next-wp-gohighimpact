@@ -7,6 +7,7 @@ import Script from "next/script";
 import { AnnouncementBar, Footer } from "@/components/marketing";
 import { Header } from "@/components/nav/header";
 import { StructuredData } from "@/components/structured-data";
+import { TrialPopup } from "@/components/trial-popup";
 import { siteConfig } from "@/site.config";
 import { cn } from "@/lib/utils";
 import { getNavigationLinks } from "@/lib/wordpress";
@@ -117,6 +118,15 @@ export default async function RootLayout({
             gtag('config', 'G-23HWYQVF1Z');
           `}
         </Script>
+        <Script id="clarity-analytics" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "twp5gimbri");
+          `}
+        </Script>
         <StructuredData />
         <div className="flex min-h-screen flex-col">
           <AnnouncementBar />
@@ -124,6 +134,7 @@ export default async function RootLayout({
           <main className="pt-[100px]">{children}</main>
           <Footer />
         </div>
+        <TrialPopup />
         <Analytics />
       </body>
     </html>
