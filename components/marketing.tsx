@@ -224,7 +224,7 @@ export function Footer() {
                 <p className="text-sm font-semibold uppercase tracking-wide text-brand-blue/80">
                   GoHigh Impact
                 </p>
-                <p className="text-xs text-slate-300">Certified GoHighLevel partner & implementation team</p>
+                <p className="text-xs text-slate-300">The #1 Resource Hub for Business Owners Growing Smarter with GoHighLevel.</p>
               </div>
             </Link>
             <p className="max-w-sm text-sm text-slate-300">
