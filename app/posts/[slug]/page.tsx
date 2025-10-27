@@ -1,4 +1,15 @@
-import { getPostBySlug, getAllPostSlugs, getFeaturedMediaById } from "@/lib/wordpress";
+import Image from "next/image";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+
+import { Facebook, Linkedin, Twitter } from "lucide-react";
+
+import {
+  getPostBySlug,
+  getAllPostSlugs,
+  getFeaturedMediaById,
+  getAuthorById,
+} from "@/lib/wordpress";
 import { Section, Container, Prose } from "@/components/craft";
 import { siteConfig } from "@/site.config";
 
@@ -83,21 +94,101 @@ export default async function Page({
 }) {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
+  if (!post) {
+    notFound();
+  }
+  const author = post.author ? await getAuthorById(post.author) : null;
+
+  const formattedDate = post.date
+    ? new Date(post.date).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
+    : null;
+
+  const plainTitle = post.title.rendered.replace(/<[^>]*>/g, "").trim() || "GoHigh Impact";
+  const shareHref = `${siteConfig.site_domain}/posts/${post.slug}`;
+  const shareUrl = encodeURIComponent(shareHref);
+  const shareTitle = encodeURIComponent(plainTitle);
+
+  const shareLinks = [
+    {
+      name: "LinkedIn",
+      href: `https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${shareTitle}`,
+      icon: Linkedin,
+    },
+    {
+      name: "Facebook",
+      href: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`,
+      icon: Facebook,
+    },
+    {
+      name: "Twitter",
+      href: `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareTitle}`,
+      icon: Twitter,
+    },
+  ];
+
+  const authorAvatar = author?.avatar_urls?.["96"] || author?.avatar_urls?.["48"] || author?.avatar_urls?.["24"];
+  const authorBio = author?.description ? author.description.replace(/<[^>]*>/g, "").trim() : "";
 
   return (
     <Section>
       <Container>
-        <Prose>
-          <h1>{post.title.rendered}</h1>
-          {post.date && (
-            <p className="text-sm text-muted-foreground">
-              Published on {new Date(post.date).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </p>
-          )}
+        <Prose className="space-y-8">
+          <header className="space-y-6">
+            <h1 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+            <div className="not-prose rounded-3xl border border-border bg-muted/30 p-6">
+              <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex items-start gap-4">
+                  {authorAvatar ? (
+                    <Image
+                      src={authorAvatar}
+                      alt={author?.name ? `Photo of ${author.name}` : "Author avatar"}
+                      width={48}
+                      height={48}
+                      className="h-12 w-12 rounded-full object-cover"
+                    />
+                  ) : (
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-base font-semibold text-primary">
+                      {(author?.name || "GHI").charAt(0).toUpperCase()}
+                    </div>
+                  )}
+                  <div className="space-y-1">
+                    <p className="text-base font-semibold leading-tight">
+                      {author?.name || "GoHigh Impact Team"}
+                    </p>
+                    {formattedDate ? (
+                      <p className="text-sm text-muted-foreground">
+                        Published on {formattedDate}
+                      </p>
+                    ) : null}
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-sm font-semibold text-muted-foreground">Share</span>
+                  {shareLinks.map(({ name, href, icon: Icon }) => (
+                    <Link
+                      key={name}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      prefetch={false}
+                      aria-label={`Share on ${name}`}
+                      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background transition hover:border-primary hover:text-primary"
+                    >
+                      <Icon className="h-4 w-4" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              {authorBio ? (
+                <p className="mt-4 text-sm text-muted-foreground">{authorBio}</p>
+              ) : null}
+            </div>
+          </header>
+
           <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
         </Prose>
       </Container>
