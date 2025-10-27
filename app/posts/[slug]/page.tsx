@@ -101,10 +101,10 @@ export default async function Page({
 
   const formattedDate = post.date
     ? new Date(post.date).toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      })
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    })
     : null;
 
   const plainTitle = post.title.rendered.replace(/<[^>]*>/g, "").trim() || "GoHigh Impact";
