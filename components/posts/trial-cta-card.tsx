@@ -34,7 +34,7 @@ export function TrialCtaCard() {
           </Button>
 
           <span className="text-center text-sm text-gray-500 sm:text-left">
-            Join 2M+ businesses already scaling with GoHighLevel
+            Join 2M+ businesses already growing with GoHighLevel
           </span>
         </div>
       </div>
