@@ -11,6 +11,7 @@ import {
   getAuthorById,
 } from "@/lib/wordpress";
 import { Section, Container, Prose } from "@/components/craft";
+import { PostContentWithCta } from "@/components/posts/post-content-with-cta";
 import { siteConfig } from "@/site.config";
 
 import type { Metadata } from "next";
@@ -97,7 +98,11 @@ export default async function Page({
   if (!post) {
     notFound();
   }
-  const author = post.author ? await getAuthorById(post.author) : null;
+
+  const [author, featuredImage] = await Promise.all([
+    post.author ? getAuthorById(post.author) : null,
+    post.featured_media ? getFeaturedMediaById(post.featured_media) : null,
+  ]);
 
   const formattedDate = post.date
     ? new Date(post.date).toLocaleDateString("en-US", {
@@ -189,7 +194,28 @@ export default async function Page({
             </div>
           </header>
 
-          <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+          {featuredImage?.source_url && (
+            <div className="not-prose my-8">
+              <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-border bg-muted shadow-lg">
+                <Image
+                  src={featuredImage.source_url}
+                  alt={featuredImage.alt_text || post.title.rendered.replace(/<[^>]*>/g, "").trim()}
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                />
+              </div>
+              {featuredImage.caption?.rendered && (
+                <p
+                  className="mt-3 text-center text-sm text-muted-foreground"
+                  dangerouslySetInnerHTML={{ __html: featuredImage.caption.rendered }}
+                />
+              )}
+            </div>
+          )}
+
+          <PostContentWithCta content={post.content.rendered} />
         </Prose>
       </Container>
     </Section>
