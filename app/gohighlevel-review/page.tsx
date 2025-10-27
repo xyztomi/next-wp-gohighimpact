@@ -620,7 +620,7 @@ export default function GoHighLevelReview() {
             <div className="bg-gray-100 p-6 rounded-lg mt-8">
               <h3 className="text-xl font-bold mb-4">💳 Payment Options & Free Trial</h3>
               <ul className="space-y-2">
-                <li>✅ <strong>14-day free trial</strong> on all plans (no credit card required)</li>
+                <li>✅ <strong>30-day free trial</strong> on all plans (no credit card required)</li>
                 <li>✅ <strong>Monthly billing</strong> available for all plans</li>
                 <li>✅ <strong>Annual billing</strong> saves 16-17% (effectively 2 months free)</li>
                 <li>✅ <strong>No contracts</strong> - cancel anytime</li>
@@ -1928,7 +1928,7 @@ export default function GoHighLevelReview() {
               <div className="bg-blue-50 p-4 rounded">
                 <p className="font-semibold mb-2">Account Configuration (2 hours)</p>
                 <ol className="list-decimal pl-6 space-y-1 text-sm">
-                  <li>Sign up for 14-day free trial at GoHighLevel</li>
+                  <li>Sign up for 30-day free trial at GoHighLevel</li>
                   <li>Complete company profile (name, logo, colors)</li>
                   <li>Connect custom domain for emails (yourdomain.com)</li>
                   <li>Verify domain (SPF, DKIM records for deliverability)</li>
@@ -2344,7 +2344,7 @@ export default function GoHighLevelReview() {
         </ol>
         <h3>Join the GoHighLevel Ecosystem</h3>
         <p>Whether you&apos;re launching your first funnel or scaling your SaaS empire, GoHighLevel CRM gives you the infrastructure to grow faster with fewer tools. The best time to start was yesterday — the second best time is right now.</p>
-        <p><Link href="https://snip.ly/ghl-bootcamp" target="_blank" rel="noopener noreferrer">Start Your 14-Day Free Trial</Link></p>
+        <p><Link href="https://snip.ly/ghl-bootcamp" target="_blank" rel="noopener noreferrer">Start Your 30-Day Free Trial</Link></p>
       </section>
     </main>
   );

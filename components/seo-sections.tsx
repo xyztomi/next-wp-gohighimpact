@@ -678,7 +678,7 @@ const faqItems = [
   {
     question: "Does GoHighLevel offer a free trial?",
     answer:
-      "Yes. GoHighLevel offers a 14-day free trial so you can test everything, including funnels, automation, CRM, and more, before committing.",
+      "Yes. GoHighLevel offers a 30-day free trial so you can test everything, including funnels, automation, CRM, and more, before committing.",
   },
   {
     question: "What industries use GoHighLevel CRM?",
