@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Instagram, Mail } from "lucide-react";
+import { siteConfig } from "@/site.config";
 
 export const metadata: Metadata = {
   title: "Contact GoHigh Impact - Support & Partnerships",
@@ -8,6 +9,17 @@ export const metadata: Metadata = {
     "Get in touch with the GoHigh Impact team. Reach us via email or Instagram for GoHighLevel CRM support, partnerships, and collaboration opportunities.",
   alternates: {
     canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact GoHigh Impact - Support & Partnerships",
+    description: "Get in touch with the GoHigh Impact team for GoHighLevel CRM support, partnerships, and collaboration opportunities.",
+    url: `${siteConfig.site_domain}/contact`,
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Contact GoHigh Impact - Support & Partnerships",
+    description: "Get in touch with the GoHigh Impact team for GoHighLevel CRM support and partnerships.",
   },
 };
 

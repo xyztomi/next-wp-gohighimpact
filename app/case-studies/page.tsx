@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     url: `${siteConfig.site_domain}/case-studies`,
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "GoHighLevel Case Studies: Real ROI & Results",
+    description: "See how agencies achieved 10x ROI, 400% revenue growth, and 85% time savings with GoHighLevel CRM.",
+  },
   keywords: [
     "gohighlevel case studies",
     "gohighlevel roi",

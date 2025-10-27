@@ -4,6 +4,7 @@ import { CheckCircle2, Target, Zap, Users, Award } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { siteConfig } from "@/site.config";
 
 export const metadata: Metadata = {
   title: "About GoHigh Impact - GoHighLevel CRM Experts & Consultants",
@@ -11,6 +12,17 @@ export const metadata: Metadata = {
     "Learn how GoHigh Impact helps agencies and SaaS companies scale with GoHighLevel CRM. Expert implementation, automation, and growth strategies.",
   alternates: {
     canonical: "/about",
+  },
+  openGraph: {
+    title: "About GoHigh Impact - GoHighLevel CRM Experts & Consultants",
+    description: "Learn how GoHigh Impact helps agencies and SaaS companies scale with GoHighLevel CRM. Expert implementation, automation, and growth strategies.",
+    url: `${siteConfig.site_domain}/about`,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About GoHigh Impact - GoHighLevel CRM Experts & Consultants",
+    description: "Learn how GoHigh Impact helps agencies and SaaS companies scale with GoHighLevel CRM.",
   },
 };
 

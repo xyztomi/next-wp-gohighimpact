@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { siteConfig } from "@/site.config";
 
 export const metadata: Metadata = {
   title: "Terms of Service - GoHigh Impact",
@@ -7,6 +8,12 @@ export const metadata: Metadata = {
     "Review the Terms of Service governing your use of GoHigh Impact's GoHighLevel CRM resources, trainings, and services.",
   alternates: {
     canonical: "/tos",
+  },
+  openGraph: {
+    title: "Terms of Service - GoHigh Impact",
+    description: "Review the Terms of Service governing your use of GoHigh Impact's GoHighLevel CRM resources.",
+    url: `${siteConfig.site_domain}/tos`,
+    type: "website",
   },
 };
 

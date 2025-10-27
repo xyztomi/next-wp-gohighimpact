@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { siteConfig } from "@/site.config";
 
 export const metadata: Metadata = {
   title: "Privacy Policy - GoHigh Impact",
@@ -7,6 +8,12 @@ export const metadata: Metadata = {
     "Learn how GoHigh Impact collects, uses, and protects your personal information when you access our GoHighLevel CRM resources.",
   alternates: {
     canonical: "/privacy-policy",
+  },
+  openGraph: {
+    title: "Privacy Policy - GoHigh Impact",
+    description: "Learn how GoHigh Impact collects, uses, and protects your personal information.",
+    url: `${siteConfig.site_domain}/privacy-policy`,
+    type: "website",
   },
 };
 
