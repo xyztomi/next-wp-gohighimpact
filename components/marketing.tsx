@@ -150,6 +150,7 @@ const comparisonLinks = [
 
 const companyLinks = [
   { label: "About GoHigh Impact", href: "/about" },
+  { label: "Case Studies & ROI", href: "/case-studies" },
   { label: "Implementation Guide", href: "/#guide" },
   { label: "Client Success Stories", href: "/#success" },
   { label: "Request a Roadmap Call", href: "https://snip.ly/ghl-bootcamp" },

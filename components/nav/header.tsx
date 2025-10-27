@@ -24,6 +24,7 @@ const fallbackLinks: HeaderLink[] = [
   { title: "Home", href: "/" },
   { title: "GoHighLevel Review", href: "/gohighlevel-review" },
   { title: "GoHighLevel White Label", href: "/gohighlevel-whitelabel" },
+  { title: "Case Studies", href: "/case-studies" },
   { title: "About", href: "/about" },
   { title: "Blog", href: "/posts" },
 ];

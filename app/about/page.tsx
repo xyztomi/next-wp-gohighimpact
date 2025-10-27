@@ -137,7 +137,7 @@ export default function AboutPage() {
               </h3>
               <p className="text-sm text-gray-700 sm:text-base">
                 From initial audit to full deployment, we handle every aspect of GoHighLevel CRM setup. Our proven
-                framework reduces migration risk, maintains campaign continuity, and accelerates time to value.
+                framework reduces migration risk, maintains campaign continuity, and accelerates time to value. View our <Link href="/case-studies" className="text-brand-blue hover:underline">client case studies</Link> to see documented results.
               </p>
             </Card>
             <Card className="border-gray-200 bg-white p-6 sm:p-8">

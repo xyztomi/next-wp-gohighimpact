@@ -44,6 +44,8 @@ export default function SummaryPage() {
         "Added links to /about (implementation services)",
         "Cross-linked comparison section to review and posts",
         "Used descriptive anchor text with target keywords",
+        "Created /case-studies page with 5 detailed success stories",
+        "Added case study links to homepage, about page, and footer navigation",
       ],
     },
     {
@@ -80,7 +82,6 @@ export default function SummaryPage() {
     "Add video transcript below embedded video for SEO content",
     "Create comparison pages: /gohighlevel-vs-hubspot, /gohighlevel-vs-clickfunnels, /gohighlevel-vs-keap",
     "Add 10+ annotated screenshots of GoHighLevel dashboard",
-    "Create 3-5 detailed case studies with metrics and ROI",
     "Develop downloadable PDF resource (checklist or comparison guide)",
     "Build backlink acquisition strategy and begin outreach",
     "Create industry-specific landing pages (real estate, dentists, agencies)",
