@@ -1,6 +1,12 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "GoHigh Impact",
+  "short_name": "GoHigh Impact",
+  "description": "Your trusted resource for GoHighLevel guides, tutorials, and marketing automation strategies.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -11,9 +17,12 @@
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
     }
-  ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  ]
 }

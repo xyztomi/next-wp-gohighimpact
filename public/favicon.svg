@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+  xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brand-gradient" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#111827" />
+      <stop offset="1" stop-color="#1F2937" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#brand-gradient)" />
+  <path fill="#F8FAFC" d="M32 18A14 14 0 1 0 32 46H44V40H32A8 8 0 1 1 38.4 26H46V24C46 20.6863 43.3137 18 40 18H32Z" />
+  <rect x="42" y="24" width="6" height="16" rx="3" fill="#34D399" />
+</svg>

@@ -15,7 +15,7 @@ export function StructuredData() {
     name: "GoHigh Impact",
     alternateName: "GoHighImpact",
     url: siteConfig.site_domain,
-    logo: `${siteConfig.site_domain}/logo.png`,
+    logo: `${siteConfig.site_domain}/logo.svg`,
     description: siteConfig.site_description,
     sameAs: [
       // Add your social media profiles here
@@ -92,7 +92,7 @@ export function StructuredData() {
       name: "GoHigh Impact",
       logo: {
         "@type": "ImageObject",
-        url: `${siteConfig.site_domain}/logo.png`,
+        url: `${siteConfig.site_domain}/logo.svg`,
       },
     },
   };
@@ -193,7 +193,7 @@ export function ArticleSchema({
       name: "GoHigh Impact",
       logo: {
         "@type": "ImageObject",
-        url: `${siteConfig.site_domain}/logo.png`,
+        url: `${siteConfig.site_domain}/logo.svg`,
       },
     },
   };
