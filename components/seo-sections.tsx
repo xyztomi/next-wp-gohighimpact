@@ -81,15 +81,15 @@ export function HeroSection() {
             Discover how GoHighLevel CRM can automate your marketing, close more deals, and create predictable monthly revenue.
           </p>
 
-          <div className="mx-auto mb-8 flex max-w-2xl flex-col items-center gap-2 rounded-full border border-yellow-200 bg-yellow-50/60 px-5 py-3 text-sm font-medium text-yellow-800 shadow-sm sm:mb-12 sm:flex-row sm:justify-center sm:gap-4 sm:text-base">
-            <span className="flex items-center gap-2">
-              <span aria-hidden="true" className="flex items-center text-lg text-yellow-500">★★★★½</span>
+          <div className="mx-auto mb-8 flex max-w-2xl flex-col items-center gap-3 rounded-2xl border border-yellow-200 bg-yellow-50/60 px-5 py-4 text-sm font-medium text-yellow-800 shadow-sm sm:mb-12 sm:flex-row sm:justify-center sm:gap-4 sm:rounded-full sm:py-3 sm:text-base">
+            <span className="flex flex-col items-center gap-1 text-center sm:flex-row sm:items-center sm:gap-2 sm:text-left">
+              <span aria-hidden="true" className="flex items-center text-lg text-yellow-500 sm:text-xl">★★★★½</span>
               <span>
                 <strong className="text-gray-900">4.7/5</strong> from 2,500+ agency reviews
               </span>
             </span>
             <span className="hidden h-4 w-px bg-yellow-300 sm:block" aria-hidden="true" />
-            <span>
+            <span className="text-center sm:text-left">
               Plans start at <strong className="text-gray-900">$97/mo</strong> with SaaS upgrades available
             </span>
           </div>
