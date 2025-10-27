@@ -15,12 +15,14 @@ export function TrialCtaCard() {
 
 
         <h3 className="mb-3 text-xl font-bold text-gray-900 sm:text-2xl">
-          Why 2M+ Businesses Trust GoHighLevel
+          Ready to Transform Your Business?
         </h3>
 
         <p className="mb-5 text-base text-gray-600">
-          Start your 30-day free trial of GoHighLevel CRM today. No credit card required. Get full access to all features and see why 2,500+ agencies trust us.
-        </p>        <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+          Start your 30-day free trial of GoHighLevel CRM today. No credit card required. Get full access to all features and see why 2M+ businesses trust GoHighLevel.
+        </p>
+
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
           <Button
             asChild
             className="group w-full rounded-full bg-brand-green px-6 py-6 text-base font-semibold text-white shadow-lg shadow-brand-green/30 transition-all hover:bg-brand-green/90 hover:shadow-xl sm:w-auto"
@@ -32,7 +34,7 @@ export function TrialCtaCard() {
           </Button>
 
           <span className="text-center text-sm text-gray-500 sm:text-left">
-            Join 2,500+ agencies already scaling with GoHighLevel
+            Join 2M+ businesses already scaling with GoHighLevel
           </span>
         </div>
       </div>

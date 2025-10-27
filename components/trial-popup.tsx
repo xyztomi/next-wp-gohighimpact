@@ -79,12 +79,12 @@ export function TrialPopup() {
               id="trial-popup-title"
               className="mb-3 text-center text-2xl font-bold text-gray-900 sm:text-3xl"
             >
-              Why 2M+ Businesses Trust GoHighLevel
+              Ready to Transform Your Business?
             </h2>
 
             {/* Description */}
             <p className="mb-6 text-center text-base text-gray-600">
-              Get full access to GoHighLevel CRM and discover how it can transform your agency. No credit card required.
+              Get full access to GoHighLevel CRM and discover why 2M+ businesses trust GoHighLevel. No credit card required.
             </p>
 
             {/* Features */}

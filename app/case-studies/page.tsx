@@ -365,10 +365,10 @@ export default function CaseStudiesPage() {
       <section className="bg-gradient-to-b from-white to-brand-green/5 px-4 py-16 sm:px-6 sm:py-24">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
-            Why 2M+ Businesses Trust GoHighLevel
+            Ready to Transform Your Business?
           </h2>
           <p className="mb-8 text-lg text-gray-600">
-            Start your 30-day free trial of GoHighLevel CRM or schedule a consultation with our implementation team to build a custom success plan for your agency.
+            Start your 30-day free trial of GoHighLevel CRM or schedule a consultation with our implementation team. See why 2M+ businesses trust GoHighLevel to build a custom success plan for your agency.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
             <Button asChild className="rounded-full bg-brand-green px-8 py-6 text-lg text-white shadow-lg shadow-brand-green/30 hover:bg-brand-green/90">
