@@ -382,7 +382,7 @@ export default function CaseStudiesPage() {
             </Button>
           </div>
           <p className="mt-6 text-sm text-gray-500">
-            No credit card required • Full platform access • Implementation support included
+            Full platform access • Implementation support included
           </p>
         </div>
       </section>

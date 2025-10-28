@@ -85,8 +85,7 @@ export default function GoHighLevelWhiteLabelPage() {
               <CardFooter className="flex flex-col items-center gap-4 pt-0 md:flex-row md:justify-center">
                 <Button
                   asChild
-                  variant="outline"
-                  className="w-full rounded-full border-brand-green/40 text-brand-green hover:bg-brand-green/10 md:w-56 animate-in"
+                  className="w-full rounded-full bg-brand-green text-white hover:bg-brand-green/90 shadow-lg shadow-brand-green/30 md:w-56 animate-in"
                 >
                   <Link
                     href="https://snip.ly/ghl-whitelabel"
@@ -99,7 +98,7 @@ export default function GoHighLevelWhiteLabelPage() {
                 <Button
                   asChild
                   variant="outline"
-                  className="w-full rounded-full border-brand-green/40 text-brand-green hover:bg-brand-green/10 md:w-56"
+                  className="w-full rounded-full border-2 border-brand-blue text-brand-blue hover:bg-brand-blue/10 md:w-56"
                 >
                   <Link
                     href="https://snip.ly/ghl-pricing"

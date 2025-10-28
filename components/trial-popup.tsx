@@ -84,7 +84,7 @@ export function TrialPopup() {
 
             {/* Description */}
             <p className="mb-6 text-center text-base text-gray-600">
-              Get full access to GoHighLevel CRM and discover why 2M+ businesses trust GoHighLevel. No credit card required.
+              Get full access to GoHighLevel CRM and discover why 2M+ businesses trust GoHighLevel.
             </p>
 
             {/* Features */}

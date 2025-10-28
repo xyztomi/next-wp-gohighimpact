@@ -19,7 +19,7 @@ export function TrialCtaCard() {
         </h3>
 
         <p className="mb-5 text-base text-gray-600">
-          Start your 30-day free trial of GoHighLevel CRM today. No credit card required. Get full access to all features and see why 2M+ businesses trust GoHighLevel.
+          Start your 30-day free trial of GoHighLevel CRM today. Get full access to all features and see why 2M+ businesses trust GoHighLevel.
         </p>
 
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">

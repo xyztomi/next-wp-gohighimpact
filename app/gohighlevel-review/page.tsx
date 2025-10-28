@@ -620,7 +620,7 @@ export default function GoHighLevelReview() {
             <div className="bg-gray-100 p-6 rounded-lg mt-8">
               <h3 className="text-xl font-bold mb-4">💳 Payment Options & Free Trial</h3>
               <ul className="space-y-2">
-                <li>✅ <strong>30-day free trial</strong> on all plans (no credit card required)</li>
+                <li>✅ <strong>30-day free trial</strong> on all plans</li>
                 <li>✅ <strong>Monthly billing</strong> available for all plans</li>
                 <li>✅ <strong>Annual billing</strong> saves 16-17% (effectively 2 months free)</li>
                 <li>✅ <strong>No contracts</strong> - cancel anytime</li>

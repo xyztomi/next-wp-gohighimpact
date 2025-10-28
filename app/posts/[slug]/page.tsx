@@ -144,53 +144,69 @@ export default async function Page({
         <Prose className="space-y-8">
           <header className="space-y-6">
             <h1 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-            <div className="not-prose rounded-3xl border border-border bg-muted/30 p-6">
-              <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-                <div className="flex items-start gap-4">
-                  {authorAvatar ? (
-                    <Image
-                      src={authorAvatar}
-                      alt={author?.name ? `Photo of ${author.name}` : "Author avatar"}
-                      width={48}
-                      height={48}
-                      className="h-12 w-12 rounded-full object-cover"
-                    />
-                  ) : (
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-base font-semibold text-primary">
-                      {(author?.name || "GHI").charAt(0).toUpperCase()}
-                    </div>
-                  )}
-                  <div className="space-y-1">
-                    <p className="text-base font-semibold leading-tight">
-                      {author?.name || "GoHigh Impact Team"}
-                    </p>
-                    {formattedDate ? (
-                      <p className="text-sm text-muted-foreground">
-                        Published on {formattedDate}
+
+            {/* Optimized Author Box */}
+            <div className="not-prose overflow-hidden rounded-2xl border border-gray-200 bg-gradient-to-br from-gray-50 to-white shadow-sm">
+              <div className="p-6 sm:p-8">
+                <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+                  {/* Author Info */}
+                  <div className="flex items-center gap-4 sm:flex-1">
+                    {authorAvatar ? (
+                      <Image
+                        src={authorAvatar}
+                        alt={author?.name ? `Photo of ${author.name}` : "Author avatar"}
+                        width={64}
+                        height={64}
+                        className="h-14 w-14 rounded-full object-cover ring-2 ring-brand-green/20 sm:h-16 sm:w-16"
+                      />
+                    ) : (
+                      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-brand-green/10 text-lg font-bold text-brand-green ring-2 ring-brand-green/20 sm:h-16 sm:w-16">
+                        {(author?.name || "GHI").charAt(0).toUpperCase()}
+                      </div>
+                    )}
+                    <div className="flex-1 space-y-1.5">
+                      <p className="text-lg font-bold leading-tight text-gray-900">
+                        {author?.name || "GoHigh Impact Team"}
                       </p>
-                    ) : null}
+                      {formattedDate && (
+                        <p className="flex items-center gap-2 text-sm text-gray-600">
+                          <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                          {formattedDate}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Share Buttons */}
+                  <div className="flex items-center gap-3 sm:flex-shrink-0">
+                    <span className="hidden text-sm font-semibold text-gray-600 sm:block">Share</span>
+                    <div className="flex items-center gap-2">
+                      {shareLinks.map(({ name, href, icon: Icon }) => (
+                        <Link
+                          key={name}
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          prefetch={false}
+                          aria-label={`Share on ${name}`}
+                          className="inline-flex h-10 w-10 items-center justify-center rounded-full border-2 border-gray-200 bg-white text-gray-600 transition-all hover:border-brand-blue hover:bg-brand-blue hover:text-white hover:shadow-md"
+                        >
+                          <Icon className="h-4 w-4" />
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-sm font-semibold text-muted-foreground">Share</span>
-                  {shareLinks.map(({ name, href, icon: Icon }) => (
-                    <Link
-                      key={name}
-                      href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      prefetch={false}
-                      aria-label={`Share on ${name}`}
-                      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background transition hover:border-primary hover:text-primary"
-                    >
-                      <Icon className="h-4 w-4" />
-                    </Link>
-                  ))}
-                </div>
+
+                {/* Author Bio */}
+                {authorBio && (
+                  <div className="mt-5 border-t border-gray-200 pt-5">
+                    <p className="text-sm leading-relaxed text-gray-700">{authorBio}</p>
+                  </div>
+                )}
               </div>
-              {authorBio ? (
-                <p className="mt-4 text-sm text-muted-foreground">{authorBio}</p>
-              ) : null}
             </div>
           </header>
 
