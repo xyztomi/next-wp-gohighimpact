@@ -45,11 +45,11 @@ export default function GoHighLevelWhiteLabelPage() {
           </h1>
           {/* CTA Section */}
           <section className="mt-16">
-            <Card className="border-brand-green/40 shadow-xl">
+            <Card className="border-2 border-brand-blue shadow-xl shadow-brand-blue/20">
               <CardHeader className="items-center space-y-4 text-center">
                 <Badge
                   variant="outline"
-                  className="mx-auto border-brand-green/40 bg-brand-green/15 text-brand-green"
+                  className="mx-auto border-brand-blue bg-brand-green/15 text-brand-green"
                 >
                   Start Your SaaS Era
                 </Badge>
