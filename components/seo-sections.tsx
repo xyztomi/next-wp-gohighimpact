@@ -648,7 +648,7 @@ export function TestimonialsSection() {
             <a href="https://snip.ly/ghl-bootcamp" target="_blank" rel="noopener noreferrer">Start Free Trial</a>
           </Button>
           <Button asChild variant="outline" className="w-full rounded-full border-2 border-brand-blue/20 px-6 py-4 text-sm text-brand-blue hover:border-brand-blue hover:bg-brand-blue/10 sm:w-auto sm:px-8 sm:text-base">
-            <a href="/case-studies">See more case studies</a>
+            <Link href="/case-studies" prefetch={false}>See more case studies</Link>
           </Button>
         </div>
       </div>
