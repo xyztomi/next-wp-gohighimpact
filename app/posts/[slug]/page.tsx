@@ -2,21 +2,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { Calendar, Facebook, Linkedin, Share2, Twitter } from "lucide-react";
+// icons no longer needed for minimal byline
 
 import {
   getPostBySlug,
   getAllPostSlugs,
   getFeaturedMediaById,
   getAuthorById,
+  getCategoryById,
 } from "@/lib/wordpress";
 import { Section, Container, Prose } from "@/components/craft";
 import { PostContentWithCta } from "@/components/posts/post-content-with-cta";
 import { siteConfig } from "@/site.config";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 import type { Metadata } from "next";
 
@@ -108,6 +106,11 @@ export default async function Page({
     post.featured_media ? getFeaturedMediaById(post.featured_media) : null,
   ]);
 
+  // Fetch primary category for minimal byline badge (first category only)
+  const primaryCategory = post.categories?.length
+    ? await getCategoryById(post.categories[0])
+    : null;
+
   const formattedDate = post.date
     ? new Date(post.date).toLocaleDateString("en-US", {
       year: "numeric",
@@ -121,103 +124,42 @@ export default async function Page({
   const shareUrl = encodeURIComponent(shareHref);
   const shareTitle = encodeURIComponent(plainTitle);
 
-  const shareLinks = [
-    {
-      name: "LinkedIn",
-      href: `https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${shareTitle}`,
-      icon: Linkedin,
-    },
-    {
-      name: "Facebook",
-      href: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`,
-      icon: Facebook,
-    },
-    {
-      name: "Twitter",
-      href: `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareTitle}`,
-      icon: Twitter,
-    },
-  ];
-
-  const authorAvatar = author?.avatar_urls?.["96"] || author?.avatar_urls?.["48"] || author?.avatar_urls?.["24"];
-  const authorBio = author?.description ? author.description.replace(/<[^>]*>/g, "").trim() : "";
+  // Minimal header doesn't render share buttons or avatar/bio
 
   return (
     <Section>
       <Container>
         <Prose className="space-y-8">
-          <header className="space-y-6">
+          <header className="space-y-3">
             <h1 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
 
-            {/* Modern Author Box with shadcn */}
-            <Card className="not-prose border-border/50 shadow-sm">
-              <CardContent className="p-0">
-                <div className="flex flex-col gap-6 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
-                  {/* Author Info */}
-                  <div className="flex items-start gap-4 sm:flex-1">
-                    <Avatar className="h-16 w-16 border-2 border-primary/10">
-                      <AvatarImage
-                        src={authorAvatar}
-                        alt={author?.name || "Author"}
-                      />
-                      <AvatarFallback className="bg-primary/5 text-lg font-semibold text-primary">
-                        {(author?.name || "GHI").charAt(0).toUpperCase()}
-                      </AvatarFallback>
-                    </Avatar>
-                    <div className="flex-1 space-y-1">
-                      <div>
-                        <p className="text-base font-semibold text-foreground">
-                          {author?.name || "GoHigh Impact Team"}
-                        </p>
-                        {formattedDate && (
-                          <div className="mt-1 flex items-center gap-1.5 text-sm text-muted-foreground">
-                            <Calendar className="h-3.5 w-3.5" />
-                            <time dateTime={post.date}>{formattedDate}</time>
-                          </div>
-                        )}
-                      </div>
-                      {authorBio && (
-                        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                          {authorBio}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Share Buttons */}
-                  <div className="flex items-center gap-2 sm:flex-shrink-0">
-                    <Separator orientation="vertical" className="hidden h-12 sm:block" />
-                    <div className="flex flex-col gap-2 sm:pl-4">
-                      <div className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
-                        <Share2 className="h-3.5 w-3.5" />
-                        <span>Share</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        {shareLinks.map(({ name, href, icon: Icon }) => (
-                          <Button
-                            key={name}
-                            variant="outline"
-                            size="icon"
-                            className="h-9 w-9"
-                            asChild
-                          >
-                            <Link
-                              href={href}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              prefetch={false}
-                              aria-label={`Share on ${name}`}
-                            >
-                              <Icon className="h-4 w-4" />
-                            </Link>
-                          </Button>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            {/* Minimal byline row */}
+            <div className="flex items-center justify-between">
+              <p className="text-sm text-muted-foreground">
+                {formattedDate && (
+                  <>
+                    Published <time dateTime={post.date}>{formattedDate}</time>
+                  </>
+                )}
+                {author?.name && (
+                  <>
+                    {formattedDate ? " by " : "By "}
+                    <Link
+                      href={`/posts?author=${encodeURIComponent(author.slug)}`}
+                      prefetch={false}
+                      className="underline underline-offset-4 hover:text-foreground"
+                    >
+                      {author.name}
+                    </Link>
+                  </>
+                )}
+              </p>
+              {primaryCategory?.name && (
+                <Badge variant="outline" className="whitespace-nowrap">
+                  {primaryCategory.name}
+                </Badge>
+              )}
+            </div>
           </header>
 
           {featuredImage?.source_url && (
