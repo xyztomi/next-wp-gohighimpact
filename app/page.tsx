@@ -10,6 +10,7 @@ import {
   UseCasesIndustries,
   ImplementationGuide,
   SuccessStories,
+  TestimonialsSection,
   CompetitorComparison,
   FAQSection,
   FinalCTA,
@@ -27,6 +28,7 @@ export default function Home() {
       <UseCasesIndustries />
       <ImplementationGuide />
       <SuccessStories />
+      <TestimonialsSection />
       <CompetitorComparison />
       <FAQSection />
       <FinalCTA />

@@ -21,6 +21,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { FAQSchema } from "@/components/structured-data";
+import YouTubeEmbed from "@/components/youtube-embed";
 import Hls from "hls.js";
 
 export function HeroSection() {
@@ -564,6 +565,91 @@ export function SuccessStories() {
         </div>
         <div className="mt-8 text-center text-xs text-gray-500 sm:mt-12 sm:text-sm">
           Want your story featured? <Link href="/contact" className="text-brand-blue">Submit your GoHighLevel CRM case study</Link>.
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// YouTube testimonials embedded in a responsive grid
+const testimonialVideos = [
+  {
+    id: "empMzyn6JcA",
+    title:
+      "Alex Shlinsky of Prospecting On Demand™ shares his experience with the marketing platform HighLevel",
+  },
+  {
+    id: "j02i9bolMec",
+    title:
+      "HighLevel Testimonial From Gustavo Muñuz Castro, Founder & CEO of Power ISA",
+  },
+  {
+    id: "TJegWB5GX2Y",
+    title: "Christine Seale talks about the HighLevel",
+  },
+  {
+    id: "-T2GoCTEP9g",
+    title: "Matt Coffy of CustomerBloom Talks About HighLevel",
+  },
+] as const;
+
+export function TestimonialsSection() {
+  const [meta, setMeta] = useState<Record<string, { title?: string; channelTitle?: string }>>({});
+
+  useEffect(() => {
+    const ids = testimonialVideos.map((v) => v.id).join(",");
+    fetch(`/api/youtube/metadata?ids=${ids}`)
+      .then((r) => r.json())
+      .then((data) => {
+        const next: Record<string, { title?: string; channelTitle?: string }> = {};
+        (data.items || []).forEach((it: any) => {
+          next[it.id] = { title: it.title, channelTitle: it.channelTitle };
+        });
+        setMeta(next);
+      })
+      .catch(() => {
+        // fail silently; fall back to generic titles
+      });
+  }, []);
+  return (
+    <section id="testimonials" className="bg-gray-50 px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
+      <div className="container mx-auto max-w-6xl">
+        <div className="mb-6 text-center sm:mb-10">
+          <Badge className="mb-3 inline-flex items-center gap-2 rounded-full border border-brand-blue/30 bg-brand-blue/10 px-3 py-1.5 text-xs text-brand-blue sm:mb-4 sm:px-4 sm:py-2 sm:text-sm">
+            Real testimonials
+          </Badge>
+          <h2 className="text-2xl font-semibold text-gray-900 sm:text-3xl lg:text-4xl">
+            Real GoHighLevel Users, Real Results
+          </h2>
+          <p className="mx-auto mt-3 max-w-3xl text-sm text-gray-600 sm:mt-4 sm:text-base lg:text-lg">
+            Short highlights from creators and agencies actively using GoHighLevel in their businesses.
+          </p>
+        </div>
+
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
+          {testimonialVideos.map((video) => {
+            const channel = meta[video.id]?.channelTitle;
+            return (
+              <Card key={video.id} className="overflow-hidden border-gray-200 bg-white">
+                <YouTubeEmbed id={video.id} title={video.title} />
+                <div className="p-4 sm:p-5">
+                  <p className="text-sm font-medium text-gray-900 sm:text-base">{video.title}</p>
+                  {channel && (
+                    <p className="mt-1 text-xs text-gray-500 sm:text-sm">{channel}</p>
+                  )}
+                </div>
+              </Card>
+            );
+          })}
+        </div>
+
+        <div className="mt-8 flex flex-col items-center gap-3 sm:mt-12 sm:flex-row sm:justify-center sm:gap-4">
+          <Button asChild className="w-full rounded-full bg-brand-green px-6 py-4 text-sm text-white transition-colors hover:bg-brand-green/90 sm:w-auto sm:px-8 sm:text-base">
+            <a href="https://snip.ly/ghl-bootcamp" target="_blank" rel="noopener noreferrer">Start Free Trial</a>
+          </Button>
+          <Button asChild variant="outline" className="w-full rounded-full border-2 border-brand-blue/20 px-6 py-4 text-sm text-brand-blue hover:border-brand-blue hover:bg-brand-blue/10 sm:w-auto sm:px-8 sm:text-base">
+            <a href="/case-studies">See more case studies</a>
+          </Button>
         </div>
       </div>
     </section>
