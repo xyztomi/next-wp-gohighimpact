@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { Facebook, Linkedin, Twitter } from "lucide-react";
+import { Calendar, Facebook, Linkedin, Share2, Twitter } from "lucide-react";
 
 import {
   getPostBySlug,
@@ -13,6 +13,10 @@ import {
 import { Section, Container, Prose } from "@/components/craft";
 import { PostContentWithCta } from "@/components/posts/post-content-with-cta";
 import { siteConfig } from "@/site.config";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
 
 import type { Metadata } from "next";
 
@@ -145,69 +149,75 @@ export default async function Page({
           <header className="space-y-6">
             <h1 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
 
-            {/* Optimized Author Box */}
-            <div className="not-prose overflow-hidden rounded-2xl border border-gray-200 bg-gradient-to-br from-gray-50 to-white shadow-sm">
-              <div className="p-6 sm:p-8">
-                <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+            {/* Modern Author Box with shadcn */}
+            <Card className="not-prose border-border/50 shadow-sm">
+              <CardContent className="p-0">
+                <div className="flex flex-col gap-6 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
                   {/* Author Info */}
-                  <div className="flex items-center gap-4 sm:flex-1">
-                    {authorAvatar ? (
-                      <Image
+                  <div className="flex items-start gap-4 sm:flex-1">
+                    <Avatar className="h-16 w-16 border-2 border-primary/10">
+                      <AvatarImage
                         src={authorAvatar}
-                        alt={author?.name ? `Photo of ${author.name}` : "Author avatar"}
-                        width={64}
-                        height={64}
-                        className="h-14 w-14 rounded-full object-cover ring-2 ring-brand-green/20 sm:h-16 sm:w-16"
+                        alt={author?.name || "Author"}
                       />
-                    ) : (
-                      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-brand-green/10 text-lg font-bold text-brand-green ring-2 ring-brand-green/20 sm:h-16 sm:w-16">
+                      <AvatarFallback className="bg-primary/5 text-lg font-semibold text-primary">
                         {(author?.name || "GHI").charAt(0).toUpperCase()}
+                      </AvatarFallback>
+                    </Avatar>
+                    <div className="flex-1 space-y-1">
+                      <div>
+                        <p className="text-base font-semibold text-foreground">
+                          {author?.name || "GoHigh Impact Team"}
+                        </p>
+                        {formattedDate && (
+                          <div className="mt-1 flex items-center gap-1.5 text-sm text-muted-foreground">
+                            <Calendar className="h-3.5 w-3.5" />
+                            <time dateTime={post.date}>{formattedDate}</time>
+                          </div>
+                        )}
                       </div>
-                    )}
-                    <div className="flex-1 space-y-1.5">
-                      <p className="text-lg font-bold leading-tight text-gray-900">
-                        {author?.name || "GoHigh Impact Team"}
-                      </p>
-                      {formattedDate && (
-                        <p className="flex items-center gap-2 text-sm text-gray-600">
-                          <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                          </svg>
-                          {formattedDate}
+                      {authorBio && (
+                        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                          {authorBio}
                         </p>
                       )}
                     </div>
                   </div>
 
                   {/* Share Buttons */}
-                  <div className="flex items-center gap-3 sm:flex-shrink-0">
-                    <span className="hidden text-sm font-semibold text-gray-600 sm:block">Share</span>
-                    <div className="flex items-center gap-2">
-                      {shareLinks.map(({ name, href, icon: Icon }) => (
-                        <Link
-                          key={name}
-                          href={href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          prefetch={false}
-                          aria-label={`Share on ${name}`}
-                          className="inline-flex h-10 w-10 items-center justify-center rounded-full border-2 border-gray-200 bg-white text-gray-600 transition-all hover:border-brand-blue hover:bg-brand-blue hover:text-white hover:shadow-md"
-                        >
-                          <Icon className="h-4 w-4" />
-                        </Link>
-                      ))}
+                  <div className="flex items-center gap-2 sm:flex-shrink-0">
+                    <Separator orientation="vertical" className="hidden h-12 sm:block" />
+                    <div className="flex flex-col gap-2 sm:pl-4">
+                      <div className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
+                        <Share2 className="h-3.5 w-3.5" />
+                        <span>Share</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        {shareLinks.map(({ name, href, icon: Icon }) => (
+                          <Button
+                            key={name}
+                            variant="outline"
+                            size="icon"
+                            className="h-9 w-9"
+                            asChild
+                          >
+                            <Link
+                              href={href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              prefetch={false}
+                              aria-label={`Share on ${name}`}
+                            >
+                              <Icon className="h-4 w-4" />
+                            </Link>
+                          </Button>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
-
-                {/* Author Bio */}
-                {authorBio && (
-                  <div className="mt-5 border-t border-gray-200 pt-5">
-                    <p className="text-sm leading-relaxed text-gray-700">{authorBio}</p>
-                  </div>
-                )}
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           </header>
 
           {featuredImage?.source_url && (
