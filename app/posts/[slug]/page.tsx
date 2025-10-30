@@ -13,6 +13,8 @@ import {
 } from "@/lib/wordpress";
 import { Section, Container, Prose } from "@/components/craft";
 import { PostContentWithCta } from "@/components/posts/post-content-with-cta";
+import CommentsList from "@/components/posts/comments-list";
+import CommentForm from "@/components/posts/comment-form";
 import { siteConfig } from "@/site.config";
 import { Badge } from "@/components/ui/badge";
 
@@ -184,6 +186,15 @@ export default async function Page({
           )}
 
           <PostContentWithCta content={post.content.rendered} />
+
+          {/* Comments */}
+          <div className="not-prose space-y-6">
+            <div>
+              <h2 className="mb-2 text-xl font-semibold">Comments</h2>
+              <CommentsList postId={post.id} />
+            </div>
+            <CommentForm postId={post.id} enabled={post.comment_status === "open"} />
+          </div>
         </Prose>
       </Container>
     </Section>

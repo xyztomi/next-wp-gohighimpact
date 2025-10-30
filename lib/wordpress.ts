@@ -10,6 +10,7 @@ import type {
 	Page,
 	Author,
 	FeaturedMedia,
+	Comment,
 } from "./wordpress.d";
 
 const baseUrl = process.env.WORDPRESS_URL;
@@ -346,6 +347,38 @@ export async function searchAuthors(query: string): Promise<Author[]> {
 		search: query,
 		per_page: 100,
 	});
+}
+
+// Comments
+export async function getCommentsByPost(postId: number): Promise<Comment[]> {
+	const query = {
+		post: postId,
+		per_page: 100,
+		order: "asc",
+	} as const;
+
+	const url = `${baseUrl}/wp-json/wp/v2/comments?${querystring.stringify(
+		query
+	)}`;
+	const userAgent = "Next.js WordPress Client";
+
+	const response = await fetch(url, {
+		headers: { "User-Agent": userAgent },
+		next: {
+			tags: ["wordpress", "comments", `comments-post-${postId}`],
+			revalidate: 3600,
+		},
+	});
+
+	if (!response.ok) {
+		throw new WordPressAPIError(
+			`WordPress API request failed: ${response.statusText}`,
+			response.status,
+			url
+		);
+	}
+
+	return response.json();
 }
 
 // Function specifically for generateStaticParams - fetches ALL posts
