@@ -15,14 +15,14 @@ export function TrialPopup() {
     const isDismissed = sessionStorage.getItem("trial-popup-dismissed");
     if (isDismissed) return;
 
-    // Show popup after 10 seconds
+    // Show popup after 30 seconds
     const timer = setTimeout(() => {
       setShouldRender(true);
       // Small delay for animation
       requestAnimationFrame(() => {
         setIsVisible(true);
       });
-    }, 10000);
+    }, 30000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -107,7 +107,7 @@ export function TrialPopup() {
                 <svg className="mt-0.5 h-5 w-5 shrink-0 text-brand-green" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span>30-day free trial with full platform access</span>
+                <span><span className="font-semibold">30-day free trial</span> with full platform access</span>
               </li>
               <li className="flex items-start gap-2">
                 <svg className="mt-0.5 h-5 w-5 shrink-0 text-brand-green" fill="currentColor" viewBox="0 0 20 20">
