@@ -49,11 +49,11 @@ export default function GoHighLevelWhiteLabelPage() {
               <Badge className="mx-auto bg-brand-green/15 text-brand-green" variant="secondary">
                 SaaS Strategy Breakdown
               </Badge>
-              <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
-                Ready to Become a SaaSpreneur and Stack $10K+ in MRR?
-              </h2>
+              <p className="text-base text-muted-foreground sm:text-lg font-bold">
+                Discover the 18 most profitable GoHighLevel features you can sell in 2025 — and how to turn each into predictable, recurring revenue.
+              </p>
               <p className="text-base text-muted-foreground sm:text-lg">
-                Discover the 18 most profitable HighLevel features you can sell in 2025 — and how to turn each into recurring revenue.
+                Why chase clients every month when you can build a system that pays you every month? These 18 HighLevel features aren’t just “nice-to-have tools” — they’re full-blown income streams. From AI lead responders to automated review requests, each one can be white-labeled, branded as your own software, and sold on autopilot.
               </p>
             </div>
             <YouTubeEmbed
