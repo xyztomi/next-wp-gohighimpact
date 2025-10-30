@@ -4,6 +4,7 @@ import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import YouTubeEmbed from "@/components/youtube-embed";
 import {
   Card,
   CardContent,
@@ -43,6 +44,24 @@ export default function GoHighLevelWhiteLabelPage() {
           <h1 className="text-4xl font-bold">
             GoHighLevel White Label: The Complete 2025 Guide for Agencies & SaaS Builders
           </h1>
+          <section className="space-y-6 rounded-3xl border border-border bg-background/80 p-6 shadow-xl shadow-brand-blue/10 backdrop-blur">
+            <div className="space-y-3 text-center">
+              <Badge className="mx-auto bg-brand-green/15 text-brand-green" variant="secondary">
+                Featured Breakdown
+              </Badge>
+              <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+                Meet the ghost story community
+              </h2>
+              <p className="text-base text-muted-foreground sm:text-lg">
+                The 18 Most Profitable HighLevel Features for 2025
+              </p>
+            </div>
+            <YouTubeEmbed
+              id="DA3Z0rjus5E"
+              title="Meet the ghost story community: The 18 Most Profitable HighLevel Features for 2025"
+              className="overflow-hidden rounded-2xl border border-border/60 shadow-2xl"
+            />
+          </section>
           {/* CTA Section */}
           <section className="mt-16">
             <Card className="border-2 border-brand-blue shadow-xl shadow-brand-blue/20">
