@@ -8,6 +8,7 @@ import { AnnouncementBar, Footer } from "@/components/marketing";
 import { Header } from "@/components/nav/header";
 import { StructuredData } from "@/components/structured-data";
 import { TrialPopup } from "@/components/trial-popup";
+import { StickyTrialCta } from "@/components/sticky-trial-cta";
 import { siteConfig } from "@/site.config";
 import { cn } from "@/lib/utils";
 import { getNavigationLinks } from "@/lib/wordpress";
@@ -136,6 +137,7 @@ export default async function RootLayout({
           <Footer />
         </div>
         <TrialPopup />
+        <StickyTrialCta />
         <Analytics />
       </body>
     </html>
