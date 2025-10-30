@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { X, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -66,6 +67,19 @@ export function TrialPopup() {
 
           {/* Content */}
           <div className="px-6 pb-6 pt-12 sm:px-8 sm:pb-8">
+            {/* Illustration */}
+            <div className="mb-6 flex justify-center">
+              <div className="relative h-28 w-28 sm:h-32 sm:w-32">
+                <Image
+                  src="/popup.webp"
+                  alt="GoHighLevel free trial preview"
+                  fill
+                  className="rounded-2xl object-cover shadow-lg shadow-brand-blue/20"
+                  sizes="(min-width: 640px) 128px, 112px"
+                />
+              </div>
+            </div>
+
             {/* Badge */}
             <div className="mb-4 flex justify-center">
               <span className="inline-flex items-center gap-2 rounded-full border border-brand-green/30 bg-brand-green/10 px-3 py-1.5 text-xs font-medium text-brand-green">
