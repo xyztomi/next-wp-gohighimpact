@@ -47,18 +47,18 @@ export default function GoHighLevelWhiteLabelPage() {
           <section className="space-y-6 rounded-3xl border border-border bg-background/80 p-6 shadow-xl shadow-brand-blue/10 backdrop-blur">
             <div className="space-y-3 text-center">
               <Badge className="mx-auto bg-brand-green/15 text-brand-green" variant="secondary">
-                Featured Breakdown
+                SaaS Strategy Breakdown
               </Badge>
               <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
-                Meet the ghost story community
+                Ready to Become a SaaSpreneur and Stack $10K+ in MRR?
               </h2>
               <p className="text-base text-muted-foreground sm:text-lg">
-                The 18 Most Profitable HighLevel Features for 2025
+                Discover the 18 most profitable HighLevel features you can sell in 2025 — and how to turn each into recurring revenue.
               </p>
             </div>
             <YouTubeEmbed
               id="DA3Z0rjus5E"
-              title="Meet the ghost story community: The 18 Most Profitable HighLevel Features for 2025"
+              title="Ready to Become a SaaSpreneur and Stack $10K+ in MRR?"
               className="overflow-hidden rounded-2xl border border-border/60 shadow-2xl"
             />
           </section>
