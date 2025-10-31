@@ -594,23 +594,6 @@ const testimonialVideos = [
 ] as const;
 
 export function TestimonialsSection() {
-  const [meta, setMeta] = useState<Record<string, { title?: string; channelTitle?: string }>>({});
-
-  useEffect(() => {
-    const ids = testimonialVideos.map((v) => v.id).join(",");
-    fetch(`/api/youtube/metadata?ids=${ids}`)
-      .then((r) => r.json())
-      .then((data) => {
-        const next: Record<string, { title?: string; channelTitle?: string }> = {};
-        (data.items || []).forEach((it: any) => {
-          next[it.id] = { title: it.title, channelTitle: it.channelTitle };
-        });
-        setMeta(next);
-      })
-      .catch(() => {
-        // fail silently; fall back to generic titles
-      });
-  }, []);
   return (
     <section id="testimonials" className="bg-gray-50 px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
       <div className="container mx-auto max-w-6xl">
@@ -627,20 +610,14 @@ export function TestimonialsSection() {
         </div>
 
         <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
-          {testimonialVideos.map((video) => {
-            const channel = meta[video.id]?.channelTitle;
-            return (
-              <Card key={video.id} className="overflow-hidden border-gray-200 bg-white">
-                <YouTubeEmbed id={video.id} title={video.title} />
-                <div className="p-4 sm:p-5">
-                  <p className="text-sm font-medium text-gray-900 sm:text-base">{video.title}</p>
-                  {channel && (
-                    <p className="mt-1 text-xs text-gray-500 sm:text-sm">{channel}</p>
-                  )}
-                </div>
-              </Card>
-            );
-          })}
+          {testimonialVideos.map((video) => (
+            <Card key={video.id} className="overflow-hidden border-gray-200 bg-white">
+              <YouTubeEmbed id={video.id} title={video.title} />
+              <div className="p-4 sm:p-5">
+                <p className="text-sm font-medium text-gray-900 sm:text-base">{video.title}</p>
+              </div>
+            </Card>
+          ))}
         </div>
 
         <div className="mt-8 flex flex-col items-center gap-3 sm:mt-12 sm:flex-row sm:justify-center sm:gap-4">
